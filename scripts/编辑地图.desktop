@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=编辑地图
+Exec=sh -c 'cd "/home/ztx/robot/DaoLan/scripts" && chmod +x map_edit.sh && ./map_edit.sh'
+Path=/home/ztx/robot/DaoLan/scripts
+Terminal=true
+Icon=/home/ztx/robot/DaoLan/scripts/icons/edit.png
+

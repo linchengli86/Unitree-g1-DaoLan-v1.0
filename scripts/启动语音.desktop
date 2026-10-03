@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=启动语音
+Exec=sh -c 'cd "/home/ztx/robot/DaoLan/scripts" && chmod +x voice_start.sh && ./voice_start.sh --fg'
+Path=/home/ztx/robot/DaoLan/scripts
+Terminal=true
+Icon=/home/ztx/robot/DaoLan/scripts/icons/voice.png
+

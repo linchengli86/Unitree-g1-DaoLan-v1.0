@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Comment=切换到无线话筒DJI MIC MINI
+Name=无线话筒
+Exec=sh -c 'cd "/home/ztx/robot/DaoLan/scripts" && chmod +x select_wireless_microphone.sh && ./select_wireless_microphone.sh'
+Path=/home/ztx/robot/DaoLan/scripts
+Terminal=true
+Icon=audio-input-microphone

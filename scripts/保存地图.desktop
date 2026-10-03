@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=保存地图
+Exec=sh -c 'cd "/home/ztx/robot/DaoLan/scripts" && chmod +x save_map.sh && ./save_map.sh'
+Path=/home/ztx/robot/DaoLan/scripts
+Terminal=true
+Icon=media-record

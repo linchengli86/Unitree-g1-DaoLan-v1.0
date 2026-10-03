@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=启动导航
+Comment=启动导航、运控与语音
+Exec=bash -lc 'cd "/home/ztx/robot/DaoLan/scripts" && chmod +x nav_start.sh && ./nav_start.sh; echo; echo "已完成启动，重定位后可以开始导航了"; read _'
+Path=/home/ztx/robot/DaoLan/scripts
+Terminal=true
+Icon=/home/ztx/robot/DaoLan/scripts/icons/nav2.png
+

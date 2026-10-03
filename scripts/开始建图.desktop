@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=开始建图
+Exec=sh -c 'cd "/home/ztx/robot/DaoLan/scripts" && chmod +x mapping.sh && ./mapping.sh'
+Path=/home/ztx/robot/DaoLan/scripts
+Terminal=true
+Icon=/home/ztx/robot/DaoLan/scripts/icons/map.png
+

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=有线话筒
+Comment=切换到有线话筒VM10
+Exec=sh -c 'cd "/home/ztx/robot/DaoLan/scripts" && chmod +x select_wired_microphone.sh && ./select_wired_microphone.sh'
+Path=/home/ztx/robot/DaoLan/scripts
+Icon=audio-input-microphone
+Terminal=true

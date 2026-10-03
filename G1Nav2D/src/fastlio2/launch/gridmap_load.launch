@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- 启动rviz -->
+    <arg name="rviz" default="true" />
+
+    <!-- 设置地图的配置文件 -->
+    <!-- 使用包路径或用户自定义传入的地图文件，默认指向 fastlio 包同级目录下的 map.yaml（如果存在） -->
+    <arg name="2dmap_file" default="$(env HOME)/robot/DaoLan/map/map.yaml" />
+    <!-- <arg name="2dmap_file" default="$(find pcd_file)/grid_map/pcd2pgm/bbb.yaml" /> -->
+    <arg name="2dmap_frame" default="map"/>
+    <arg name="2dmap_topic" default="map_2d"/>      <!-- 注意map_server的地图话题名不能为数字开头 -->
+
+    <!-- 运行地图服务器，并且加载设置的地图-->
+    <node name="map_server" pkg="map_server" type="map_server" args="$(arg 2dmap_file) /map:=$(arg 2dmap_topic)" >
+        <param name="frame_id" value="$(arg 2dmap_frame)"/>
+    </node>
+
+    <!-- rviz display -->
+    <group if="$(arg rviz)">
+        <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" />
+    </group>
+
+</launch>

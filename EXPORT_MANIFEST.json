@@ -1,0 +1,4362 @@
+{
+  "created_utc": "2026-10-03T14:56:10.246388+00:00",
+  "kind": "source-only baseline; not a PC2 asset backup or historical Git reconstruction",
+  "exclusions": "root .gitignore plus explicit source-directory allowlist",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 177,
+      "sha256": "817dd1a599c46bd41cc88fcdc3a00f3f1bcfbcf007208c9f5d4a7e1fba24cd80"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 632,
+      "sha256": "5e917f78acd730ce6f4cc00b32224a4c88a3f170219ebdb82e0115abeea985b4"
+    },
+    {
+      "path": "G1Nav2D/.catkin_workspace",
+      "bytes": 98,
+      "sha256": "095f6554aab683a09c20a1d4aa28894cfa1133b4173a5ef73c496aeadc792dae"
+    },
+    {
+      "path": "G1Nav2D/build.sh",
+      "bytes": 1839,
+      "sha256": "3c223d7f76f979ec4d96539b1898d5cfa098d6cd21bf8469d12acd5768143153"
+    },
+    {
+      "path": "G1Nav2D/client/DogControllerSDK.py",
+      "bytes": 3907,
+      "sha256": "bc12c64139489cc05a8ce76d915c1446ff8992115a46f3b146fa8390b31d03fd"
+    },
+    {
+      "path": "G1Nav2D/client/YgClient.py",
+      "bytes": 1851,
+      "sha256": "67161164266c656a267245a1bd30cedcef7fb256a92acdaa832a5c7485d30d41"
+    },
+    {
+      "path": "G1Nav2D/client/clientTrue.html",
+      "bytes": 29081,
+      "sha256": "7eaae08c4191825ad7206a8a8cafbed63a7b37346e48e01bda48e6405605558c"
+    },
+    {
+      "path": "G1Nav2D/client/constants.py",
+      "bytes": 1840,
+      "sha256": "261baedc97d46b3b4bfaac36e6496ecb35454da566d7a57ec995988d3309ca86"
+    },
+    {
+      "path": "G1Nav2D/src/CMakeLists.txt",
+      "bytes": 2179,
+      "sha256": "9daeb27c05be5e85e5a29a335b77a1c6f3c98ac694c62ad1b721aad4b0b500ca"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/CMakeLists.txt",
+      "bytes": 3337,
+      "sha256": "e62d468736f6ccce6e6a3c27fbf9fe0924b22e8b2315d69aabd133c85c362daf"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/LICENSE",
+      "bytes": 1068,
+      "sha256": "99dc341d361bca49a8f42ce1c710300dda1d1b226c507f61b5c063d7d728fd20"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/README.md",
+      "bytes": 1307,
+      "sha256": "fcdd633bf2c8f220205685754d53d520034db1cca082391707d4833fdb27bd5a"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/config/localize.yaml",
+      "bytes": 993,
+      "sha256": "77fb715fcf36fa93a51795ae6f73753e9a2b67dd5f024ccca7395095b6454fc3"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/config/mapping.yaml",
+      "bytes": 789,
+      "sha256": "b137d5e5179a56518b654ab945e6ad4602b58f105503721010851d7305fdad82"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/IKFoM_toolkit/esekfom/esekfom.hpp",
+      "bytes": 68712,
+      "sha256": "4cd3272b48af7b9d5306cf3982884dd887faf82478dbd4f83b27fea6ec977b04"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/IKFoM_toolkit/esekfom/util.hpp",
+      "bytes": 2363,
+      "sha256": "3c4265d25ea3f8c7f586d1e34bc352e981e09e30555e42011cd23a0a147d6918"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/IKFoM_toolkit/mtk/build_manifold.hpp",
+      "bytes": 9436,
+      "sha256": "0e88522551d02e78dc995e6c9d7883d9ecca7190379ec047ab839fff7186ea0f"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/IKFoM_toolkit/mtk/src/SubManifold.hpp",
+      "bytes": 4886,
+      "sha256": "96709f0f453a0c8776b1969064275ebf14dc5234b7024e68eb1cfc51a513864f"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/IKFoM_toolkit/mtk/src/mtkmath.hpp",
+      "bytes": 10176,
+      "sha256": "f9627989cf578f35ec5594a6956b4e9283d4dd109b26e7d2621682c508546295"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/IKFoM_toolkit/mtk/src/vectview.hpp",
+      "bytes": 6540,
+      "sha256": "7855408124ea65df4423bae5f97d5104af5552318796bc6324bdbf98a45101f3"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/IKFoM_toolkit/mtk/startIdx.hpp",
+      "bytes": 12515,
+      "sha256": "79cdc368bb4e083f5fda7549094c0aba8b599aee1f88e9f2a8b7fa785bf1f757"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/IKFoM_toolkit/mtk/types/S2.hpp",
+      "bytes": 9971,
+      "sha256": "f861be0bbb1a80d968189c90f9ef6b8e56b5f4bb19a9043a2e41c9397c215d56"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/IKFoM_toolkit/mtk/types/SOn.hpp",
+      "bytes": 10624,
+      "sha256": "90a8384a05d656698e6826b892561dc6cd619b62a7e32f9e6e3a9253e5e0c8aa"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/IKFoM_toolkit/mtk/types/vect.hpp",
+      "bytes": 14226,
+      "sha256": "771ecededd51dc694bdadb57f8a49fad7bc6091c6f6112142096954649ac405f"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/IKFoM_toolkit/mtk/types/wrapped_cv_mat.hpp",
+      "bytes": 3236,
+      "sha256": "3040f43fcb4195a2572a8819be012ebd2c4b59a38cfae86fcac3e01d7039a589"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/commons.h",
+      "bytes": 4668,
+      "sha256": "48e341737fe7bdecc02558158dda44ce34d172ef50b02f1bafcca62a930b66cf"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/ikd-Tree/README.md",
+      "bytes": 73,
+      "sha256": "a7f6feab008dc54a053963fb518e360389ee807af63ebddcc15e90b1ede78073"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/ikd-Tree/ikd_Tree.cpp",
+      "bytes": 68733,
+      "sha256": "ec3cbbbb6386eb6c68f9aa081c48b5d62209ada44fe167a002d4e3b112a1ea9f"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/ikd-Tree/ikd_Tree.h",
+      "bytes": 10279,
+      "sha256": "bb87cab944c6c59e0be61cb0b3a2cd0e334d93dc1bf768875058857278135a4b"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/lio_builder/imu_processor.h",
+      "bytes": 2653,
+      "sha256": "0ad0c9c864270ca51d40fdeb3b06d88a62bb4b449a1e58adf75afddcf64cb8b4"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/lio_builder/lio_builder.h",
+      "bytes": 2982,
+      "sha256": "9f9fd6b5a80c28dfc01b54eafc6dbd2f784435bb909908fdec345c1d4079dc94"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/localizer/base_pose_adapter.h",
+      "bytes": 1783,
+      "sha256": "7d0e9ae5da73f306fd5f50b770c770fd0ac7b74548a0816a85287565ede3f325"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/localizer/coarse_registration_policy.h",
+      "bytes": 4582,
+      "sha256": "ffadc6f0d49671796732a39ef8c5cd21f535e510fb0c3b89498ca225dd8c5f6a"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/localizer/icp_localizer.h",
+      "bytes": 4102,
+      "sha256": "49b290c4abaf2fa582f897cc4ed1c6f0694c681917c868b0b261241bbe804d6c"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/include/navigation_odometry.h",
+      "bytes": 5630,
+      "sha256": "514b9899975b8c852139a79233228f8013218d15196af96050b7272b74cfb95e"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/launch/gridmap_load.launch",
+      "bytes": 1013,
+      "sha256": "80b7375ecc70ced006d2c769a2ca26fc6aaf7d2b040ada5b11db7a39ed11a177"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/launch/mapping.launch",
+      "bytes": 585,
+      "sha256": "7f9af94803f6812ba3a84c682c90f333426dc1dbfdfdc40bcd3cb9bad18e5913"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/launch/navigation.launch",
+      "bytes": 1533,
+      "sha256": "f172fdc18bede5a9831706860c55bcc7f488f9809550825627ccb6b9e2df8737"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/launch/navigation（备份6-15-360）.launch",
+      "bytes": 1393,
+      "sha256": "bc16b1bc925bdcdcbc91abff32cf68e969db616caddd9cf282fe01653320f622"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/launch/octomap_server.launch",
+      "bytes": 470,
+      "sha256": "8bdb00a714a1572fe106d845425e92eaf998ca41a076332b76e2175adaa4c32d"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/package.xml",
+      "bytes": 2732,
+      "sha256": "5c6c73a4d29cbe1ff8120090c0fc8cd3269155d39719157718793e6c50d945e6"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/rviz/localize.rviz",
+      "bytes": 13252,
+      "sha256": "3cda42d8e9c4987480413b979345550f2f088986448d89dbb8aa450ae1529e6c"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/rviz/mapping.rviz",
+      "bytes": 9797,
+      "sha256": "721009797781c0be5389defb8d658294ca139bd44efbafd346d1f50659ccc28c"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/scripts/slam_reloc.py",
+      "bytes": 1654,
+      "sha256": "9922d7547c9aa62fa6aeac9f739b9980d69723b208e03cda2eed9942bb7ec0cd"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/src/commons.cpp",
+      "bytes": 9795,
+      "sha256": "d73a9fe2a2154d6ab6ecfa5522c3079cc79015107eb290bb364f8a8912cf0f72"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/src/lio_builder/imu_processor.cpp",
+      "bytes": 7985,
+      "sha256": "282f5709a96e7e1ab5874eecc44e23c68aa657d7025c902c887bbd25468702ff"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/src/lio_builder/lio_builder.cpp",
+      "bytes": 20501,
+      "sha256": "eb710953b546e45f8f7a00d4290460f1a14758112c1e03943d3004adfc649137"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/src/localizer/icp_localizer.cpp",
+      "bytes": 37042,
+      "sha256": "3830c0174a3b56d80104b20a436842308c1b28b572a860fe4fa5bb3668f017f4"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/src/localizer_node.cpp",
+      "bytes": 44359,
+      "sha256": "b4008f81701c5df7867e9f84138a2a11f4caf92ac8df7dab8f2e95ae1f02427c"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/src/map_builder_node.cpp",
+      "bytes": 56067,
+      "sha256": "bb7a5327b30c881f66485f4997983db1139273a19331ee5cd510a80e650613e7"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/src/temp_node.cpp",
+      "bytes": 1972,
+      "sha256": "ec71b7638648c9b79cc34fd4364a34eb9502af4d7922cb87809b403f52075ffe"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/srv/MapConvert.srv",
+      "bytes": 83,
+      "sha256": "c6e3ee8d0e605ffe9fba91d5c369c8c7eba1b90784cbcb533f27ec3032ac265a"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/srv/SaveMap.srv",
+      "bytes": 67,
+      "sha256": "dc6ca0e9a8e05a4254282e4ab8a3b5d16e95c5325ab639e16d266ba29bba3de6"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/srv/SlamHold.srv",
+      "bytes": 43,
+      "sha256": "eb20a5d11c44a5ceae91b60ea7f1b968f0d7455b39142440db1e8950159a7997"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/srv/SlamReLoc.srv",
+      "bytes": 116,
+      "sha256": "f41c934c0e190f9e58c31a2f82ab71a767b106e48b2ff52d8bb3f7acf8bea99d"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/srv/SlamRelocCheck.srv",
+      "bytes": 25,
+      "sha256": "5b576e5306b3e407aab12be79228049f22792c2d9fe5e4e0ac62c8facd15a581"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/srv/SlamStart.srv",
+      "bytes": 43,
+      "sha256": "eb20a5d11c44a5ceae91b60ea7f1b968f0d7455b39142440db1e8950159a7997"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/test/base_pose_adapter_test.cpp",
+      "bytes": 2748,
+      "sha256": "6bd16bb3cd518aea423fc46d5705a7b5cb4073e3708d0b75a2c05a70ba08fc6b"
+    },
+    {
+      "path": "G1Nav2D/src/fastlio2/test/test_navigation_odometry.cpp",
+      "bytes": 6280,
+      "sha256": "c24480ae2b0bab2f39dde025b119fb2681cd36d8ad705b26a72f494124e83f58"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/allocators.h",
+      "bytes": 10437,
+      "sha256": "49b554ebfc2369438fd9365b28f0453485d936437847de31a7bb770001abca55"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/cursorstreamwrapper.h",
+      "bytes": 2230,
+      "sha256": "de1a52b674c998a7581f9cb69c9310757f825595c3fef985d5d153f7ac1b6aaf"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/document.h",
+      "bytes": 117966,
+      "sha256": "6afae6a8825b03b4c6baa42a513e5a5242ac96b4c95968c07ee8bda8163eb3ff"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/encodedstream.h",
+      "bytes": 10634,
+      "sha256": "4bb5e4853943d5ead467e46b5313d95aa23645018cda93e7907a934a06cfbb26"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/encodings.h",
+      "bytes": 29827,
+      "sha256": "0201c664e471c615b5cd27d2e981cf8b21ac9c210bdf108062fb2fd9d493a501"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/error/en.h",
+      "bytes": 3739,
+      "sha256": "484dcd32c0b35b7a81561740fad970402c0ffcec44311381a2fb265cfe5e273c"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/error/error.h",
+      "bytes": 6472,
+      "sha256": "aa9b40b61754b227248b4b092331dbd5721ef6565d962e4c225c6c1e7974817e"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/filereadstream.h",
+      "bytes": 2961,
+      "sha256": "8c7d282eb32897969430f5a94178cab238433e25fa139ee74eda87eb1d42690a"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/filewritestream.h",
+      "bytes": 3073,
+      "sha256": "1db49a4cd9038f2670667e5900f346d231a0eece06ac1817f33feb63f33545b9"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/fwd.h",
+      "bytes": 4120,
+      "sha256": "2a0e024b8b6b87d1d3f50d1d0dd4656124c161fea88406265d097d613498854e"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/internal/biginteger.h",
+      "bytes": 8296,
+      "sha256": "0be8375c2d39bc1f8f57b755a26569db9ed35c86d066b294911690513786afb3"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/internal/clzll.h",
+      "bytes": 2035,
+      "sha256": "93d71c879a805a8c17cfd8913cf1add4d2f25407bbf668abe1dcca6e40ebc746"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/internal/diyfp.h",
+      "bytes": 11387,
+      "sha256": "f2c45af9e73a451e5472e5dd10a7672085e9a3504d1f3ab864a5b9cc7445c1eb"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/internal/dtoa.h",
+      "bytes": 7724,
+      "sha256": "965deca8d1382c30db9e0a1d51200a4934bfe032eda3dcde10d4bdb39817c05a"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/internal/ieee754.h",
+      "bytes": 2990,
+      "sha256": "a1b4a88d5e0f633e99c7d68a34fdebc6289e6be0f0cfba452a7793166d7ea970"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/internal/itoa.h",
+      "bytes": 9272,
+      "sha256": "45c96bab2327aee5ff999167fac8f768a3a9e1003142fa68e3aee50b54d93e12"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/internal/meta.h",
+      "bytes": 6731,
+      "sha256": "a20dad578c7d714ff04029f04719df19be5835c30bf9c7028d226e67d065bf0b"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/internal/pow10.h",
+      "bytes": 3957,
+      "sha256": "7a7693969c936ddb6d036467a0f6b53def076922bb838d250eb40f12b2e2ce0e"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/internal/regex.h",
+      "bytes": 23238,
+      "sha256": "624cf078b8179a198374eebe94331aa2d8b70b08997f4e270ccfaccc90fd09b2"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/internal/stack.h",
+      "bytes": 6805,
+      "sha256": "46c4f98ff2acce64d1280458dd1224aaee9a9035eebd3462cdf31ee25a13702e"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/internal/strfunc.h",
+      "bytes": 2184,
+      "sha256": "e083b68f7bf3570653fce1e3ea0a573a75745a096dd80194e1a2fde4d7695bb8"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/internal/strtod.h",
+      "bytes": 8656,
+      "sha256": "2134c15ad40b9584ecb8e1a7f6163277a6d783574b3fb08574f88ab769b91751"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/internal/swap.h",
+      "bytes": 1421,
+      "sha256": "48ecb57c3b2ca955ad3cccdfff03835be495a56c9c5da07ab9c02f488b7d7fe1"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/istreamwrapper.h",
+      "bytes": 4112,
+      "sha256": "b3c03a5826b8d8c9dfcef64eb09d8ec4a955e0c6edd38d9c3a127dbca53ec2dc"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/license.txt",
+      "bytes": 5152,
+      "sha256": "a140e5d46fe734a1c78f1a3c3ef207871dd75648be71fdda8e309b23ab8b1f32"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/memorybuffer.h",
+      "bytes": 2573,
+      "sha256": "cf661606aa41bee3466cee20174bc7454210e8aabac929b1d8e9e189fef601ab"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/memorystream.h",
+      "bytes": 2673,
+      "sha256": "8dd07eb66381de95a69c9cadce537d76c0349f913cfe183ab6243c54863c4dcf"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/msinttypes/inttypes.h",
+      "bytes": 7824,
+      "sha256": "92f53d3ba0cdebaeb20a52893f89d0c29aae5111a3a8bb555eabdd8c96e3244f"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/msinttypes/stdint.h",
+      "bytes": 9151,
+      "sha256": "515ff5e244372892293c20bbfe6a5b3dcca7265442941df31dcebdfbe2a828fe"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/ostreamwrapper.h",
+      "bytes": 2342,
+      "sha256": "366d953184777b0de0a102ef38cf56f9fc766422246f16be9af2dad8ad787054"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/pointer.h",
+      "bytes": 60230,
+      "sha256": "d74ab63c76a99a5a92418d2420cc733c22767b6d9e9a6f989689940de4f7c478"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/prettywriter.h",
+      "bytes": 10253,
+      "sha256": "e8495e521c5d726c7e2ff59b1f7eb6f08a1e0298055d1fbbc4f29f08d736360d"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/rapidjson.h",
+      "bytes": 24293,
+      "sha256": "22ffbcb054cecc5180bdb72478ab32598c9aa40421322f17923809acdcf99629"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/reader.h",
+      "bytes": 89290,
+      "sha256": "291f6d315a3617c9bd83d8b2836f9dc1e45a2a9770dcb0745f9eaaa603b715a6"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/schema.h",
+      "bytes": 101259,
+      "sha256": "473b44fcb9f88d2fa7439e1c9f86899deae44205323a7ba7709e6b4b513f01fa"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/stream.h",
+      "bytes": 6694,
+      "sha256": "58e37336dafded31177eb2381f0d553de8a5fd33c8580873de32b0e467d85677"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/stringbuffer.h",
+      "bytes": 3984,
+      "sha256": "8434f52ca786bf876b3d3d693ce8e2d399325ddf891e0437becd41ed590806e9"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/3rdparty/rapidjson/writer.h",
+      "bytes": 26178,
+      "sha256": "b42eca28a42d7b3806aaf691ee921accabcf911be6728c35fa04e14162a72bdf"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/CHANGELOG.md",
+      "bytes": 1573,
+      "sha256": "b5abf4f88cd797a9f1cdf22c3cc0a162f7a56d60e3493fe26b944e69bf31e98c"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/CMakeLists.txt",
+      "bytes": 10969,
+      "sha256": "88a63812dce4aab95eb8405d46af6542f68a48ae2e36e6e6b0395320f494cf20"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/LICENSE.txt",
+      "bytes": 19928,
+      "sha256": "5d965fd1439196751d5ccad8064a51dafdb2d88548174bb5516d393c7a4c0717"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/README.md",
+      "bytes": 19951,
+      "sha256": "281d4149b6bdfb8dfb93a99c11607a5fb24986d774d06881fd80734b4b2c476c"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/build.sh",
+      "bytes": 1642,
+      "sha256": "011e71c816d73e35a27933ac05d626d69a5b6e74b4a238eef4f50772d9669937"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/cmake/version.cmake",
+      "bytes": 990,
+      "sha256": "698b065d680a20695f2163ca5bbe601792b24069357919bee3136768d75f8f7f"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/config/HAP_config.json",
+      "bytes": 863,
+      "sha256": "956414d48bf17af2427e2b8f3dbbeff92345f93fe81e97422f22117ea0ef3f35"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/config/MID360_config.json",
+      "bytes": 903,
+      "sha256": "09e74c3cba204cc8212cd604bf0f44ad9e2b320cea70e0461943185fb3dbfd28"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/config/MID360_config（26-6-15备份）.json",
+      "bytes": 903,
+      "sha256": "09e74c3cba204cc8212cd604bf0f44ad9e2b320cea70e0461943185fb3dbfd28"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/config/display_point_cloud_ROS1.rviz",
+      "bytes": 5650,
+      "sha256": "89d934b783d9f0386dbaef7cbbf0ea3f4ee0c87c57b313178d822cec93320caf"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/config/display_point_cloud_ROS2.rviz",
+      "bytes": 4834,
+      "sha256": "ae7cea85c28bcb532f3504994aa287ad14100048cd53b30821b73df0a1f94e61"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/config/mixed_HAP_MID360_config.json",
+      "bytes": 1665,
+      "sha256": "99895013db7bfc1d58fef1abb2d25461624ab468bce5f5c4381172f3b7d235cf"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/install",
+      "bytes": 960,
+      "sha256": "095768f912faa4cd84f48f396bf7fe4fb7f3a950b9d023cf345a5e9e6f2c9219"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/install.1",
+      "bytes": 960,
+      "sha256": "095768f912faa4cd84f48f396bf7fe4fb7f3a950b9d023cf345a5e9e6f2c9219"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/launch_ROS1/msg_HAP.launch",
+      "bytes": 1743,
+      "sha256": "2bb9adeab763da7a414fe756fa0569e41ab4795722817ad950a39450f97813ef"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/launch_ROS1/msg_MID360.launch",
+      "bytes": 1877,
+      "sha256": "dd46547ec57a5b46d95d7a61af0323f4bcf6b74042ad639827b7c41a7b621c1e"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/launch_ROS1/msg_mixed.launch",
+      "bytes": 1754,
+      "sha256": "77c8f7eed8d2702211f52db053f792f2b5906123e8ab647a913313bb015c6ab8"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/launch_ROS1/rviz_HAP.launch",
+      "bytes": 1930,
+      "sha256": "be4b09a282eb005128933ec802d0658d273ebe5b91dc65d0413a78c603ee3f78"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/launch_ROS1/rviz_MID360.launch",
+      "bytes": 1933,
+      "sha256": "03a622737d58ac346261ad5bf87df109d3c339184c1baeee11ba8371396f6578"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/launch_ROS1/rviz_mixed.launch",
+      "bytes": 1943,
+      "sha256": "bb9830540646897bb52e4abd76947232a751b27f0f9ec7c4fedc953bb4fbcb79"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/launch_ROS2/msg_HAP_launch.py",
+      "bytes": 1968,
+      "sha256": "bb58699d0b6d344f579f5b2991db54561621ddb395e6ade8c94425c563cd9ef6"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/launch_ROS2/msg_MID360_launch.py",
+      "bytes": 1902,
+      "sha256": "11b0618d2a9a0def7f6e1a6831646d261674014344496fa1497fea67d6c0e826"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/launch_ROS2/rviz_HAP_launch.py",
+      "bytes": 2186,
+      "sha256": "da07dc3d0402cccffe3e068108066fede37ed71ef47c191541158665d67b478f"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/launch_ROS2/rviz_MID360_launch.py",
+      "bytes": 2189,
+      "sha256": "8331565b4c8fe1a80ec77d518b4bb2fcbe40ea8bf60a20de691d9c61417b678e"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/launch_ROS2/rviz_mixed.py",
+      "bytes": 2199,
+      "sha256": "decc75ab24173f20455c849c0cbe6cb3931d33d4901f39b52c105d381405b8d0"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/msg/CustomMsg.msg",
+      "bytes": 341,
+      "sha256": "f42d6709db951b1fa307e929e742c0593cbf0d1b0ff977d2ed63ad8d7cee0a96"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/msg/CustomPoint.msg",
+      "bytes": 353,
+      "sha256": "b64b31a8edc8c8b3765d82b5d3ccd2d2e1f217b9525ef7007ab918674c619c59"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/package.xml",
+      "bytes": 3395,
+      "sha256": "2e3eb6932e9fe365d31aa69926aa6cae76464f4176008cf33de26f0fbee29c27"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/package_ROS1.xml",
+      "bytes": 3395,
+      "sha256": "2e3eb6932e9fe365d31aa69926aa6cae76464f4176008cf33de26f0fbee29c27"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/package_ROS2.xml",
+      "bytes": 1123,
+      "sha256": "084b1db3a68ef3cf979da0c8ce6a8bf9566dc586ebfdd51d0dbe012f43c3d2dd"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/call_back/lidar_common_callback.cpp",
+      "bytes": 2276,
+      "sha256": "8f37b7dda4236edbcb4a87cfa6a016e4105ca1e0b8e0e99f2446953636412196"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/call_back/lidar_common_callback.h",
+      "bytes": 1575,
+      "sha256": "e0fd66f13ad20b0426b9b5384abee61c8b2b85ace2e9904c470da9fd7c0cc366"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/call_back/livox_lidar_callback.cpp",
+      "bytes": 15357,
+      "sha256": "3c89ef3bbcc78488b1117421ff05d0100d5ff4867df5c6752e68f4f8b364f635"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/call_back/livox_lidar_callback.h",
+      "bytes": 3296,
+      "sha256": "cd484274d87f1cc43c0a2b72a9d04d728db37369238e43b72c83de80f34abacf"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/comm/cache_index.cpp",
+      "bytes": 3858,
+      "sha256": "dca25f47674f530249e94c0ac8ac368d122910ca66336bd1bee65a06d2f01667"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/comm/cache_index.h",
+      "bytes": 2055,
+      "sha256": "65c635bd6903564bc1e0547113a6aff52e592c16295ed23264b5726317327c01"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/comm/comm.cpp",
+      "bytes": 2209,
+      "sha256": "73e6b7469337528ffb60b0f670bedc3c01dfcd7d8a048e72e8f04bd5d839f126"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/comm/comm.h",
+      "bytes": 8580,
+      "sha256": "72c639ba1d6eaf7c355050672c865c7615cea3619abee628683d98920fb31fa4"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/comm/ldq.cpp",
+      "bytes": 4682,
+      "sha256": "b5a11f2b4b658e4fc2c53dc261a7401e09516a6276e9b1a9c7568a4ee6d86a3f"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/comm/ldq.h",
+      "bytes": 2330,
+      "sha256": "01ccf8d13f84475cb126dea1f15546a59ce9398968360e6484da5832729aa077"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/comm/lidar_imu_data_queue.cpp",
+      "bytes": 2248,
+      "sha256": "7f9ecbdad433653233b2701dbd06dd4f7f523d0e972cc5cb4bf0aca2ed7494b5"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/comm/lidar_imu_data_queue.h",
+      "bytes": 2632,
+      "sha256": "cc8ae6d425cf6fb173b59072e5310f7b984e776a9d8277c8e9e0ef9d9dc58998"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/comm/pub_handler.cpp",
+      "bytes": 16120,
+      "sha256": "1cc813603036627f1e7e98d099cc8710d65f213035ac796186bd5f1b302cbcbc"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/comm/pub_handler.h",
+      "bytes": 4465,
+      "sha256": "0d46b585f457e948a32eda201b78fc6b2f922b27a515da3f7d730c2114fc892e"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/comm/semaphore.cpp",
+      "bytes": 1470,
+      "sha256": "7ea77d2b2b9f5aca1aa1c4f239d427398699b504a25b5bcd1667545650a0c587"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/comm/semaphore.h",
+      "bytes": 1623,
+      "sha256": "a07dedf139d6a1f85d572b23f4a69b1f0574577366b2ecd759f06da4995eadcb"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/driver_node.cpp",
+      "bytes": 1485,
+      "sha256": "2367146dbf888b8eb6ac661792c3858ae7c2f8bb3136888fbbaee7593f1c1a1c"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/driver_node.h",
+      "bytes": 2482,
+      "sha256": "503851a1fe806c633377f891479b8b434e89a0ac4070db80d9e3b8fc36070a6a"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/include/livox_ros_driver2.h",
+      "bytes": 1734,
+      "sha256": "b344ecdbe8a80b4bbe6cc5ba72a49dbf9dec979d283b43fcd2f36669acd48efa"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/include/ros1_headers.h",
+      "bytes": 2216,
+      "sha256": "25d868b0c4e1972ad61619b26e47c5538d282b520143f6c03300b0adeab8fb0b"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/include/ros2_headers.h",
+      "bytes": 2478,
+      "sha256": "16aa2833be3b35acb0bbb9c71e78e261f65d7251740565571ae24d2c43b579d1"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/include/ros_headers.h",
+      "bytes": 1341,
+      "sha256": "67c52fefe87f71fb83d99774ba8569fff0de7c698a6917c31de2f4ccff3c78eb"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/lddc.cpp",
+      "bytes": 22762,
+      "sha256": "37dcc252a743fafe14c7ee5341d8827f1a5298ec910502b201bd0feb3476c71e"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/lddc.h",
+      "bytes": 5868,
+      "sha256": "31a78f172caf82f3b2938c9e2c296cd582da228d0043c17849f7a9b20788d4ea"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/lds.cpp",
+      "bytes": 5950,
+      "sha256": "a53c0f737a61282c523a00bbdc5a76bfbb7ed5616fc5bbb4265bc64ca0853efe"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/lds.h",
+      "bytes": 2689,
+      "sha256": "090334fb09e5b9a946042af06abe46d0f5a098b9978527b42ac1d0b7ce022b63"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/lds_lidar.cpp",
+      "bytes": 6492,
+      "sha256": "e7fce0a88e662a2335b6153502ad912bceeb6d15e003cbda5eba55ba132acb99"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/lds_lidar.h",
+      "bytes": 2734,
+      "sha256": "6b94cb2956ec36028d445500741914bccec05cc1e352fc73d269e21051e42990"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/livox_ros_driver2.cpp",
+      "bytes": 7899,
+      "sha256": "5be8fe1854e345660e78cf4f1c600eb87bb34ead54ef50b16033fba0cecdd621"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/parse_cfg_file/parse_cfg_file.cpp",
+      "bytes": 2381,
+      "sha256": "f893a7397f05e81826d6097233ae6a90d3428f921ceb04d9f957427f4bcf7e5e"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/parse_cfg_file/parse_cfg_file.h",
+      "bytes": 1721,
+      "sha256": "c0512f0ddb732861ec152e93d7d6477dd620865b4a92c385379d013286506998"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/parse_cfg_file/parse_livox_lidar_cfg.cpp",
+      "bytes": 5293,
+      "sha256": "ce7cc5df5f7e09768a2d256f0d1cae30ae9c6214d821be95036311cef08912ed"
+    },
+    {
+      "path": "G1Nav2D/src/livox_ros_driver2-master/src/parse_cfg_file/parse_livox_lidar_cfg.h",
+      "bytes": 2047,
+      "sha256": "0ad28cf4977f6c9c07aa23dbac80f66ba4da7680042ba59f8d0d794d78d262f8"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/CMakeLists.txt",
+      "bytes": 919,
+      "sha256": "1e44e29c2de92e41058fe4c09aa36cf0f295a3f0a93423cb28c5b975a75ed361"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/launch/move_base.launch",
+      "bytes": 1121,
+      "sha256": "6d6d02136f2153b43b94e50ddc28854d018c9f24150847e99380421f8622a0b1"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/package.xml",
+      "bytes": 792,
+      "sha256": "f9080f6d6b3fec231b07837117eccd76987b537ab35762ad6ce77a4acd0bfbe5"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/param/costmap_ackermann_params.yaml",
+      "bytes": 2094,
+      "sha256": "eeea8d9cdb4cd51da74cfaae3a3fb8b3e62764cb534830f78eb1ee73815424ae"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/param/costmap_converter_params.yaml",
+      "bytes": 1545,
+      "sha256": "34d4631534b7a2fb4f8d78bdd063c9d6e904494ee61d8cd0f98cc935904e33ce"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/param/costmap_params.yaml",
+      "bytes": 2669,
+      "sha256": "6e7dacf0db7fc1ec499e15c7daac7ef04630068895fa0aed9dad8405ed1edb21"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/param/dwa_local_planner_params.yaml",
+      "bytes": 990,
+      "sha256": "a3e3db212a015468cbbf1bc9ba6e01942a9866353566436bc8ad74f9c1191e80"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/param/mbf_sbpl.yaml",
+      "bytes": 463,
+      "sha256": "5770adf8b32f6be7fcee47438d9def28eab0cd33a36e947acf05382685fed35c"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/param/move_base_flex_params.yaml",
+      "bytes": 468,
+      "sha256": "0d015c0e0d2ef49fd1a666b18dd4d91d8cc243b521a0698fd46c7b7b782aa318"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/param/move_base_params.yaml",
+      "bytes": 456,
+      "sha256": "4ed4ec39f8e7a11e749a568ae46e7500790fb80e0cb222bd1cb5d978331be0e8"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/param/recovery_behavior_params.yaml",
+      "bytes": 314,
+      "sha256": "9efbdcc7b881a4921d74fef42b1217b9640a1c370d8868e88ea5a653b0a4035c"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/param/sbpl_global_params.yaml",
+      "bytes": 173,
+      "sha256": "f523dfd895cab07c05cd4216b6d0edced9f95c187b0499ec5b2f7aec6750ca77"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/param/teb_ackermann.yaml",
+      "bytes": 2676,
+      "sha256": "5151ea0e4fd7fb3ed0b3381d89e75ce888ede5b9a1d8b5d4a8c5b613ba4a5386"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/param/teb_local_planner_params.yaml",
+      "bytes": 4599,
+      "sha256": "4180c2e4a6cb8b1976629f935adfc665736e0e7c923ca65dae18b546b2bcf352"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/param/xjureso005.mprim",
+      "bytes": 25104,
+      "sha256": "57673179c6cd9f629890e50210ae393904837242a5e8ecdd960a118ce7ca09f9"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/param.zip",
+      "bytes": 13128,
+      "sha256": "f4dd71a3af123fa692b71b1877c6e2a31be7051cee4dc1219b44bf812daab9b3"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/rviz/mbf.rviz",
+      "bytes": 23771,
+      "sha256": "58b97d8c21e116e2a8f4113550dc580cdd20e7538157fbc4d5d0c1e06cb41a96"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/rviz/pnc.rviz",
+      "bytes": 10439,
+      "sha256": "704f034c9131fcf47d72490827a17d5c9ccc7edc650bc43303e739f525f10b55"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/rviz/teb.rviz",
+      "bytes": 11788,
+      "sha256": "4c2f6eb7f841268b0756a075b99525c9010fde7bc3640ad985317346ed707f81"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/src/costmap_clear.cpp",
+      "bytes": 1016,
+      "sha256": "679b83d38b07c0081c7e1a7e324211b9eb35f91c19053be4f4bd4ccb1e5d2d4f"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/srv/xju_task.srv",
+      "bytes": 474,
+      "sha256": "8aac913554c051987396bea2ea01756512c6a171cd04eb7484ea507e2ed57fbf"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/移动速度备份/param/K/teb_local_planner_params.yaml",
+      "bytes": 3096,
+      "sha256": "befd31ae47aef8d2303462533d135a5310d29c7de71bd4d58c487aa92217196d"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/移动速度备份/param/M/teb_local_planner_params.yaml",
+      "bytes": 3097,
+      "sha256": "5a29d5f7dbb46ba1822577047a748925dd746c4fcbf334bd80c35cf3de87807a"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/移动速度备份/param/k-teb_local_planner_params.yaml",
+      "bytes": 3096,
+      "sha256": "befd31ae47aef8d2303462533d135a5310d29c7de71bd4d58c487aa92217196d"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/移动速度备份/param/m-teb_local_planner_params.yaml",
+      "bytes": 3097,
+      "sha256": "5a29d5f7dbb46ba1822577047a748925dd746c4fcbf334bd80c35cf3de87807a"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/运控备份/20260108稳定版慢速u1/teb_local_planner_params.yaml",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/运控备份/20260512运控备份/teb_local_planner_params.yaml",
+      "bytes": 4652,
+      "sha256": "9ff55d4a7bd2bee0a52aae44b43a7e54c971dc7f6a30e9762c6806d5f07f9ed8"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/运控备份/全适应速度快定位有误差/teb_local_planner_params.yaml",
+      "bytes": 4653,
+      "sha256": "1d3db7e48f7c6d3b0c1f29227cc6c309ba9dd592a8f40ec14b7532877f184da3"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/运控备份/有车测试版/teb_local_planner_params.yaml",
+      "bytes": 4654,
+      "sha256": "e8e03b04a4e38c3c15f13a3dc465796b49f867639e40fc549e5286b3e9ba994e"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/运控备份/走跑/teb_local_planner_params.yaml",
+      "bytes": 3098,
+      "sha256": "40a63e7a18a897f5d69a5ae2cc76fe51cdf020ca01b8c0661f38f19a8a0c838f"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/运控备份/走跑U2/teb_local_planner_params.yaml",
+      "bytes": 3098,
+      "sha256": "40a63e7a18a897f5d69a5ae2cc76fe51cdf020ca01b8c0661f38f19a8a0c838f"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/运控备份/走路/teb_local_planner_params.yaml",
+      "bytes": 3096,
+      "sha256": "befd31ae47aef8d2303462533d135a5310d29c7de71bd4d58c487aa92217196d"
+    },
+    {
+      "path": "G1Nav2D/src/movebase/运控备份/走路-优化版/teb_local_planner_params.yaml",
+      "bytes": 3097,
+      "sha256": "ca6d23cc314dd8fd0a3ad28b334a2bd65bd00164caf9469740c7731d09f8160d"
+    },
+    {
+      "path": "G1Nav2D/src/pointcloud_to_laserscan/CHANGELOG.rst",
+      "bytes": 2298,
+      "sha256": "e7e91aadaaf84c49467575855606c5948b68ae639dc585a18996255fee8f1de8"
+    },
+    {
+      "path": "G1Nav2D/src/pointcloud_to_laserscan/CMakeLists.txt",
+      "bytes": 1328,
+      "sha256": "93db08b85645052fdfc488d783e909110d12de06e65fd29c24a65ac84952d6e4"
+    },
+    {
+      "path": "G1Nav2D/src/pointcloud_to_laserscan/README.md",
+      "bytes": 95,
+      "sha256": "ab9bbb1786d3943247b6d4f38a7eb51b592098005ff86e64afa5a2f24ae99103"
+    },
+    {
+      "path": "G1Nav2D/src/pointcloud_to_laserscan/include/pointcloud_to_laserscan/pointcloud_to_laserscan_nodelet.h",
+      "bytes": 3494,
+      "sha256": "faea2635792f34d09033b49b4a75f4eec9d695684885f2aec243bcb2dbf8e056"
+    },
+    {
+      "path": "G1Nav2D/src/pointcloud_to_laserscan/launch/point_to_scan.launch",
+      "bytes": 1729,
+      "sha256": "89e91ad43914983573e0c0ac2516dcc6694e82d60ff80f1741bb6052bc2caad5"
+    },
+    {
+      "path": "G1Nav2D/src/pointcloud_to_laserscan/launch/sample_node.launch",
+      "bytes": 1310,
+      "sha256": "d522e4bfc2fd61cfa1309771cf775f8b8b27b1f9274172456ae867670b494290"
+    },
+    {
+      "path": "G1Nav2D/src/pointcloud_to_laserscan/launch/sample_nodelet.launch",
+      "bytes": 1420,
+      "sha256": "97e85ea564037d2c28c873c960c86cb293a7863f22db76683add6d6ca5d64259"
+    },
+    {
+      "path": "G1Nav2D/src/pointcloud_to_laserscan/launch/xiaoqiang_lungu_kinect.launch",
+      "bytes": 1201,
+      "sha256": "8c87b097ba0fec4562ff42ad386e77435dfe5274707207ea19d439a40959f779"
+    },
+    {
+      "path": "G1Nav2D/src/pointcloud_to_laserscan/launch/xiaoqiang_pro_kinect.launch",
+      "bytes": 1203,
+      "sha256": "e1f8716584a11a72d8bc0bc85521563eea1e593afb80b46b70933e85d351dca4"
+    },
+    {
+      "path": "G1Nav2D/src/pointcloud_to_laserscan/launch/xiaoqiang_rslidar.launch",
+      "bytes": 1065,
+      "sha256": "0bdb6a1068a71d379639545a037f5fb607b800624ff83bb297b034ebbc852f27"
+    },
+    {
+      "path": "G1Nav2D/src/pointcloud_to_laserscan/nodelets.xml",
+      "bytes": 358,
+      "sha256": "54bfa985ac766ebe9a9a7d8e9b8d7013b6fec793fd2bf3136870c8afe46456c4"
+    },
+    {
+      "path": "G1Nav2D/src/pointcloud_to_laserscan/package.xml",
+      "bytes": 1138,
+      "sha256": "544c457dbeaf9029d83c739267dfb12f30ba3d46a0ff9d0b732821f22f944592"
+    },
+    {
+      "path": "G1Nav2D/src/pointcloud_to_laserscan/rviz/kinect.rviz",
+      "bytes": 6921,
+      "sha256": "4ed54f2e594c96f072ff1d65c8dd42eba092c91eaea6fac7db3be9761a251d4c"
+    },
+    {
+      "path": "G1Nav2D/src/pointcloud_to_laserscan/rviz/rsldiar.rviz",
+      "bytes": 7006,
+      "sha256": "9886aa8738b04467e47fc271f5f95cf92775293bee04cc9eeb488c5fca926622"
+    },
+    {
+      "path": "G1Nav2D/src/pointcloud_to_laserscan/src/pointcloud_to_laserscan_node.cpp",
+      "bytes": 2500,
+      "sha256": "ed0c7433d8b96fd9c02da2e9a99421b9c161ebe12496e7866aad3bf4863b66d7"
+    },
+    {
+      "path": "G1Nav2D/src/pointcloud_to_laserscan/src/pointcloud_to_laserscan_nodelet.cpp",
+      "bytes": 9091,
+      "sha256": "55769f5f981d4bc137bf4b75829830d480d0a7f5144d0fbc5999c3351b564fdd"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/CMakeLists.txt",
+      "bytes": 7303,
+      "sha256": "6e1b084d3d3a83c12f43b7d6acbc212cff9ec3dfd3073707c53c856f656c5d70"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/PROJECT_SUMMARY.md",
+      "bytes": 8240,
+      "sha256": "6efb2334acc9cd5beca11bd2b940d857e9709b0bf3fea509ccdbe1bd63d32969"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/README.md",
+      "bytes": 3437,
+      "sha256": "28899ca343e8c3767c234c35bd7236ee14e75704865bc0cfd9ac2eac09efdedb"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/USAGE.md",
+      "bytes": 3511,
+      "sha256": "7afcc11c80f79f5ae72335565948844efba4242332e0e45128ce573d32901645"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/config/map_edit.rviz",
+      "bytes": 3955,
+      "sha256": "852856ccb15ea35604bb244c73fe74251ab84592fbed30c5297d5b326a3cad94"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/images/ros_map_edit.png",
+      "bytes": 138703,
+      "sha256": "d75e23b2399dbb314850c206989013f900e38ff95f873e7f20cc007eab80cbd3"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/include/ros_map_edit/map_edit_panel.h",
+      "bytes": 1356,
+      "sha256": "d8dd1269202929fd6d2d6b9ec9802d21e64a56036eccb24fc9ed71a22911732f"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/include/ros_map_edit/map_edit_tool.h",
+      "bytes": 848,
+      "sha256": "c9274baf009d6fc192365dce57585e107b24bea57860213a2b7b591f98bc898c"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/include/ros_map_edit/map_eraser_tool.h",
+      "bytes": 1883,
+      "sha256": "53e548bd282e92a310e1f4bfafd9d741d772da0dcdf8ee0d49982fdea7c174f4"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/include/ros_map_edit/map_file_manager.h",
+      "bytes": 2313,
+      "sha256": "6235367b97569b2fa24e42ed451184c863fd12ef5f864e0868330614c5a1ed6d"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/include/ros_map_edit/region_tool.h",
+      "bytes": 1938,
+      "sha256": "c1b5011aa2f33b7ace70fe0878422b32f154d8e9a8cb4e1e19242c11e27f0251"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/include/ros_map_edit/tool_manager.h",
+      "bytes": 945,
+      "sha256": "b586a66409ae2a898d7a9a92b70cd695b2347bd650251f454899a9c020fd5ffd"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/include/ros_map_edit/virtual_wall_tool.h",
+      "bytes": 1719,
+      "sha256": "741d60e1774f13d7cc1896a0f38aa090867946c91730e6b9eb15ac20db7dd88f"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/launch/map_edit.launch",
+      "bytes": 580,
+      "sha256": "e7b1fc0593d2a7fc7478054b079757442fd404d743875370670eb198ced6d341"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/launch/map_server.launch",
+      "bytes": 912,
+      "sha256": "07437ffcccc094f1f97d0413913f934031cd5c360fdc0dde6e11ea5a5f2127bb"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/maps/25030901.json",
+      "bytes": 1674,
+      "sha256": "aec873a84a35cc641273f729a1dfe710dcbc98ac98a9d768d33ca09de5ba4e4d"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/maps/25030901.yaml",
+      "bytes": 122,
+      "sha256": "747cd3c42e47f504235110a94097f5b50fe3195e1d09164f886221ff5b231836"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/maps/25030901_region.json",
+      "bytes": 610,
+      "sha256": "af0490c66777b45cc0e23f659f1ce000bcf6b7b9eb0362080b9d47b567d9045d"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/maps/map.json",
+      "bytes": 685,
+      "sha256": "c26a1c9ba77d55c03c2a933d85a4f9ef3622ed81a57011362986febe47e48995"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/maps/map.yaml",
+      "bytes": 107,
+      "sha256": "f78f918f751868dbec57fea62ee96289090b0096f47095b5bd8a1a6343a48aec"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/maps/map_region.json",
+      "bytes": 20,
+      "sha256": "4b5a40f4fae3eedcae311d59e16df43324331498d7ac8d38a6caa83d08b57583"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/maps/test.json",
+      "bytes": 16,
+      "sha256": "2ccf516395cdb1be54602996740800f61f2cc0687cb58440307ecd7887730c73"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/maps/test.yaml",
+      "bytes": 114,
+      "sha256": "4656e45cafab71c36a48be9919d68fe53f612fad943604544a7ee6f46d8b7f41"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/maps/test2.json",
+      "bytes": 136,
+      "sha256": "b71aedcf814cd3dde2109e291f62ae20c5efe830078c6ba33ad31c20542b1323"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/maps/test2.yaml",
+      "bytes": 112,
+      "sha256": "0287672ad1928c50e8b2ad2064274789ebe1d11157a086ad6700d1f927526879"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/maps/test2_region.json",
+      "bytes": 271,
+      "sha256": "e4cee12a29c4ef7a6200dc99999027cdf1a9b3522d532b0e815044b213312c3c"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/maps/test_region.json",
+      "bytes": 19,
+      "sha256": "d3ab1e9609ebc9536debc1a77c689e25b3f331fafe768d92d6bbd33218dee109"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/package.xml",
+      "bytes": 4507,
+      "sha256": "37bb5e3ffc78e8416f8236b069349785973daf113ef8ab984b212c0cc93b9b65"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/params/costmap_common_params.yaml",
+      "bytes": 2993,
+      "sha256": "7129fff649b94f0808f80eddb72b33d49aaca46fb6f51bd0f5247fe9a5316be9"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/params/global_costmap_params.yaml",
+      "bytes": 469,
+      "sha256": "e7b736be645234ae0a60e065560b6561fe58c4816f6d0af8b78b4cb1efbc3f84"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/params/local_costmap_params.yaml",
+      "bytes": 712,
+      "sha256": "cf6399fa5d4634d8eedbef13cece0956eae265880eef6941fe3cb14226ad9910"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/params/mnav.yaml",
+      "bytes": 23,
+      "sha256": "77ce964e7dbc7493ece7b1653ea8215ef8b743a0af61e9f6dbd3f3844fed83bf"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/plugin_description.xml",
+      "bytes": 1216,
+      "sha256": "f406ea808be210873b0f4e852c69b9302234a74876a3df7b07547dfd41c30f9d"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/scripts/create_sample_map.py",
+      "bytes": 1204,
+      "sha256": "2ef83410d343f7a1da81d717b9f6e440ed399e45d4a816c5f785b2330b939bd5"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/scripts/debug_map_loading.sh",
+      "bytes": 2007,
+      "sha256": "da57bb46ffb489ed568dc26d5deae05256ce0a664cf9f983613560153c0daeed"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/scripts/multi_point_navigation.py",
+      "bytes": 19443,
+      "sha256": "2ad4d1755dcebc0cd8bdedf3192b2bf672a7bce7f1b561522877bdfdaca4f897"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/scripts/save_pose.py",
+      "bytes": 10385,
+      "sha256": "ca2c63eac36653522d61cd1b51686d60f5ff84337aba4171069c80b55aa0b16b"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/scripts/test_eraser.sh",
+      "bytes": 907,
+      "sha256": "9029f585d71b5f1ce3bfaf54cd0eee06e6be04999e750f8318d326f8da3139e2"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/scripts/test_file_dialog.sh",
+      "bytes": 4304,
+      "sha256": "b07e947fc83fdd89b1440bbf6c88c525e7e4686499f55547583506f197f1b9cf"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/scripts/test_map_loading.sh",
+      "bytes": 2781,
+      "sha256": "0e849ad1a08a919430a05d117d0e0ececd64042ee0d31e04cee37ce4912399c4"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/scripts/test_map_loading_only.sh",
+      "bytes": 1484,
+      "sha256": "e922f8c4b91e6a4ecaac2fe0682d16d04871e1012743695825dc3ee7797e9f27"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/scripts/test_plugin.sh",
+      "bytes": 601,
+      "sha256": "3424e3b627df6a275c7b9c6fcbac8cdbebd7e6f8b8382ef2c7585bb3d6924cda"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/scripts/test_save.sh",
+      "bytes": 1150,
+      "sha256": "ef1dc13426ec15f10ad23cc0fb79e23bfcb9efca09e89d61641ecc93bb2bf56c"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/scripts/test_square_brush.sh",
+      "bytes": 3205,
+      "sha256": "0c510e0dbc89bac521e82c6c2d9a12147e680e6940f9b9a48004d6f1249a68a0"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/scripts/test_with_new_map.sh",
+      "bytes": 1506,
+      "sha256": "588cdb14ff9bb9e2eb95e1584979c6b05ce388fe37d457e1b828631e6f01505c"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/scripts/virtual_wall_map_publisher.py",
+      "bytes": 12964,
+      "sha256": "dce6aeeafe671502c6dc1002d5c3c7fdb016b1c56791e5d949dc569a4d22237d"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/src/map_edit_panel.cpp",
+      "bytes": 17489,
+      "sha256": "c692fa80c9142a33e2307946f1a696d8bc47393b4221b35a598b9aea08fdef16"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/src/map_edit_tool.cpp",
+      "bytes": 2523,
+      "sha256": "657a0c4e56b513f2f277d6d1268f4ff5749336f704fffb83eaf912712848540e"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/src/map_eraser_tool.cpp",
+      "bytes": 8492,
+      "sha256": "22004bbae4c666bcd0602cf64dbbb7e2eb443e52099c1ae3cdc9f3f0239d464c"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/src/map_file_manager.cpp",
+      "bytes": 21086,
+      "sha256": "278d6388c14def13ac3e8050e3c3aaf7a35c61119d92e9073c1126125754adfb"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/src/region_tool.cpp",
+      "bytes": 13901,
+      "sha256": "780ae26dfa67997d155bd1fa3d954702227f9ab93384821f0a592d726eaf16c6"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/src/tool_manager.cpp",
+      "bytes": 735,
+      "sha256": "8f8756ecc24e30c4336a3a6922efa31f257c585b3df5c8f067a8b78e15e9fa18"
+    },
+    {
+      "path": "G1Nav2D/src/ros_map_edit/src/virtual_wall_tool.cpp",
+      "bytes": 11433,
+      "sha256": "162e9005143c7d49eb8234009fe9f2b9e67294a56e0a0266d4c887fb39e019fd"
+    },
+    {
+      "path": "G1Nav2D/src/tool/CMakeLists.txt",
+      "bytes": 2982,
+      "sha256": "eafcd98c2b73512e441731cbec049bfbeb6f84913dd2b043a516af3e1fdd5b16"
+    },
+    {
+      "path": "G1Nav2D/src/tool/LICENSE",
+      "bytes": 1068,
+      "sha256": "99dc341d361bca49a8f42ce1c710300dda1d1b226c507f61b5c063d7d728fd20"
+    },
+    {
+      "path": "G1Nav2D/src/tool/launch/body2any_pointcloud.launch",
+      "bytes": 373,
+      "sha256": "e8ca6ebbb4f0e7fd32ab8c5ad2a9def51b4e55f23ec62203163e9aebb5331c9b"
+    },
+    {
+      "path": "G1Nav2D/src/tool/launch/body2map_pointcloud.launch",
+      "bytes": 238,
+      "sha256": "1cb7258bffb8e77a2fcf06b194da9c9e47ef888a13fbe89153c2814d2caa1413"
+    },
+    {
+      "path": "G1Nav2D/src/tool/launch/downsample_pointcloud.launch",
+      "bytes": 581,
+      "sha256": "79b4037212e0a8e9e021cd3635d1cd444fe196fc59e329f5fce83e0a65351a34"
+    },
+    {
+      "path": "G1Nav2D/src/tool/launch/livox2velodyne.launch",
+      "bytes": 114,
+      "sha256": "2ab6ca6fd8cc6ef19507e04794d3dd9c07e07c5e7222e3f872cfd1134487984d"
+    },
+    {
+      "path": "G1Nav2D/src/tool/launch/local2map_odom.launch",
+      "bytes": 219,
+      "sha256": "0e35385bc7b57382b255bda0a6e19ded86a709089c169eb4b7fa55cb4b5b689b"
+    },
+    {
+      "path": "G1Nav2D/src/tool/launch/path2waypoint.launch",
+      "bytes": 112,
+      "sha256": "0ae83d3fb4521e312adec3523de85d56b8fd612e14384068f086b97e70cb0dc5"
+    },
+    {
+      "path": "G1Nav2D/src/tool/launch/play_teaching_path.launch",
+      "bytes": 294,
+      "sha256": "50e0404e1435e957a3ae515d92838fd3333602fffd5d23283571676a4d35b210"
+    },
+    {
+      "path": "G1Nav2D/src/tool/launch/record_teaching_path.launch",
+      "bytes": 350,
+      "sha256": "672e67ad91cda1649968660f9254399bad4767f7c4db5ead7e0bea1c8548e6ea"
+    },
+    {
+      "path": "G1Nav2D/src/tool/launch/robot_around_pointcloud.launch",
+      "bytes": 381,
+      "sha256": "5bdb227c99fa9a28167a3652d31a8ed167dce19d83e0806ed473c06dfe01ee4d"
+    },
+    {
+      "path": "G1Nav2D/src/tool/package.xml",
+      "bytes": 2697,
+      "sha256": "66607739da0c1243c3ba2543ad0dd19ae494bfca3f84746bee935f33a5a4eaac"
+    },
+    {
+      "path": "G1Nav2D/src/tool/path/teaching_paths.txt",
+      "bytes": 87100,
+      "sha256": "56e245c6375c361632c74bc8ecff3cc4b29517e65b229f300d0b422e47f18ce8"
+    },
+    {
+      "path": "G1Nav2D/src/tool/scripts/get_robot_pose.py",
+      "bytes": 5663,
+      "sha256": "3e8581a5582fca3431811d8f10dd91e9f827851d161962d58749c52eaf87f57c"
+    },
+    {
+      "path": "G1Nav2D/src/tool/scripts/mapping_h5_bridge.py",
+      "bytes": 6570,
+      "sha256": "b43f8ce14fbf43f981a3c454e676bba8fec1b65627a7aaade7b1391a4b6d9210"
+    },
+    {
+      "path": "G1Nav2D/src/tool/scripts/nav_ws_bridge.py",
+      "bytes": 9993,
+      "sha256": "1ed5000ca30380aeb2a94189cb726d8ffb42dd169f1cdf0f3017b5548edf7e16"
+    },
+    {
+      "path": "G1Nav2D/src/tool/scripts/play_teaching_path.py",
+      "bytes": 2491,
+      "sha256": "29d6e52c1fda2b0da19943a3b8f21fa8d48ebd11f28444207f83cbf7587d275c"
+    },
+    {
+      "path": "G1Nav2D/src/tool/scripts/projected_map_ws_bridge.py",
+      "bytes": 3965,
+      "sha256": "c6635066b197147f8b536155052c7bf515b6d8ae4226ca4194918554d06692d9"
+    },
+    {
+      "path": "G1Nav2D/src/tool/scripts/record_teaching_path.py",
+      "bytes": 5006,
+      "sha256": "7040b8a04033c3f827b96fd97b74de6c0be9167bb94cd785fa5ca21b53885f02"
+    },
+    {
+      "path": "G1Nav2D/src/tool/src/body2any_pointcloud.cpp",
+      "bytes": 1893,
+      "sha256": "29a76cfac56b81ed784a373351a93fb5ded7f934eb6cbb81fefa53b71433958f"
+    },
+    {
+      "path": "G1Nav2D/src/tool/src/body2map_pointcloud.cpp",
+      "bytes": 16043,
+      "sha256": "b53785bc5b7033bf82c1a327848c0ae08f1aef023452d55f6986d26492aa017c"
+    },
+    {
+      "path": "G1Nav2D/src/tool/src/downsample_pointcloud.cpp",
+      "bytes": 2574,
+      "sha256": "e139bcacb008f30b428d8678835afcd925b4d50a07352545e7eead4fd8274c25"
+    },
+    {
+      "path": "G1Nav2D/src/tool/src/livox2velodyne.cpp",
+      "bytes": 3984,
+      "sha256": "7e2da6a38f6e93d867460261abb8e1c73adce701d1d5a2abbeda7e9ba3c7691e"
+    },
+    {
+      "path": "G1Nav2D/src/tool/src/local2map_odom.cpp",
+      "bytes": 1409,
+      "sha256": "c5e92bac9cccfddfd978d54a9cd8843c3fb1d9b320cc1203d253f5e0eb4878d6"
+    },
+    {
+      "path": "G1Nav2D/src/tool/src/path2waypoint.cpp",
+      "bytes": 9430,
+      "sha256": "86413fc0555d392d2db4ed66bc7767bf375683376c3d2ca3a3b49674881fbf8c"
+    },
+    {
+      "path": "G1Nav2D/src/tool/src/robot_around_pointcloud.cpp",
+      "bytes": 2768,
+      "sha256": "9265b0985bc357999d3a49260c8b68c63247506909daf7d45777e4201be43ddc"
+    },
+    {
+      "path": "G1Nav2D/src/velocity_smoother_ema/CMakeLists.txt",
+      "bytes": 7089,
+      "sha256": "8dd421e0fbb527442266599ca01f012b20115958023fc87716d106cc6ffdbf64"
+    },
+    {
+      "path": "G1Nav2D/src/velocity_smoother_ema/README.md",
+      "bytes": 2348,
+      "sha256": "624822ccb5611524aa82767a5d3b7f32b11598210fb2bbdd1b380dbb9aa4be8d"
+    },
+    {
+      "path": "G1Nav2D/src/velocity_smoother_ema/include/velocity_smoother_ema/command_filter.hpp",
+      "bytes": 4425,
+      "sha256": "5bbb41822324fe0517ae77674512f9a976d0beedbe0aa2c0dea62ca51bc35d5b"
+    },
+    {
+      "path": "G1Nav2D/src/velocity_smoother_ema/include/velocity_smoother_ema/velocity_smoother_ema.hpp",
+      "bytes": 732,
+      "sha256": "38e34eb110452ea2a84cf52f1360a1bcf8e8f3a5cdaebc5807da5cd5c959732a"
+    },
+    {
+      "path": "G1Nav2D/src/velocity_smoother_ema/launch/velocity_smoother_ema.launch",
+      "bytes": 414,
+      "sha256": "81dc16a07ff2afc4cb8bcf13a09615f7f0f5f21ab2a13b731959a533daa8705c"
+    },
+    {
+      "path": "G1Nav2D/src/velocity_smoother_ema/package.xml",
+      "bytes": 2654,
+      "sha256": "15fb8a2ebffb4e76488664066d46f8db35d34c4c45699df07785550b4506f09d"
+    },
+    {
+      "path": "G1Nav2D/src/velocity_smoother_ema/param/smoother.yaml",
+      "bytes": 416,
+      "sha256": "f6fe7cc27f5e28cbd6343ac2364164f2c39bb56345b3a7bb45a963396dc825fb"
+    },
+    {
+      "path": "G1Nav2D/src/velocity_smoother_ema/src/velocity_smoother_ema.cpp",
+      "bytes": 3130,
+      "sha256": "8486101e71ad680df0f2c93e582d87f24ea6d65d696c854f4d64dc439067d36b"
+    },
+    {
+      "path": "G1Nav2D/src/velocity_smoother_ema/test/command_filter_test.cpp",
+      "bytes": 6345,
+      "sha256": "c4bef15222313cc0b3cd28e5204aa5bfb488ee2d6ad7862322257182d93cd324"
+    },
+    {
+      "path": "G1Nav2D/src/velocity_smoother_ema/velocity_smoother_ema.png",
+      "bytes": 21984,
+      "sha256": "1ecf4ba3666430b27351e667f397c925e4a72d07bf5a598cb7f4ee20f5cb0c99"
+    },
+    {
+      "path": "G1Nav2D/启动脚本.txt",
+      "bytes": 184,
+      "sha256": "98706d75dfb22ac9bf99632a062f17420368c1a894eb66f69a7aad4d27c4c8ad"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/FastCRC/FastCRC.h",
+      "bytes": 7415,
+      "sha256": "8a33e872e2a1426f6f3d69bb2c2872ee3402c70d8c6b1394f2c093f8ecc55c22"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/FastCRC/FastCRC_tables.h",
+      "bytes": 88526,
+      "sha256": "54cc42cdc240e84347d07e61af83c6bed38c7ceac2f15a4847cfa11e509bfbac"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/FastCRC/FastCRChw.cpp",
+      "bytes": 16870,
+      "sha256": "1eab1fe68bf64cf937759e81c4ae69c2f1a929769a6651b595658e3e9af49117"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/FastCRC/FastCRCsw.cpp",
+      "bytes": 13727,
+      "sha256": "7fe0edc04442a29a0b076b4d09c7b250d2c4f89bba1bfa6a43f2493d33524937"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/FastCRC/LICENSE.md",
+      "bytes": 1071,
+      "sha256": "2cdf510c5ad25585baf540ce3867879baaa80238c0bb29cdbe661435e6ea1c3d"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/FastCRC/README.md",
+      "bytes": 1546,
+      "sha256": "a05479bb2028ad8d4e664295a5aec7ab78a6c3aa3292a461800c6f3a7fdbaf13"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/allocators.h",
+      "bytes": 10437,
+      "sha256": "49b554ebfc2369438fd9365b28f0453485d936437847de31a7bb770001abca55"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/cursorstreamwrapper.h",
+      "bytes": 2230,
+      "sha256": "de1a52b674c998a7581f9cb69c9310757f825595c3fef985d5d153f7ac1b6aaf"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/document.h",
+      "bytes": 117966,
+      "sha256": "6afae6a8825b03b4c6baa42a513e5a5242ac96b4c95968c07ee8bda8163eb3ff"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/encodedstream.h",
+      "bytes": 10634,
+      "sha256": "4bb5e4853943d5ead467e46b5313d95aa23645018cda93e7907a934a06cfbb26"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/encodings.h",
+      "bytes": 29827,
+      "sha256": "0201c664e471c615b5cd27d2e981cf8b21ac9c210bdf108062fb2fd9d493a501"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/error/en.h",
+      "bytes": 3739,
+      "sha256": "484dcd32c0b35b7a81561740fad970402c0ffcec44311381a2fb265cfe5e273c"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/error/error.h",
+      "bytes": 6472,
+      "sha256": "aa9b40b61754b227248b4b092331dbd5721ef6565d962e4c225c6c1e7974817e"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/filereadstream.h",
+      "bytes": 2961,
+      "sha256": "8c7d282eb32897969430f5a94178cab238433e25fa139ee74eda87eb1d42690a"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/filewritestream.h",
+      "bytes": 3073,
+      "sha256": "1db49a4cd9038f2670667e5900f346d231a0eece06ac1817f33feb63f33545b9"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/fwd.h",
+      "bytes": 4120,
+      "sha256": "2a0e024b8b6b87d1d3f50d1d0dd4656124c161fea88406265d097d613498854e"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/internal/biginteger.h",
+      "bytes": 8296,
+      "sha256": "0be8375c2d39bc1f8f57b755a26569db9ed35c86d066b294911690513786afb3"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/internal/clzll.h",
+      "bytes": 2035,
+      "sha256": "93d71c879a805a8c17cfd8913cf1add4d2f25407bbf668abe1dcca6e40ebc746"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/internal/diyfp.h",
+      "bytes": 11387,
+      "sha256": "f2c45af9e73a451e5472e5dd10a7672085e9a3504d1f3ab864a5b9cc7445c1eb"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/internal/dtoa.h",
+      "bytes": 7724,
+      "sha256": "965deca8d1382c30db9e0a1d51200a4934bfe032eda3dcde10d4bdb39817c05a"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/internal/ieee754.h",
+      "bytes": 2990,
+      "sha256": "a1b4a88d5e0f633e99c7d68a34fdebc6289e6be0f0cfba452a7793166d7ea970"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/internal/itoa.h",
+      "bytes": 9272,
+      "sha256": "45c96bab2327aee5ff999167fac8f768a3a9e1003142fa68e3aee50b54d93e12"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/internal/meta.h",
+      "bytes": 6731,
+      "sha256": "a20dad578c7d714ff04029f04719df19be5835c30bf9c7028d226e67d065bf0b"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/internal/pow10.h",
+      "bytes": 3957,
+      "sha256": "7a7693969c936ddb6d036467a0f6b53def076922bb838d250eb40f12b2e2ce0e"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/internal/regex.h",
+      "bytes": 23238,
+      "sha256": "624cf078b8179a198374eebe94331aa2d8b70b08997f4e270ccfaccc90fd09b2"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/internal/stack.h",
+      "bytes": 6805,
+      "sha256": "46c4f98ff2acce64d1280458dd1224aaee9a9035eebd3462cdf31ee25a13702e"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/internal/strfunc.h",
+      "bytes": 2184,
+      "sha256": "e083b68f7bf3570653fce1e3ea0a573a75745a096dd80194e1a2fde4d7695bb8"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/internal/strtod.h",
+      "bytes": 8656,
+      "sha256": "2134c15ad40b9584ecb8e1a7f6163277a6d783574b3fb08574f88ab769b91751"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/internal/swap.h",
+      "bytes": 1421,
+      "sha256": "48ecb57c3b2ca955ad3cccdfff03835be495a56c9c5da07ab9c02f488b7d7fe1"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/istreamwrapper.h",
+      "bytes": 4112,
+      "sha256": "b3c03a5826b8d8c9dfcef64eb09d8ec4a955e0c6edd38d9c3a127dbca53ec2dc"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/license.txt",
+      "bytes": 5152,
+      "sha256": "a140e5d46fe734a1c78f1a3c3ef207871dd75648be71fdda8e309b23ab8b1f32"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/memorybuffer.h",
+      "bytes": 2573,
+      "sha256": "cf661606aa41bee3466cee20174bc7454210e8aabac929b1d8e9e189fef601ab"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/memorystream.h",
+      "bytes": 2673,
+      "sha256": "8dd07eb66381de95a69c9cadce537d76c0349f913cfe183ab6243c54863c4dcf"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/msinttypes/inttypes.h",
+      "bytes": 7824,
+      "sha256": "92f53d3ba0cdebaeb20a52893f89d0c29aae5111a3a8bb555eabdd8c96e3244f"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/msinttypes/stdint.h",
+      "bytes": 9151,
+      "sha256": "515ff5e244372892293c20bbfe6a5b3dcca7265442941df31dcebdfbe2a828fe"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/ostreamwrapper.h",
+      "bytes": 2342,
+      "sha256": "366d953184777b0de0a102ef38cf56f9fc766422246f16be9af2dad8ad787054"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/pointer.h",
+      "bytes": 60230,
+      "sha256": "d74ab63c76a99a5a92418d2420cc733c22767b6d9e9a6f989689940de4f7c478"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/prettywriter.h",
+      "bytes": 10253,
+      "sha256": "e8495e521c5d726c7e2ff59b1f7eb6f08a1e0298055d1fbbc4f29f08d736360d"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/rapidjson.h",
+      "bytes": 24293,
+      "sha256": "22ffbcb054cecc5180bdb72478ab32598c9aa40421322f17923809acdcf99629"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/reader.h",
+      "bytes": 89290,
+      "sha256": "291f6d315a3617c9bd83d8b2836f9dc1e45a2a9770dcb0745f9eaaa603b715a6"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/schema.h",
+      "bytes": 101259,
+      "sha256": "473b44fcb9f88d2fa7439e1c9f86899deae44205323a7ba7709e6b4b513f01fa"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/stream.h",
+      "bytes": 6694,
+      "sha256": "58e37336dafded31177eb2381f0d553de8a5fd33c8580873de32b0e467d85677"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/stringbuffer.h",
+      "bytes": 3984,
+      "sha256": "8434f52ca786bf876b3d3d693ce8e2d399325ddf891e0437becd41ed590806e9"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/rapidjson/writer.h",
+      "bytes": 26178,
+      "sha256": "b42eca28a42d7b3806aaf691ee921accabcf911be6728c35fa04e14162a72bdf"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/LICENSE",
+      "bytes": 1120,
+      "sha256": "9eb46fbd9cbdb0793e496ab744aa2e290b4e39825a2da5cba3ba6fa36bb25683"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/async.h",
+      "bytes": 3082,
+      "sha256": "1bde72990e5a257dc0e504dddacb3b87e1917022b500a27b3a7f6291be605e66"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/async_logger.h",
+      "bytes": 2323,
+      "sha256": "a106c25916b1cd75b93213c6bbf7901a68452d01ed807d7a9e86cabe98a895ee"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/common.h",
+      "bytes": 6046,
+      "sha256": "15b198046a43cbade6128cde15cdc92086628108aefdd23dc79411f99115c506"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/details/async_logger_impl.h",
+      "bytes": 2989,
+      "sha256": "747c2c65518816ef1843ec0fc97e54cc44bea3826997f1b2942979a0ed3f5787"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/details/circular_q.h",
+      "bytes": 1531,
+      "sha256": "fc7d426985bc3a1152820712799531896a22fdfce37a37de4da094315a179dd3"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/details/console_globals.h",
+      "bytes": 1195,
+      "sha256": "c1aa7ca8aaa4e302409c7346c1b6151fc9e8bb7c7c854bb7f26430a084956caa"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/details/file_helper.h",
+      "bytes": 3892,
+      "sha256": "b936cec4ef1befe70e3ea5c6f681bca0f5ed86e034937bb3472b66e4cfa31fa7"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/details/fmt_helper.h",
+      "bytes": 3444,
+      "sha256": "e8e83597b5ba80020a469a833ffd0ecd7025d64079a2df9754d0dda0685e9d18"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/details/log_msg.h",
+      "bytes": 1269,
+      "sha256": "3b0c767bcd002f9343dd043ea33ad1aec7b569671e81df0665162979daa7d569"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/details/logger_impl.h",
+      "bytes": 11499,
+      "sha256": "eb40321c51c82b889b7f439a7fe5a3970382a77900359adf0a6abdee147196e4"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/details/mpmc_blocking_q.h",
+      "bytes": 3437,
+      "sha256": "303cb6f41b0e36ed663e6f47ad762c201fe715a9ac97aa448db3caabfb97b02d"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/details/null_mutex.h",
+      "bytes": 683,
+      "sha256": "fda252aef2f7eedf1dfe568753ae9a11da0c5179752350ce667db85ee9151602"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/details/os.h",
+      "bytes": 10605,
+      "sha256": "d72824ff220aec056bc355cbe65394fafdb8804fbd657512d70db00b04264230"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/details/pattern_formatter.h",
+      "bytes": 39208,
+      "sha256": "f17b20dc98f8105ffc0ff11cb024e29e43852b7cc083115d2c94a5ef834637ff"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/details/periodic_worker.h",
+      "bytes": 1844,
+      "sha256": "f98bb0dc13b33a943dcb691cf0a4bbbb7376688e72da22de98c4efd88386f1cb"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/details/registry.h",
+      "bytes": 8086,
+      "sha256": "5ac3d6cb05c44e85b191348f6c9c49ffe614fa56bcf9e53e3bc4c9f9a0b0fbbc"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/details/thread_pool.h",
+      "bytes": 6420,
+      "sha256": "ccbb96ac813a6e8d137a73186cd02419a32bfa9e18436ee6c90dcfcd9f1e7668"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/fmt/bin_to_hex.h",
+      "bytes": 4360,
+      "sha256": "4f35606238b6cbdf4252df16b7fb3a0bb3a2b8f47613c301fc9cbcdbb71e0020"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/fmt/bundled/LICENSE.rst",
+      "bytes": 1310,
+      "sha256": "560d39617dfb4b4e4088597291a070ed6c3a8d67668114ed475c673430c3e49a"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/fmt/bundled/chrono.h",
+      "bytes": 13284,
+      "sha256": "65b9c60e7087d6777117607c4aa0551f85385b5e2fb1fbe7f32dca2861b16265"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/fmt/bundled/color.h",
+      "bytes": 21968,
+      "sha256": "b975e869f28357e684de70668a8e7940a90b4b45d31aa5cbed44b8578ece82da"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/fmt/bundled/core.h",
+      "bytes": 47459,
+      "sha256": "907c67c6a2065fcc0351ce963ac43033aa82e12b1db5d8b0f8105a706663bd5e"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/fmt/bundled/format-inl.h",
+      "bytes": 32309,
+      "sha256": "7a2e969f2f0c26136dcab196231c6a7fbebefcd793e51cd2005f62ebd1c11952"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/fmt/bundled/format.h",
+      "bytes": 109393,
+      "sha256": "234b9186b0a873b6229aa266abfd2ebd213e023a2993929149eaa2495ad40592"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/fmt/bundled/locale.h",
+      "bytes": 2782,
+      "sha256": "f49f539f85b43e4cc78926fee401d5981d191d958c642ef5205fc0cce30c1fdd"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/fmt/bundled/ostream.h",
+      "bytes": 4771,
+      "sha256": "1d9425bc01a205e79fdf7cb6fdbb92e3670f7a0173a5a431a7ff355eba5bcc28"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/fmt/bundled/posix.h",
+      "bytes": 8820,
+      "sha256": "aae4dfc21228375ecdc9880cb0d6b0d1c7137a8265414d1a72e13b917242f900"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/fmt/bundled/printf.h",
+      "bytes": 25813,
+      "sha256": "e359d9d89d903bb3ce652134e2a02013d1b39b612b68811f045386ee4e725254"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/fmt/bundled/ranges.h",
+      "bytes": 9069,
+      "sha256": "6c6b80dfda0fa4844dfbdb7552f5236f69822c71f4c8338d59500c9bac9342f3"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/fmt/bundled/time.h",
+      "bytes": 4311,
+      "sha256": "6dc3f198b82abfb4051f99a47c6278366da50a00298557fc4feb105e0a7c82b3"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/fmt/fmt.h",
+      "bytes": 534,
+      "sha256": "ec8eb1c65986300dfebb23e52e8d89e9c3b77496093af04a7fe4f8c994fdbaf7"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/fmt/ostr.h",
+      "bytes": 371,
+      "sha256": "58b853c076466464f85a7095119697ea162e7fc15a1760c1cda54c5b121856d5"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/formatter.h",
+      "bytes": 436,
+      "sha256": "a8c04ae8f6b31f472159e1e2fa1bce0199efbacd1128333145ad252e3e289d96"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/logger.h",
+      "bytes": 5771,
+      "sha256": "a247881b6a6c108abcbe8e33a8a422d33991620fc9c3f7e450f903e52f730ffa"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/sinks/android_sink.h",
+      "bytes": 3292,
+      "sha256": "91c2e6b0c38583c10f3b758b27f31f3d2da25101215a8f544a650969775c2c95"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/sinks/ansicolor_sink.h",
+      "bytes": 5248,
+      "sha256": "ce74e2da37ec0b4f5642a16da264488452ed0b3b677fae55c72b6f01ea417708"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/sinks/base_sink.h",
+      "bytes": 1738,
+      "sha256": "69288b1f3b71a0b25969bf598ca38c9f7f49c2ca3adfc5a68888219e950851ce"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/sinks/basic_file_sink.h",
+      "bytes": 1827,
+      "sha256": "5509410659c581d03f1acca97270505e1311cfdaa9218ca4ac8c73314a7cdf4a"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/sinks/daily_file_sink.h",
+      "bytes": 4281,
+      "sha256": "90d15da6f6a61168ed976f0022fa967a8b9b3f0169e3967f0ec40cdafa713459"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/sinks/dist_sink.h",
+      "bytes": 2233,
+      "sha256": "1f265bac52c7adc57080a31540d98cbe23efaa2fda62c7c74864a7590b8bb34a"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/sinks/msvc_sink.h",
+      "bytes": 1034,
+      "sha256": "4f2e85966da04efad01742197fb9d59c83e8812a8dec0454aa95d92e31fe0439"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/sinks/null_sink.h",
+      "bytes": 1175,
+      "sha256": "ff22009be51101b5d150f10dc3955be12045538e98a3d0022d94110712d8179a"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/sinks/ostream_sink.h",
+      "bytes": 1276,
+      "sha256": "a59c8b69c4a656a87980af04a0dd912c327c6032543d23f8825575bef01a95f3"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/sinks/rotating_file_sink.h",
+      "bytes": 5260,
+      "sha256": "6d637caf383a15afa8c1b1e67ad04ba71bee26e8c25b2ac02c6ab7c62ead8f6b"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/sinks/sink.h",
+      "bytes": 1364,
+      "sha256": "507198c460b087751dbb69b49adf388411af5216a06459ec94664ae00f8b94a4"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/sinks/stdout_color_sinks.h",
+      "bytes": 1659,
+      "sha256": "6b9047075b3682258349e8f6359d77feebb0fb04e27520864fe4b97f984dbbf2"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/sinks/stdout_sinks.h",
+      "bytes": 2867,
+      "sha256": "dfacafbedeaffab9d18a66229c7c086e33fc6bad707e888beb76f0930b6d44ef"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/sinks/syslog_sink.h",
+      "bytes": 2963,
+      "sha256": "199ecd66edcfadf8b2a5936e277acad955d22f42d98019197167d75b8db78093"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/sinks/wincolor_sink.h",
+      "bytes": 4844,
+      "sha256": "31182b56a80bbf17d784e0498a3de2ac19c0fbdac7d377a505255068a001b9cd"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/spdlog.h",
+      "bytes": 10861,
+      "sha256": "33b8c0f738f2ade4c942b1f87ade7030e732afc8d5638e9bbb7d507ac420e9a2"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/tweakme.h",
+      "bytes": 6780,
+      "sha256": "4ce1f47e5f900739036d4755b14e58f0305aed19ef428b78600665218524107f"
+    },
+    {
+      "path": "Livox-SDK2/3rdparty/spdlog/spdlog/version.h",
+      "bytes": 305,
+      "sha256": "23681d463577afc11519160c14cd0110630e9d03f3115e696462637980e845cf"
+    },
+    {
+      "path": "Livox-SDK2/CHANGELOG.md",
+      "bytes": 878,
+      "sha256": "6b08f206fd460ce752b9cc5d2847a16f10f037534fd48970624f6a6e7611d1e9"
+    },
+    {
+      "path": "Livox-SDK2/CMakeLists.txt",
+      "bytes": 412,
+      "sha256": "cea3beb9763ecbbaac8ef7b6885bb9a86ea2a15eee7b54ea5d9e2704b4330925"
+    },
+    {
+      "path": "Livox-SDK2/LICENSE.txt",
+      "bytes": 13252,
+      "sha256": "8a71b3149554ec5b7df17087e63affedc4c0dbc7fb65bfe5495cdf86224fa85f"
+    },
+    {
+      "path": "Livox-SDK2/README.md",
+      "bytes": 10670,
+      "sha256": "75d2f7b4fa229cfb8c20b1229ec023b6eb196e0761f1e1a118ed1a3450b6414f"
+    },
+    {
+      "path": "Livox-SDK2/include/livox_lidar_api.h",
+      "bytes": 22008,
+      "sha256": "c11acd639acddea99cc1b29ce748374356652ced7133f7460fd6d2ad24632e5f"
+    },
+    {
+      "path": "Livox-SDK2/include/livox_lidar_cfg.h",
+      "bytes": 1731,
+      "sha256": "fbeb3b91897fad5b71b169e4e4f88bfb3b4b716cecb07e45aa08569cf159e9a5"
+    },
+    {
+      "path": "Livox-SDK2/include/livox_lidar_def.h",
+      "bytes": 19354,
+      "sha256": "19f29a1bff6f7d117893645f6266bf72a9cae97d673089bb4ce7411593e81f12"
+    },
+    {
+      "path": "Livox-SDK2/samples/CMakeLists.txt",
+      "bytes": 582,
+      "sha256": "bc5344549cc6ccf249a451d7dd4acb2571acf33308dbca26ce0081086335932f"
+    },
+    {
+      "path": "Livox-SDK2/samples/debug_point_cloud/CMakeLists.txt",
+      "bytes": 192,
+      "sha256": "5cc2b500d40099cacd6a6f9bff231a85337e1bf9b2d87d22a088764e59d54fcc"
+    },
+    {
+      "path": "Livox-SDK2/samples/debug_point_cloud/config.json",
+      "bytes": 517,
+      "sha256": "092516d76b94d0488cad6cd65616d16dbb8ce238a0c21e023bae592356294d1b"
+    },
+    {
+      "path": "Livox-SDK2/samples/debug_point_cloud/hap_config.json",
+      "bytes": 487,
+      "sha256": "a7aad263c1564b7c3102739cc2347409d1904708c515befd4abbb91be3fb85f5"
+    },
+    {
+      "path": "Livox-SDK2/samples/debug_point_cloud/main.cpp",
+      "bytes": 5246,
+      "sha256": "59b5e20f8d6f06c0f74be0cc3037f357d3a39d0e7bc297858799274fdd30df51"
+    },
+    {
+      "path": "Livox-SDK2/samples/debug_point_cloud/mid360_config.json",
+      "bytes": 498,
+      "sha256": "c54bf627b5bf69637839f30164b1063f8a4f4d5fd21f75839ed05d4662d20a37"
+    },
+    {
+      "path": "Livox-SDK2/samples/lidar_cmd_observer/CMakeLists.txt",
+      "bytes": 297,
+      "sha256": "e9d3b2dbab4e9752f373606ddd71a140095d8500256a7a293522115ae4c32297"
+    },
+    {
+      "path": "Livox-SDK2/samples/lidar_cmd_observer/config.json",
+      "bytes": 517,
+      "sha256": "092516d76b94d0488cad6cd65616d16dbb8ce238a0c21e023bae592356294d1b"
+    },
+    {
+      "path": "Livox-SDK2/samples/lidar_cmd_observer/hap_config.json",
+      "bytes": 499,
+      "sha256": "1d61cff146b8fb415b4aa95a7f0d6ce89f6e3989176c8b7dc5c28be59b50cbbe"
+    },
+    {
+      "path": "Livox-SDK2/samples/lidar_cmd_observer/main.cpp",
+      "bytes": 2999,
+      "sha256": "ba3f144008db8d715e0d8a7fef6f3b79c79fbb6cbf1d60dac6b0603ce560e91b"
+    },
+    {
+      "path": "Livox-SDK2/samples/lidar_cmd_observer/mid360_config.json",
+      "bytes": 510,
+      "sha256": "eb942e2ec0f9db40adfbcfcb493b73f301150f5215f81c160d70ebd445209559"
+    },
+    {
+      "path": "Livox-SDK2/samples/livox_lidar_quick_start/CMakeLists.txt",
+      "bytes": 202,
+      "sha256": "747067c949e6a87d9dbf34ffca2f6189fedafe6dc8f4673b8612998ed18285d1"
+    },
+    {
+      "path": "Livox-SDK2/samples/livox_lidar_quick_start/config.json",
+      "bytes": 517,
+      "sha256": "092516d76b94d0488cad6cd65616d16dbb8ce238a0c21e023bae592356294d1b"
+    },
+    {
+      "path": "Livox-SDK2/samples/livox_lidar_quick_start/hap_config.json",
+      "bytes": 499,
+      "sha256": "1d61cff146b8fb415b4aa95a7f0d6ce89f6e3989176c8b7dc5c28be59b50cbbe"
+    },
+    {
+      "path": "Livox-SDK2/samples/livox_lidar_quick_start/main.cpp",
+      "bytes": 7998,
+      "sha256": "cda5807878c25938be0289b476b2c620f96c1399a3abe762db3b3443b5475767"
+    },
+    {
+      "path": "Livox-SDK2/samples/livox_lidar_quick_start/mid360_config.json",
+      "bytes": 510,
+      "sha256": "eb942e2ec0f9db40adfbcfcb493b73f301150f5215f81c160d70ebd445209559"
+    },
+    {
+      "path": "Livox-SDK2/samples/livox_lidar_rmc_time_sync/CMakeLists.txt",
+      "bytes": 308,
+      "sha256": "8ba555c39bb3e33fe164a727028acfa8c23b2c1afcb44d0ce2fa5e1a84ae2ab8"
+    },
+    {
+      "path": "Livox-SDK2/samples/livox_lidar_rmc_time_sync/config.json",
+      "bytes": 517,
+      "sha256": "092516d76b94d0488cad6cd65616d16dbb8ce238a0c21e023bae592356294d1b"
+    },
+    {
+      "path": "Livox-SDK2/samples/livox_lidar_rmc_time_sync/hap_config.json",
+      "bytes": 499,
+      "sha256": "1d61cff146b8fb415b4aa95a7f0d6ce89f6e3989176c8b7dc5c28be59b50cbbe"
+    },
+    {
+      "path": "Livox-SDK2/samples/livox_lidar_rmc_time_sync/linux/synchro.cpp",
+      "bytes": 6288,
+      "sha256": "27c6092d309449c54ca265308a449f1320610df971e5f8689e52229bb294139e"
+    },
+    {
+      "path": "Livox-SDK2/samples/livox_lidar_rmc_time_sync/main.cpp",
+      "bytes": 4193,
+      "sha256": "6ad052c16deed02f98a1ecf324e5f998e155392eff1c5f2e5f559ebeefd08fff"
+    },
+    {
+      "path": "Livox-SDK2/samples/livox_lidar_rmc_time_sync/mid360_config.json",
+      "bytes": 510,
+      "sha256": "eb942e2ec0f9db40adfbcfcb493b73f301150f5215f81c160d70ebd445209559"
+    },
+    {
+      "path": "Livox-SDK2/samples/livox_lidar_rmc_time_sync/synchro.h",
+      "bytes": 2901,
+      "sha256": "37792059eba3ec98811392baece762f113710fb116a2f6c983c0c7acccb73c95"
+    },
+    {
+      "path": "Livox-SDK2/samples/livox_lidar_rmc_time_sync/win/synchro.cpp",
+      "bytes": 5809,
+      "sha256": "7e44d030de8779db17ecdb4dfcc9d818a0fff3b916287542a2e798d1a1262a29"
+    },
+    {
+      "path": "Livox-SDK2/samples/logger/CMakeLists.txt",
+      "bytes": 181,
+      "sha256": "5738ce24a51b2bc61fa2874238582c7adafe83bd3ad7fdb0600ff0983f11b5c9"
+    },
+    {
+      "path": "Livox-SDK2/samples/logger/config.json",
+      "bytes": 612,
+      "sha256": "1cba2dea623af1ba36afb82d7c298c4eece443bf1f20975c39438a32058cc418"
+    },
+    {
+      "path": "Livox-SDK2/samples/logger/hap_config.json",
+      "bytes": 549,
+      "sha256": "8cd0e7529e0607cc56f1fa8ce004808ae15f966fe980977fff98a53fe727a262"
+    },
+    {
+      "path": "Livox-SDK2/samples/logger/main.cpp",
+      "bytes": 4729,
+      "sha256": "281849a75f5d861d6d2ad0fe6657d08476c0934ad24e2865801d61d3a261ad0e"
+    },
+    {
+      "path": "Livox-SDK2/samples/logger/mid360_config.json",
+      "bytes": 560,
+      "sha256": "91abf6180cb3a4990e41046e4ee041dc7ae363bb133eb46461526c67035bd519"
+    },
+    {
+      "path": "Livox-SDK2/samples/multi_lidars_upgrade/CMakeLists.txt",
+      "bytes": 203,
+      "sha256": "edd517690359d9d6b6700d4e58fd19316a3a8d3e2286a06ca1178793aabc2286"
+    },
+    {
+      "path": "Livox-SDK2/samples/multi_lidars_upgrade/config.json",
+      "bytes": 517,
+      "sha256": "092516d76b94d0488cad6cd65616d16dbb8ce238a0c21e023bae592356294d1b"
+    },
+    {
+      "path": "Livox-SDK2/samples/multi_lidars_upgrade/hap_config.json",
+      "bytes": 499,
+      "sha256": "1d61cff146b8fb415b4aa95a7f0d6ce89f6e3989176c8b7dc5c28be59b50cbbe"
+    },
+    {
+      "path": "Livox-SDK2/samples/multi_lidars_upgrade/main.cpp",
+      "bytes": 3939,
+      "sha256": "bfd55a484ef6fd37d09a27a70ead21b18aaafd2ffbc716d59490386b281a8491"
+    },
+    {
+      "path": "Livox-SDK2/samples/multi_lidars_upgrade/mid360_config.json",
+      "bytes": 510,
+      "sha256": "eb942e2ec0f9db40adfbcfcb493b73f301150f5215f81c160d70ebd445209559"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/CMakeLists.txt",
+      "bytes": 4285,
+      "sha256": "9cee2f1a6c958317154a6140d6ca053045fe99b69923f37d38855423c896c055"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/command_callback.h",
+      "bytes": 7515,
+      "sha256": "11ea39c0df2a1c1fcd55e71e7fdfc3e73df9ecdd5d4c38b7795d86ae935f45bc"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/io_loop.cpp",
+      "bytes": 3449,
+      "sha256": "51acbb82696af042f1df0dd35deab6638078a3728b23cde0d34bacc1b63457b4"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/io_loop.h",
+      "bytes": 2670,
+      "sha256": "d589b5c511414ad085a314f5ac6f340d68485e4c9b6ef8741f286d6787f9bb17"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/io_thread.cpp",
+      "bytes": 1641,
+      "sha256": "ccca2b4e207361b25c0d23f7d0436c21fe228cc17056ad6ffd8ba2a389673f52"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/io_thread.h",
+      "bytes": 1693,
+      "sha256": "dc2f129b486f95b1e7ca8dcb2fd3dd40f53b65a7140154674787d66f6e3595f4"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/logging.cpp",
+      "bytes": 2146,
+      "sha256": "1e854fb0936239af466d114055925e2a14aa4059b2136345f85687e8fae9c26f"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/logging.h",
+      "bytes": 2468,
+      "sha256": "d2a8c658e06a9531c8d9aa261579bdc44efde977924d3759f0c195ff3a5d6339"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/multiple_io/multiple_io_base.cpp",
+      "bytes": 2634,
+      "sha256": "047678daec2fc09c9090d916cdbd7207e7f808ce7d952e4519c469c044b7bd39"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/multiple_io/multiple_io_base.h",
+      "bytes": 2701,
+      "sha256": "0ddd32c039d5f99d4d2bb7715a4a857b92dd76b2a2b44e3b8015898f0babf15d"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/multiple_io/multiple_io_epoll.cpp",
+      "bytes": 3119,
+      "sha256": "a3aa786e33be4f4830994f30d97e405aba6b12db26a77aac5ee5ea28d54a52f4"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/multiple_io/multiple_io_epoll.h",
+      "bytes": 1770,
+      "sha256": "19b867eed1a4b7f387878c56c42cdc334ea6ac7e1e8aafb81a35862b8e953263"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/multiple_io/multiple_io_factory.h",
+      "bytes": 2021,
+      "sha256": "6b821852ea5ca0ba7ea12176da702bd5ad2e5b450275e236ae42510bef3dc277"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/multiple_io/multiple_io_kqueue.cpp",
+      "bytes": 4146,
+      "sha256": "3fc579c9ae20a547eed5e6b2d26c975d03eb3f9031f2523f21d14711d2a39004"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/multiple_io/multiple_io_kqueue.h",
+      "bytes": 1806,
+      "sha256": "294f80e0108191f2adf6914f7f7ef2bb3280df093971f71dce2eccd4c45524e0"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/multiple_io/multiple_io_poll.cpp",
+      "bytes": 3129,
+      "sha256": "1d3f75e8fd1ff5332e8b9c631155960c7f85fff73cf8606d8c599c71b8dd339c"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/multiple_io/multiple_io_poll.h",
+      "bytes": 1761,
+      "sha256": "4d1260881bcb88f0f5d9ba7b3a74ba527b1381163eaa0db6ef4d037e6f9dd045"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/multiple_io/multiple_io_select.cpp",
+      "bytes": 3275,
+      "sha256": "45e8e7708c9f16591e62435dcd3261f0757e710de0e3f9ef480666fed73acc6c"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/multiple_io/multiple_io_select.h",
+      "bytes": 1734,
+      "sha256": "d65c2279429afe5341a7f7ebfd25618c84d60491934a5b91301b15daf18861e4"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/network/network_util.h",
+      "bytes": 2178,
+      "sha256": "415701f2c7c414ae7552136421d92f635ddd6817cf489e3de96c21b775b780c8"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/network/unix/network_util.cpp",
+      "bytes": 6139,
+      "sha256": "0627dff0662394da7b2f839b9aa649114d950aac1bd2c75049ebb94e96d4fc3e"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/network/win/network_util.cpp",
+      "bytes": 5662,
+      "sha256": "869c288ee43fe73548d812516140fc02d729bc20811df89a240a7e82783bd331"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/noncopyable.h",
+      "bytes": 1500,
+      "sha256": "0735ef6902571ec9ad6421d81ad9a4bc00b78f0824171a5787e308602c4bb4a3"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/thread_base.cpp",
+      "bytes": 1839,
+      "sha256": "93b8b2c613a6df84e52395ff5785dfa9e67ce5b40cf4085c576b0971805e5bca"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/thread_base.h",
+      "bytes": 1694,
+      "sha256": "4ea799e351d9ac4db9f393fd4a8cfa75986226b2f5167315d4c6be854a6a21d1"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/wake_up/unix/wake_up_pipe.cpp",
+      "bytes": 2768,
+      "sha256": "fd98af5806f5dcb77418d0c89ab67017999ed1551fab6160df071e6d8d28bbe1"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/wake_up/wake_up_pipe.h",
+      "bytes": 1581,
+      "sha256": "9ebc0266829f033c3ce52ff51cc8811a02a6f8c1fe7b444ca2662aedd2910e75"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/base/wake_up/win/wake_up_pipe.cpp",
+      "bytes": 3631,
+      "sha256": "a13434ea5a9f466bc207ad9d253f389427e7d8d0ea1bb2ed477911e1412d4ac5"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/comm/comm_port.cpp",
+      "bytes": 1926,
+      "sha256": "5cd600de3810030216da6313c399ef114386b98bd40020138a13004fa52a1d3f"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/comm/comm_port.h",
+      "bytes": 1671,
+      "sha256": "1d27321f1a975779a479827d1f0162638a47dfe5dbc7201d68a806d0a5f8053b"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/comm/define.h",
+      "bytes": 10884,
+      "sha256": "a2d61ecc9d748adf93a133de42dc3fb648a29a5150a2786ff184e09d9a882e71"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/comm/generate_seq.cpp",
+      "bytes": 1599,
+      "sha256": "5da24cfef577446f257358cd800cac96af5b415e0db37ca4f0e73f22f80610e1"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/comm/generate_seq.h",
+      "bytes": 1448,
+      "sha256": "53e0af4907e9939e29e8f577dc20776fa19d8b095e8aa28f0826dfd3db736e32"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/comm/protocol.h",
+      "bytes": 2667,
+      "sha256": "342e11184d7c775d2cd178cf605586427d13a1fcd9cd9437211dbec61f8a09dd"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/comm/sdk_protocol.cpp",
+      "bytes": 4109,
+      "sha256": "f863c28d96588afbf870c80702bc43e7f7c77fd41c5dcd3c99f48ea46a7f46e7"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/comm/sdk_protocol.h",
+      "bytes": 2447,
+      "sha256": "4cf4e4818a9e3541a2839eb40f0c167bd57257ab759f5a030c4f165679b816fd"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/command_handler/build_request.cpp",
+      "bytes": 17982,
+      "sha256": "b20a82eb8bbaa322009857af1df3bf774a717c398692fe74afcc7929213d7eb8"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/command_handler/build_request.h",
+      "bytes": 2901,
+      "sha256": "ec97044f15acbb75737067f174bb6b1f5e1a3d3c931ae2bff83fade692781fc0"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/command_handler/command_handler.h",
+      "bytes": 2265,
+      "sha256": "45188ace6b6aad784b52fbdef0e5dde10bd3fc338f4d33f8cb7aebfce2554abe"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/command_handler/command_impl.cpp",
+      "bytes": 35487,
+      "sha256": "522b902e5770c57cbcc7066d0c3142d3dec58678db4fd2af6b9e00691cbb8b27"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/command_handler/command_impl.h",
+      "bytes": 7828,
+      "sha256": "ab3f7d6080ee281257304b15293ef096174a728f19606379b42b732a009a1571"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/command_handler/general_command_handler.cpp",
+      "bytes": 26413,
+      "sha256": "c87e33104a3e499769b0ecccf663a117c1bdca01b75223cdc91a7ddda6417e96"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/command_handler/general_command_handler.h",
+      "bytes": 6029,
+      "sha256": "b8691365d81e2e2821abe471615415e3cf4bbfb6d2862ee2c31e432c78e3d16a"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/command_handler/hap_command_handler.cpp",
+      "bytes": 10813,
+      "sha256": "00758c6d123129e17a72f540e4e52698d0dc27350eeb87eaffe93a1782320173"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/command_handler/hap_command_handler.h",
+      "bytes": 3424,
+      "sha256": "2468ee96a29765a1f0dda72f321615ed38953ec70a2e1e114c047a1d3c3f90b1"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/command_handler/mid360_command_handler.cpp",
+      "bytes": 10412,
+      "sha256": "d925eef3b52e850343fd91ddb56fe6a38ebfbf476e9d6771578dafb91b7e6169"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/command_handler/mid360_command_handler.h",
+      "bytes": 3407,
+      "sha256": "a575869b71c9ac79da402d8061fdfca4fe977858c077d777cb49105bf04bbb59"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/command_handler/parse_lidar_state_info.cpp",
+      "bytes": 26345,
+      "sha256": "7bd5e611f77f22df66e31f6e7ab4fde7b60a9b73055c8c2db5c83ab0b78b92be"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/command_handler/parse_lidar_state_info.h",
+      "bytes": 2537,
+      "sha256": "2301e1d8e15a448e2d6029d7077f5780f571c180633674a8481daa97ac654d9f"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/data_handler/data_handler.cpp",
+      "bytes": 3936,
+      "sha256": "d4d59a0454c77c2c4f5702d96874b6c1f250516169cafc28d70286f37db45d62"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/data_handler/data_handler.h",
+      "bytes": 2410,
+      "sha256": "9498f0ee4c4ca979b55ef3878a9a41273f7a7d583edab5b16cc833951421e57c"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/debug_point_cloud_handler/debug_point_cloud_handler.cpp",
+      "bytes": 4236,
+      "sha256": "c2e45ce27488562bed2cac67853290fa35cbe85f770b6482b022b397a9592d66"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/debug_point_cloud_handler/debug_point_cloud_handler.h",
+      "bytes": 2459,
+      "sha256": "2af6044de25639eaf1a0fac07b22c2b5d6dde1d9313fcccc80ced625a0997b09"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/debug_point_cloud_handler/debug_point_cloud_manager.cpp",
+      "bytes": 1911,
+      "sha256": "dbf910247fcde590d9e643e1d1572182233d0f8146d0b4cd31f56a7b311fd5e8"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/debug_point_cloud_handler/debug_point_cloud_manager.h",
+      "bytes": 2406,
+      "sha256": "e55e23eb40c4db42ad1743650b8ac6af31e9c552a5db43cb57f234fb8eac728a"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/device_manager.cpp",
+      "bytes": 30845,
+      "sha256": "17fb42b9f3c8fed83d1219a4e911598385fa9a866f6137bcf6e6af0fa1e33e53"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/device_manager.h",
+      "bytes": 7054,
+      "sha256": "78c97876a8c1faa093314fd0c27b57f71884247f2bc7aa079b0b54005c880c3e"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/livox_lidar_sdk.cpp",
+      "bytes": 13580,
+      "sha256": "a9d47ccf89af3445b63ab246c47640407de5e8bf4928eb77e7236e5b9aadaec0"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/logger_handler/file_manager.cpp",
+      "bytes": 11084,
+      "sha256": "5062c984f8a54e685571b685b4169e26c6da7015954f2aaf9052195405e6e00c"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/logger_handler/file_manager.h",
+      "bytes": 1897,
+      "sha256": "14236dfb3326144d68e24804d0af61e0d79fa158aa5994090d1d61e41163cc64"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/logger_handler/logger_handler.cpp",
+      "bytes": 7642,
+      "sha256": "799c64d2439df3ef1dead55c0acc1407a35148d764db14d8df73b985c2bd7b9c"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/logger_handler/logger_handler.h",
+      "bytes": 2920,
+      "sha256": "81aeaaa9892c10d9f17aad341f1bc13a21d2527648bb279ab6459f04105697e7"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/logger_handler/logger_manager.cpp",
+      "bytes": 13219,
+      "sha256": "3b22a3b5366c176eb316b1c233ee2e6b2bc5aa1feb8b93fcdff62de896ffd144"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/logger_handler/logger_manager.h",
+      "bytes": 3985,
+      "sha256": "e029b74d199a4fa5351614656e9204a994d89c63ac4a8592c06cccae837f0d26"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/params_check.cpp",
+      "bytes": 6612,
+      "sha256": "baca34facd07de4f953c809ab74ac5a0f82d8ae0dca3a8a963fb2e6d38d47249"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/params_check.h",
+      "bytes": 2020,
+      "sha256": "1664f63068ca0ebc278ae94a7d012df19c265ff0a68f3b28e0566027950610c2"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/parse_cfg_file.cpp",
+      "bytes": 14546,
+      "sha256": "8578b744d5a2a765b467c32456cf2d692f3db4736fc39051a815196f4a4b047e"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/parse_cfg_file.h",
+      "bytes": 3222,
+      "sha256": "ba77ab667b983b71ad4dc8e1d37e3cfdc3904f35f61f6f3baf381b40da65394e"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/upgrade/firmware.cpp",
+      "bytes": 3086,
+      "sha256": "42e66a98f29926ebe35035e3b546105e0207457f65f452fb1e771091f97eaaee"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/upgrade/firmware.h",
+      "bytes": 3954,
+      "sha256": "2c4084706a8824cc5c010aca2d7ba56943f76ce16f42c27157ea96d3b08711f4"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/upgrade/livox_lidar_upgrader.cpp",
+      "bytes": 15978,
+      "sha256": "77b5d91b99ac8a95c70f4f8003b95f87e25ee78ff25b319afc5ec43ced163b60"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/upgrade/livox_lidar_upgrader.h",
+      "bytes": 3443,
+      "sha256": "836f1f9c1632edffa5f5a980ef6c5e5b855b6069f16f180a58ba181e72edb21f"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/upgrade_manager.cpp",
+      "bytes": 2833,
+      "sha256": "848719bb42fc04f4f214b282a478fd97f3858749c5924cb9dc3a863826d02b86"
+    },
+    {
+      "path": "Livox-SDK2/sdk_core/upgrade_manager.h",
+      "bytes": 2486,
+      "sha256": "1128979b3e6ea4005504a53c198f1d5f238eef500295890e76a41fcb767033fc"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3317,
+      "sha256": "b221ba14ed539e45c3090748e70c5e3468e7c4c0b60c9645501d141918056a64"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 4682,
+      "sha256": "ac6d16efa13a80a67a6288e4fc9b9cf5f646a5a33c086b96542968961ebdb29e"
+    },
+    {
+      "path": "docs/DEPLOYMENT.md",
+      "bytes": 3742,
+      "sha256": "247be0130a8c9e32bb67c308bdb6065f187e8df8210641a97d66854d3a3e0ee0"
+    },
+    {
+      "path": "docs/OMNI_GUIDE.md",
+      "bytes": 50339,
+      "sha256": "235c577b139076c8be4c8f84701d6b8900006564490a6191d7bb55a4467a454e"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "bytes": 3996,
+      "sha256": "c3fee4b9ce992e8e26692c4b98d580486000eec9b2e3e8d3b647ab411e2586bb"
+    },
+    {
+      "path": "docs/README.md",
+      "bytes": 1015,
+      "sha256": "88a100f896d480da1e5ca938dce5f2893df8b1e9722ce085999dfb4cd7c1c653"
+    },
+    {
+      "path": "docs/REPOSITORY.md",
+      "bytes": 2831,
+      "sha256": "ff9ec9b3f53dd78737995b052cb80b3ace3bd08e3bf573682e60072918e1b0ee"
+    },
+    {
+      "path": "docs/THIRD_PARTY.md",
+      "bytes": 1604,
+      "sha256": "ebbb52d1e1ee88d3506c187a45b24b2767e8d453c83840790a1eb3760087ecd7"
+    },
+    {
+      "path": "docs/TROUBLESHOOTING.md",
+      "bytes": 3388,
+      "sha256": "d60bd16a4d1f25fcf4245ac1a0f1bfb4da216139b47e254fd34f0fdeb74b63b9"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "bytes": 3918,
+      "sha256": "6b1c9928408a79023e0bdc690b9c2996f34d20cf40fabcfb582948c89385b7d2"
+    },
+    {
+      "path": "scripts/26-03-10-run_nav_script.sh",
+      "bytes": 2630,
+      "sha256": "bf7b761c088a140dcb696e0fb17881148f97d00c261761a06857debaebd6a490"
+    },
+    {
+      "path": "scripts/activate_dialogue.sh",
+      "bytes": 2050,
+      "sha256": "fb803898ebe727b6d7e624d97695884b717cb0690992f5b65de06cdf218315b3"
+    },
+    {
+      "path": "scripts/auto_reloc.sh",
+      "bytes": 3667,
+      "sha256": "ec31cf393f69a7b352508a3ee5b261607fc249eef1c49cc12fe11b930a5ddec1"
+    },
+    {
+      "path": "scripts/capture_guide_pose.py",
+      "bytes": 3965,
+      "sha256": "fce8e825e040ebab2a5456d037d59dac3c95cad060b45bf8e236faf3f3b03673"
+    },
+    {
+      "path": "scripts/check_status.sh",
+      "bytes": 1607,
+      "sha256": "025a2301f47c21deec38f4700d7e8dfe335dc881281c9e3fdb0b2579db7471b4"
+    },
+    {
+      "path": "scripts/configure_pc2.py",
+      "bytes": 2310,
+      "sha256": "ba963597f5128033dcf98569b2be796b600941ca2b21b9a914dfc721cae68b87"
+    },
+    {
+      "path": "scripts/diagnose_navigation_latency.py",
+      "bytes": 27436,
+      "sha256": "fff057c70a87faf36768bf91412f2e031d102a08075460121af7a5dd126b6d2b"
+    },
+    {
+      "path": "scripts/enable_aec.sh",
+      "bytes": 4892,
+      "sha256": "e162045707d1cd01ceb4991cb604df571552ba29f4d680758b54c48b4668b588"
+    },
+    {
+      "path": "scripts/env.sh",
+      "bytes": 3209,
+      "sha256": "3500bb46166abf7e56936628db776d1d32542e81c9b69071ebbb7202dc0f1d5e"
+    },
+    {
+      "path": "scripts/export_repository.py",
+      "bytes": 5442,
+      "sha256": "1c5d0de400336dfc7e031810c548fe02c8f4226e8dad8f56c61f750b6e992683"
+    },
+    {
+      "path": "scripts/get_current_microphone.sh",
+      "bytes": 5366,
+      "sha256": "cea5440ebd63005cad185b4eb2195aceb2d5da7d13494d4cc8461f6b956f4129"
+    },
+    {
+      "path": "scripts/get_microphone_volume.sh",
+      "bytes": 15596,
+      "sha256": "3112e60854d0f8e8a93119cef6c711fc76db36c9aa7dd2b2cc912b5cfbdd7db7"
+    },
+    {
+      "path": "scripts/get_robot_position.sh",
+      "bytes": 6015,
+      "sha256": "f2b8397a54b1996824c7b5ef0902694971399541b98f9a8dcbf76c4eb133419f"
+    },
+    {
+      "path": "scripts/go_idle.sh",
+      "bytes": 923,
+      "sha256": "45079b6f035e54856c78a097cbe8aad9c273dabb0f494df0b952e9643f3f836f"
+    },
+    {
+      "path": "scripts/guide_actions.py",
+      "bytes": 10698,
+      "sha256": "56c7259503d288a6b033a7d15ea99f890407cc9fc7e697a3994c93cddcc198c8"
+    },
+    {
+      "path": "scripts/guide_arm_action.py",
+      "bytes": 2280,
+      "sha256": "9a76aa381ea6cd32d5f74d29ce7132757ab80f579e71566934a83d4d320448de"
+    },
+    {
+      "path": "scripts/guide_board_processing.py",
+      "bytes": 12285,
+      "sha256": "70b046dff3e61524057dfc3b96367ddfab54c53f734cc106d6cd7e10f6d631da"
+    },
+    {
+      "path": "scripts/guide_conception.py",
+      "bytes": 6420,
+      "sha256": "ed422a0777607e56264f9feec3e5eb16f3447341cd0a7dd3b862e7ba0fc366d1"
+    },
+    {
+      "path": "scripts/guide_conception_jobs.py",
+      "bytes": 11937,
+      "sha256": "9db3a1b6ad330bd88c3c0be090f1a009a16a1a2308ae758ca42d5331e61ff9d8"
+    },
+    {
+      "path": "scripts/guide_initialization.py",
+      "bytes": 10224,
+      "sha256": "a0c7ab0d4dfdd115043b4718d6b4fe13a52d46d28067ea8639de9e548257b865"
+    },
+    {
+      "path": "scripts/guide_knowledge.py",
+      "bytes": 18789,
+      "sha256": "71d1297f867336cbd85323810be73141e4116c0802fc762138bd359e71ac2576"
+    },
+    {
+      "path": "scripts/guide_live_map.py",
+      "bytes": 12936,
+      "sha256": "409f064a933ba2d00f90f06d6cc4005f0fdf2733299a78cc31e4a49902e5b14c"
+    },
+    {
+      "path": "scripts/guide_map.py",
+      "bytes": 13277,
+      "sha256": "a4a6389856728dda615fbcc1ac8517ebd4c31305b701e25ad0c65d85db8c2dbe"
+    },
+    {
+      "path": "scripts/guide_points.py",
+      "bytes": 12955,
+      "sha256": "2b22d27cf4a6e1b3b144174a521d6c821c8911078779bc7aaa5c6618a9b5c585"
+    },
+    {
+      "path": "scripts/guide_relocalization.py",
+      "bytes": 13180,
+      "sha256": "71051985f5b2bb3d71ff6ecea50a7b94c95a6a6a7b8cc0a12739ebf98cd3d64e"
+    },
+    {
+      "path": "scripts/guide_skills.py",
+      "bytes": 8822,
+      "sha256": "1001f5fe02672ecb4a1016034b3370b1318100003fb51e9e8575e6c7036a7934"
+    },
+    {
+      "path": "scripts/guide_stop_motion.sh",
+      "bytes": 946,
+      "sha256": "d3471e058d262172b37c3ba619ce63efcf729123358199b679f32b4d2e0d754b"
+    },
+    {
+      "path": "scripts/guide_task_executor.py",
+      "bytes": 21659,
+      "sha256": "c2f9a1352e83d23ebafa4a8b18f9583c375ef4d3057b789a5dcaf99e0b9dbe83"
+    },
+    {
+      "path": "scripts/guide_web.py",
+      "bytes": 114866,
+      "sha256": "22710b87f520428fb160a423e4a6a15ca7fd1f592333081f4bde50eb47718b28"
+    },
+    {
+      "path": "scripts/icons/edit.png",
+      "bytes": 4116,
+      "sha256": "01d5db8658be9c1771fb01d93804e3e89401ff1f7b96104ecec4705a44fe2463"
+    },
+    {
+      "path": "scripts/icons/edit2.png",
+      "bytes": 6528,
+      "sha256": "37d6b3733c4dfea222c70daa0dd0fe2444534f1d97cc44f5d0e07808178a9180"
+    },
+    {
+      "path": "scripts/icons/map.png",
+      "bytes": 3988,
+      "sha256": "135047c1f75d1ddadd24063dea5f130c68c8d5ea91db819393cc5190d5041983"
+    },
+    {
+      "path": "scripts/icons/map2.png",
+      "bytes": 7833,
+      "sha256": "ff206c3d60491eb9e14fdfd0b9a88bc8c2d7a1d3ec4597eb6dee0ce4b0cba047"
+    },
+    {
+      "path": "scripts/icons/nav.png",
+      "bytes": 8475,
+      "sha256": "dc204941b6e1688b6e3961f9aa1edd0b3688129f2fd6e2bca1c37c7ebb867d80"
+    },
+    {
+      "path": "scripts/icons/nav2.png",
+      "bytes": 8475,
+      "sha256": "dc204941b6e1688b6e3961f9aa1edd0b3688129f2fd6e2bca1c37c7ebb867d80"
+    },
+    {
+      "path": "scripts/icons/voice.png",
+      "bytes": 4249,
+      "sha256": "98d86dc3afb8f80c4d70c553f62ef80cb578c055ea8fdcd5db48304d6a618b7c"
+    },
+    {
+      "path": "scripts/initialize_robot_services.py",
+      "bytes": 27574,
+      "sha256": "642a56b9bc0df4759d7c09d78685fc06ac05aab3edace681c25f28489d9e3595"
+    },
+    {
+      "path": "scripts/interrupt_dialogue.sh",
+      "bytes": 960,
+      "sha256": "632ac0d6183a3e80183bbed621e1c1d71a2eb4036c2d3573b6cb086b961c38c3"
+    },
+    {
+      "path": "scripts/license.txt",
+      "bytes": 65,
+      "sha256": "18598e9abf2091c4d571bc948ee9de05fa423b2da47b46fab24b5d1ca341937c"
+    },
+    {
+      "path": "scripts/map_edit.sh",
+      "bytes": 1361,
+      "sha256": "e288e0920ee0da43af4a558ac21a6a9e02cbe9cfdccbe6a206f59a1bf7e08914"
+    },
+    {
+      "path": "scripts/mapping.sh",
+      "bytes": 3600,
+      "sha256": "50a389a6d1c17ced7708b16415c78befda1ba909367567330146ec06e7fe5aaa"
+    },
+    {
+      "path": "scripts/mobile_guide_server.py",
+      "bytes": 49715,
+      "sha256": "8260c505c433f47d7fee19f5699f47c098eebfc54a2d24d642619c701be94fe0"
+    },
+    {
+      "path": "scripts/mobile_guide_start.sh",
+      "bytes": 1293,
+      "sha256": "6bb0a187e831e16e699c9aa6be0011f952db51d3c901c899296aa2f95cae2736"
+    },
+    {
+      "path": "scripts/mobile_guide_stop.sh",
+      "bytes": 229,
+      "sha256": "0f4d3f7938dcbfe169479859939f8595e2904fc36a6fdbca004da6dcfc2d849d"
+    },
+    {
+      "path": "scripts/mute.sh",
+      "bytes": 1803,
+      "sha256": "5cfd13467bb24865893ba41639f9f7c63c2693174e1f1649ca69dc31850df3f2"
+    },
+    {
+      "path": "scripts/nav_start.sh",
+      "bytes": 6459,
+      "sha256": "43086d268d2f744227d607c298e574b8d721ba8bb67f7f9b021b0e58d8683ac1"
+    },
+    {
+      "path": "scripts/nav_stop_audio.sh",
+      "bytes": 1925,
+      "sha256": "3eacf6d41dcfb43de4579156a00d55f1322644b38e52bd1defe4e21250213748"
+    },
+    {
+      "path": "scripts/navigate_to_point_safe.py",
+      "bytes": 35477,
+      "sha256": "a30dc4b5f184a4e1d16136b34e7aff841cdd5c28ddccf15b60e42b6599e4327f"
+    },
+    {
+      "path": "scripts/navigation_readiness.py",
+      "bytes": 2478,
+      "sha256": "3ac391900640b68dacd41e617b53eafb958e1435f8ec1606a728576a5038b36c"
+    },
+    {
+      "path": "scripts/navigation_thread_budget.py",
+      "bytes": 1647,
+      "sha256": "fd85cddf75c4bddd7757a6e846ac609f808464deba0805546bb6e1cbcac08bd0"
+    },
+    {
+      "path": "scripts/omni-requirements.txt",
+      "bytes": 25,
+      "sha256": "749868cb40b4a706064ac43650974fb28d45804667bb37b7ed4c968b59ecba3e"
+    },
+    {
+      "path": "scripts/omni.env.example",
+      "bytes": 666,
+      "sha256": "7fe43c88b7612c0f2b7e897e927f4939e2fe5ca0b1d61b512dbefe26818839ae"
+    },
+    {
+      "path": "scripts/omni_client.py",
+      "bytes": 16660,
+      "sha256": "58ce7618dd25c4f48e5a8a1102e8efc714348936f83c59c62067dd90d9f4e21b"
+    },
+    {
+      "path": "scripts/omni_configure.py",
+      "bytes": 3088,
+      "sha256": "31a9a4bfdc0e92554db2d4cc327ba5a7e5a3f8c4b3d6229966e042cd5542f081"
+    },
+    {
+      "path": "scripts/omni_setup.sh",
+      "bytes": 700,
+      "sha256": "8dea6b345958d5980da447a517372b246a0513e153cd9c0b41bffd1d785b1a46"
+    },
+    {
+      "path": "scripts/patrol.sh",
+      "bytes": 933,
+      "sha256": "a3c605e482cde247ac3426e61570e37ba8ac3fd6cb9397fe6e94bf92bb50a879"
+    },
+    {
+      "path": "scripts/pause_nav.sh",
+      "bytes": 1220,
+      "sha256": "2f03c33ccfb04402a3dfc535e85baa1aef20984c6edeee92b09b9ebd133c0468"
+    },
+    {
+      "path": "scripts/prepare_board_tiles.py",
+      "bytes": 2808,
+      "sha256": "88a73718bc104fafbd874cddfab33139c40b03f0a31c2d8697ef6f2c5e711dc3"
+    },
+    {
+      "path": "scripts/reloc_config.sh",
+      "bytes": 2142,
+      "sha256": "b9aaeeb3ab484218869c055e5a2d0fe7fc065c9d69c4af55b1080337ea28fca6"
+    },
+    {
+      "path": "scripts/reloc_from_point.sh",
+      "bytes": 2413,
+      "sha256": "04115ba5b2cec78c5783bb561ec5d6e2416df3e5809f738199e39f777c1c57ab"
+    },
+    {
+      "path": "scripts/replay_teaching_route_safe.py",
+      "bytes": 12256,
+      "sha256": "97b150c914024292dc63034a1637c6a7bc1a16a2a1b17bf42d5b98fe402c2584"
+    },
+    {
+      "path": "scripts/resume_nav.sh",
+      "bytes": 1220,
+      "sha256": "c453695436390a4b1b3ab2a1d60e82c46bbcbcb93b314c068df6c3fcf79948a5"
+    },
+    {
+      "path": "scripts/route_demo.sh",
+      "bytes": 2578,
+      "sha256": "0335f103fbdd9bc30795dac4e553eaf5992f85e1e9f605360eb86f0b63ddad5d"
+    },
+    {
+      "path": "scripts/run_demo_nav.sh",
+      "bytes": 3679,
+      "sha256": "4329d997b3e6531f93cc8b27712a8e785e8a964f528a9cc4c3a34785788ad1ab"
+    },
+    {
+      "path": "scripts/run_nav_script.sh",
+      "bytes": 4719,
+      "sha256": "9449767d20b002638928e11ab64c9d4d2135819623eeee93999ab7d24cb17a05"
+    },
+    {
+      "path": "scripts/run_short_nav_test.sh",
+      "bytes": 2449,
+      "sha256": "9ff92dba3575aaf3035399d63b59b423ff58b511ef46ccee18fd0593ed9eb909"
+    },
+    {
+      "path": "scripts/save_map.sh",
+      "bytes": 301,
+      "sha256": "77af500f49d8d870f65b2b76136844f93d3536c2c2ad010c033a6e6d6497cafe"
+    },
+    {
+      "path": "scripts/select_audio_output.sh",
+      "bytes": 6950,
+      "sha256": "4255749b16fe35068c57f8cc94b479a51f91dee41d7fa7954195d9cdc78ad4fb"
+    },
+    {
+      "path": "scripts/select_lenovo_microphone.sh",
+      "bytes": 7265,
+      "sha256": "36757a06fec09655e6ca04c925a23265ece54d823dbc6ab27ee4b02ecd096d71"
+    },
+    {
+      "path": "scripts/select_wired_microphone.sh",
+      "bytes": 7870,
+      "sha256": "455cde539547ac4a7676d478f9f638363452454940b1a9dd84253e9dbf4b63fc"
+    },
+    {
+      "path": "scripts/select_wireless_microphone.sh",
+      "bytes": 8474,
+      "sha256": "a1981fcdf027cf866d383bf8f3587fa53e3d8ff34600dcac8853c4a525874d1d"
+    },
+    {
+      "path": "scripts/select_wireless_microphone_delay.sh",
+      "bytes": 8808,
+      "sha256": "24204400e3e35a8f1fe24e6fc3d8ed77e16cdf28a99f1c987cb9676eae36484e"
+    },
+    {
+      "path": "scripts/start_all.sh",
+      "bytes": 4236,
+      "sha256": "1a90c3c055e7c015930d7858b6517aabd5ffd2c969c4981bd7099b8790f3c3c3"
+    },
+    {
+      "path": "scripts/stop_all.sh",
+      "bytes": 9404,
+      "sha256": "c7a7fd363584d4206ce930ca3c96a910e5d7e7d4ee69827622e2cc29415fce40"
+    },
+    {
+      "path": "scripts/stop_nav.sh",
+      "bytes": 4168,
+      "sha256": "25ce0256a1a4d367d06efbf9d5d9e840d2ee7550527edb1c44b4348c717eb662"
+    },
+    {
+      "path": "scripts/stream_live_map.py",
+      "bytes": 14646,
+      "sha256": "72c1c8d7c280e51750a7fa7bd99c95f73d1cca40b34f29135fe405db0e27819d"
+    },
+    {
+      "path": "scripts/test_agent_web.py",
+      "bytes": 13572,
+      "sha256": "ed2a161076f70c70722f4b17bbf539543bfad9e15a2ac3dbb2ff263253880437"
+    },
+    {
+      "path": "scripts/test_base_pose_adapter.py",
+      "bytes": 1780,
+      "sha256": "8e28d57ec2fb4755a43a20cbe9a6bae8046267def4b55724c1bbf8d234485397"
+    },
+    {
+      "path": "scripts/test_board_processing.py",
+      "bytes": 12292,
+      "sha256": "078fbb30a723f4f340a9ca288734f5159b9b39df20fc4637c06fb07106fd6041"
+    },
+    {
+      "path": "scripts/test_cloud_transform_guard.py",
+      "bytes": 2327,
+      "sha256": "c46bf2c415c963477c982761911d1e9407c88bcd8972f77a8e4d3dc1da64a2fe"
+    },
+    {
+      "path": "scripts/test_coarse_registration_policy.py",
+      "bytes": 6155,
+      "sha256": "3d1d1e6f4fac9f782038274c4e918a1b9a24331236dd1d2db48dd152c11d5ccb"
+    },
+    {
+      "path": "scripts/test_coarse_relocalization.py",
+      "bytes": 16718,
+      "sha256": "0120864a3a12a21cbdff94875ef3db5d17ee440d3dabd8ce31dc1e4012e64fb7"
+    },
+    {
+      "path": "scripts/test_guide_conception.py",
+      "bytes": 13136,
+      "sha256": "f678c0c805d127690aa88d3ed73a4cf4cc96eac93884dbcfdfd6f702edb83e88"
+    },
+    {
+      "path": "scripts/test_guide_conception_jobs.py",
+      "bytes": 20441,
+      "sha256": "de26e25a3958c74158dbf4e3699bb26e006d866c25368173b5f19cae257cfe02"
+    },
+    {
+      "path": "scripts/test_guide_initialization.py",
+      "bytes": 21629,
+      "sha256": "fff46de32554b5f70d081787e1dda32f16f6933ab4fc6eec59e5e4eb99f1bfa8"
+    },
+    {
+      "path": "scripts/test_guide_knowledge.py",
+      "bytes": 11876,
+      "sha256": "d03f72ab89afcb7d621361c9e0ad50c5597485e4b0a16fef9ad682e1205a8264"
+    },
+    {
+      "path": "scripts/test_guide_live_map.py",
+      "bytes": 14149,
+      "sha256": "61317f08119c0b90c801d96286220215420373b30260633fae6788230c0cfc29"
+    },
+    {
+      "path": "scripts/test_guide_map.py",
+      "bytes": 10149,
+      "sha256": "633f5d61e11534449582bc0c481cc6daaa8e47aec17fde09c1ede24bcc37b28f"
+    },
+    {
+      "path": "scripts/test_guide_points.py",
+      "bytes": 16284,
+      "sha256": "8d2a3d80892432c188645868ae2970c90038cb1cf766615a77f2887c1103bc50"
+    },
+    {
+      "path": "scripts/test_guide_relocalization.py",
+      "bytes": 9041,
+      "sha256": "b80d443e32dee2a608b5726b17575526d41499feb4969907d50a8cb13ba1b580"
+    },
+    {
+      "path": "scripts/test_guide_speed_profile.py",
+      "bytes": 1897,
+      "sha256": "775e2f84fa0e0395763b4271301e323e9ee2d880ea99268f8ae4196b1a056546"
+    },
+    {
+      "path": "scripts/test_guide_tasks.py",
+      "bytes": 21955,
+      "sha256": "4a10742342038155f578ef79d0c921946d008e45cc9fafa39d7b72618dc070c7"
+    },
+    {
+      "path": "scripts/test_guide_web.py",
+      "bytes": 47520,
+      "sha256": "18daccc5e47f3d0ea57eafcc350293af8a5a5a514d8731254e52e4e653a10fe7"
+    },
+    {
+      "path": "scripts/test_initialization_web.py",
+      "bytes": 20766,
+      "sha256": "b626fc98f16fe79afca8aba80a82d9e1da4aa6ecbd9768d89473f50dce4d3a23"
+    },
+    {
+      "path": "scripts/test_live_map_web.py",
+      "bytes": 9118,
+      "sha256": "ada1206d03a432a2de21458a031b1b9a3467ef3b41640d0484b3f961217b92de"
+    },
+    {
+      "path": "scripts/test_navigation_latency.py",
+      "bytes": 15206,
+      "sha256": "a82c94a6cbdadcba0976e17713697584a1daa79e9b500f5016acedbd4ac801ac"
+    },
+    {
+      "path": "scripts/test_navigation_odometry.py",
+      "bytes": 3719,
+      "sha256": "1662b8ad7ef8f4cc47f2f3320203701d2479dea0f7f78aee869f7496d2afcefe"
+    },
+    {
+      "path": "scripts/test_navigation_readiness.py",
+      "bytes": 5453,
+      "sha256": "c2fce5fe00280dfe8311eee2ac22ee0148392a76b9980a94aeb63084c1439bac"
+    },
+    {
+      "path": "scripts/test_navigation_thread_budget.py",
+      "bytes": 5678,
+      "sha256": "4a93d27ce0463a59e79c0114a599f3bbf55312381ba9fa801e4ee259bfa6de31"
+    },
+    {
+      "path": "scripts/test_navigation_web.py",
+      "bytes": 13572,
+      "sha256": "7a57e6d9ef9da79ef688326d708e36e4511f6d2f5d1ac3bb1cce3f2418e94afe"
+    },
+    {
+      "path": "scripts/test_omni_planning.py",
+      "bytes": 14305,
+      "sha256": "cb8d226bfaaff0d28c09dbbdb5c06a52c222679d0ca2edbcd1890c02088228b1"
+    },
+    {
+      "path": "scripts/test_point_navigation.py",
+      "bytes": 31991,
+      "sha256": "37f7add40870e74466e509da020ef76c973728b522a5d06f7efd1b6135c6e156"
+    },
+    {
+      "path": "scripts/test_presentation_prefetch_web.py",
+      "bytes": 13422,
+      "sha256": "9b4a02b6196abc015bfbc69475402f948ae2ebb5d57656173343b032024c6a43"
+    },
+    {
+      "path": "scripts/test_velocity_smoother_filter.py",
+      "bytes": 4779,
+      "sha256": "d98085baac702576165d87c42799a985544c1f4ed764d69466a566b025a25480"
+    },
+    {
+      "path": "scripts/test_voice_start.sh",
+      "bytes": 2614,
+      "sha256": "3016e4c68e6380a92fe9c49327a1feab6bce137ce141059dcdd4f7ecb327769f"
+    },
+    {
+      "path": "scripts/toggle_mute.sh",
+      "bytes": 1803,
+      "sha256": "5cfd13467bb24865893ba41639f9f7c63c2693174e1f1649ca69dc31850df3f2"
+    },
+    {
+      "path": "scripts/trigger_dialogue.sh",
+      "bytes": 2186,
+      "sha256": "6e416307c80b6e712a5624201467a42bf96629f447d63bae322bfbf995f662ec"
+    },
+    {
+      "path": "scripts/tts_speak.sh",
+      "bytes": 1208,
+      "sha256": "8a96eef06bd17c13189c7faad280f690f2ea692ed92e551d9532d43b7ff981fd"
+    },
+    {
+      "path": "scripts/tts_stop.sh",
+      "bytes": 1173,
+      "sha256": "a22d20ba117e81f677c9733d5ffd50187272860f7789bf9d1b0bd36a79b919bd"
+    },
+    {
+      "path": "scripts/update/README.md",
+      "bytes": 4068,
+      "sha256": "5202c39e25c99446aab1dc8e00343aa471c9f3aaae3219a385f01780c7a3e87e"
+    },
+    {
+      "path": "scripts/update/do_update.sh",
+      "bytes": 25423,
+      "sha256": "4121065b7eb900bc5da141476a94c7104c22a5d5358a122342cf49f121bd4ee0"
+    },
+    {
+      "path": "scripts/update/install_desktop_shortcut.sh",
+      "bytes": 2397,
+      "sha256": "dfb256c92111e6de24922e23ca269f583334569b42f554e3fc2a15e3abdc83eb"
+    },
+    {
+      "path": "scripts/update/pack_on_ubuntu.sh",
+      "bytes": 9038,
+      "sha256": "5407ef906b7260964ab9a160123cc021401c02bbb9a45a5cade77957bf5d0337"
+    },
+    {
+      "path": "scripts/update/run_update_choose_desktop.sh",
+      "bytes": 1630,
+      "sha256": "ff26bab3d14fab2d90cceb01b198f7820793631b37ac7a09302c40b321fb4fce"
+    },
+    {
+      "path": "scripts/update/run_update_desktop.sh",
+      "bytes": 1316,
+      "sha256": "60e3e48c2ce5574f0ffb7ef59ed4bf3a6ead43e61063dcea6f8a45a2335bc607"
+    },
+    {
+      "path": "scripts/update/run_update_local_desktop.sh",
+      "bytes": 2086,
+      "sha256": "c9f6064060fab3b7260aa0e1de78cbe4c62b59cab4c509b4f33c99f59d2197e5"
+    },
+    {
+      "path": "scripts/voice_start.sh",
+      "bytes": 6306,
+      "sha256": "804564c1e3d5d8d1ec3c0ca898345a35bd407b0e67231c0b55e2cb125c51b493"
+    },
+    {
+      "path": "scripts/voice_stop.sh",
+      "bytes": 2550,
+      "sha256": "a46ba38176be0234997795de1ae90d72c068698bda35388dd98f7c0649f9df85"
+    },
+    {
+      "path": "scripts/web_relocalize.py",
+      "bytes": 7001,
+      "sha256": "a85084795e36d4cd9201fe141fcfac98d14f58834d5ec13fd43f5b2bb086dac8"
+    },
+    {
+      "path": "scripts/保存地图.desktop",
+      "bytes": 209,
+      "sha256": "7153dc83b69eec39b0ee80a9f5e9b1f655ac6be3bb073d248285365dde58a19d"
+    },
+    {
+      "path": "scripts/停止语音.desktop",
+      "bytes": 223,
+      "sha256": "9e71f2cc6dc8ac027671ee92bdc0880c0e92487bc5546eedc67d304d81e4643f"
+    },
+    {
+      "path": "scripts/切换喇叭.desktop",
+      "bytes": 233,
+      "sha256": "281b1e8ef3994139d6ae9d3ad6c3a137bdca3f13211e7d950d5a02324da983a8"
+    },
+    {
+      "path": "scripts/启动导航.desktop",
+      "bytes": 361,
+      "sha256": "7918c2bd2622c492b9771c66a967d686a2d2f4fef3d7e4b25cda34c7222ad0fc"
+    },
+    {
+      "path": "scripts/启动语音.desktop",
+      "bytes": 255,
+      "sha256": "25bda6947850160304a8ab3bfa855f9710b8df5f37068d64988bbd63342961fd"
+    },
+    {
+      "path": "scripts/开始巡逻 后台版本.desktop",
+      "bytes": 284,
+      "sha256": "b4d1d1b282ac1257b41fcf51f01c03e2f124860cb70765b2664b0e0f2e500d9a"
+    },
+    {
+      "path": "scripts/开始巡逻.desktop",
+      "bytes": 279,
+      "sha256": "107a26b90105ae3db1497b9592ae945b6df12e60551a10ab3119f062c5ed93ba"
+    },
+    {
+      "path": "scripts/开始建图.desktop",
+      "bytes": 240,
+      "sha256": "087baa12583ac88f38d1148912dd5b5cfa431daf92a58537eda7ed7739ac3d88"
+    },
+    {
+      "path": "scripts/无线话筒.desktop",
+      "bytes": 309,
+      "sha256": "ca3112b0dceb9fa7da2398af8a376d6ade01a8bae0553f8217f2384f7ddb9283"
+    },
+    {
+      "path": "scripts/有线话筒.desktop",
+      "bytes": 295,
+      "sha256": "fd06eb9c46e92674ecf7445777ce0a8c249ba7b8d672872e508085d9155d7a6c"
+    },
+    {
+      "path": "scripts/编辑地图.desktop",
+      "bytes": 243,
+      "sha256": "a3acf5005a2e512ab80105471493b61cc3d83ff0a1b550a7a85adacb1ad8255d"
+    },
+    {
+      "path": "unitree_sdk2_python/LICENSE",
+      "bytes": 1559,
+      "sha256": "a5d73fc4aca9074e3e6fe0b1a0ba763cf9514b2249b7390ed20fe8d53630bf25"
+    },
+    {
+      "path": "unitree_sdk2_python/README zh.md",
+      "bytes": 4715,
+      "sha256": "ec56ee598c2f45deb4cc3c1baccd8a8a7db149cc6bd2144def78332f4c9d7f66"
+    },
+    {
+      "path": "unitree_sdk2_python/README.md",
+      "bytes": 5520,
+      "sha256": "eea01bef7677d8e269bb9a1aa4d42153c1eb6381fa8ada1244ece01cc140dafd"
+    },
+    {
+      "path": "unitree_sdk2_python/example/b2/camera/camera_opencv.py",
+      "bytes": 1625,
+      "sha256": "a613f386182409d24a91ddb9c771b6436a8b93bf597648f222af6d25dfe801c2"
+    },
+    {
+      "path": "unitree_sdk2_python/example/b2/camera/capture_image.py",
+      "bytes": 1573,
+      "sha256": "96962d93019fdfc7cf7673ec0ffeafedac5472640de0741fa8a644ac48fe715a"
+    },
+    {
+      "path": "unitree_sdk2_python/example/b2/high_level/b2_sport_client.py",
+      "bytes": 3623,
+      "sha256": "d7eff2a375329268b83a0e08ae563caaec4dd2e7f969189a62d0a24012e0bcfd"
+    },
+    {
+      "path": "unitree_sdk2_python/example/b2/low_level/b2_stand_example.py",
+      "bytes": 6319,
+      "sha256": "b60da482bfdffc26f02daa6313c904f92d7931a0ff3a1e490d78844743d306fc"
+    },
+    {
+      "path": "unitree_sdk2_python/example/b2/low_level/unitree_legged_const.py",
+      "bytes": 345,
+      "sha256": "7685d8c384f268ebfebd569dea5b6f1e40ba6ec3ae29e8535334193f257d1034"
+    },
+    {
+      "path": "unitree_sdk2_python/example/b2w/camera/camera_opencv.py",
+      "bytes": 1625,
+      "sha256": "a613f386182409d24a91ddb9c771b6436a8b93bf597648f222af6d25dfe801c2"
+    },
+    {
+      "path": "unitree_sdk2_python/example/b2w/camera/capture_image.py",
+      "bytes": 1573,
+      "sha256": "96962d93019fdfc7cf7673ec0ffeafedac5472640de0741fa8a644ac48fe715a"
+    },
+    {
+      "path": "unitree_sdk2_python/example/b2w/high_level/b2w_sport_client.py",
+      "bytes": 3171,
+      "sha256": "a2a2fad4bd964a5ec815605837f3d3e165aec7f3c861fd0d41495c9645da5abb"
+    },
+    {
+      "path": "unitree_sdk2_python/example/b2w/low_level/b2w_stand_example.py",
+      "bytes": 7403,
+      "sha256": "6b7a0b18002850a873d9665b0c06202728d0f45fd2e2c4c5301eb0f0af50bf06"
+    },
+    {
+      "path": "unitree_sdk2_python/example/b2w/low_level/unitree_legged_const.py",
+      "bytes": 485,
+      "sha256": "82af6f49261e087a7fb0d705466befe5bd9c2765ae39d1845ec89e7e5861fc77"
+    },
+    {
+      "path": "unitree_sdk2_python/example/g1/audio/g1_audio_client_example.py",
+      "bytes": 1284,
+      "sha256": "537cde5075c70ad4f6726977058e1d847abbc4e78c2a65fbab79c05ab3f89830"
+    },
+    {
+      "path": "unitree_sdk2_python/example/g1/audio/g1_audio_client_play_wav.py",
+      "bytes": 1094,
+      "sha256": "161ae3e37135666e45453f8e0f780c97923ed7aa90892cee4e5fc67069fdcd74"
+    },
+    {
+      "path": "unitree_sdk2_python/example/g1/audio/wav.py",
+      "bytes": 6351,
+      "sha256": "d24f97e51162d931cabe95caf94bc8b1eb5d8354ab42063a6575e4cd929a29f2"
+    },
+    {
+      "path": "unitree_sdk2_python/example/g1/high_level/g1_arm5_sdk_dds_example.py",
+      "bytes": 6840,
+      "sha256": "cbd01239cb2d3cce9922bd5a65cfe83ba2329271a5c437d18292400e5715f9f4"
+    },
+    {
+      "path": "unitree_sdk2_python/example/g1/high_level/g1_arm7_sdk_dds_example.py",
+      "bytes": 6961,
+      "sha256": "7901aa5ef687b914e3d657d8b2ccb4eabc2a32b6abf97cf91dd41ffbdfb7e65a"
+    },
+    {
+      "path": "unitree_sdk2_python/example/g1/high_level/g1_arm_action_example.py",
+      "bytes": 6123,
+      "sha256": "5ec92f30d1aa2e53f2507e60f3e4229e9874efee8d88b088c749ca51c57abf62"
+    },
+    {
+      "path": "unitree_sdk2_python/example/g1/high_level/g1_control.py",
+      "bytes": 2671,
+      "sha256": "727e19c0837ff0f344ffd907ca123ba00671042cad2ff82fe6273e6d18310e2a"
+    },
+    {
+      "path": "unitree_sdk2_python/example/g1/high_level/g1_control_mpc_stable_fast.py",
+      "bytes": 10318,
+      "sha256": "35faa84313039f78475ce354243e782b0a1198e8c97989fd37aa15accb77127f"
+    },
+    {
+      "path": "unitree_sdk2_python/example/g1/high_level/g1_control_safe.py",
+      "bytes": 6617,
+      "sha256": "36d23b97ec7a022067f72f1e2f2bc6428ca5638516124a345efa6b80b4aa411e"
+    },
+    {
+      "path": "unitree_sdk2_python/example/g1/high_level/g1_loco_client_example.py",
+      "bytes": 4018,
+      "sha256": "80bfcaa9c073965f9abc3cd47273c1933fe0c625b4c4fd15a32c50b6f0a9a6e9"
+    },
+    {
+      "path": "unitree_sdk2_python/example/g1/high_level/get_robot_data.py",
+      "bytes": 3809,
+      "sha256": "c23e7707d60eb1132e5a7744645a9280842cef5c8f8d6f9dac5e39f58fce9b8a"
+    },
+    {
+      "path": "unitree_sdk2_python/example/g1/low_level/g1_low_level_example.py",
+      "bytes": 7366,
+      "sha256": "044dc6f9f132ec4ddcdef7f6eda0fc74118dc21abc50e64de441179a748d1984"
+    },
+    {
+      "path": "unitree_sdk2_python/example/g1/readme.md",
+      "bytes": 172,
+      "sha256": "789c5532c207a2df26689685fcd2ad91d958981d16d8b6c5f2ee176a2ea1f004"
+    },
+    {
+      "path": "unitree_sdk2_python/example/go2/front_camera/camera_opencv.py",
+      "bytes": 1095,
+      "sha256": "dd11e1b9326375884e53d6ccf422a3737f07bcd56fa1d64792dfba391c4903c3"
+    },
+    {
+      "path": "unitree_sdk2_python/example/go2/front_camera/capture_image.py",
+      "bytes": 736,
+      "sha256": "61811dc0a2c333e91ebfe0a94737c1ce83f88417784d2933d8057399e341dca0"
+    },
+    {
+      "path": "unitree_sdk2_python/example/go2/high_level/go2_sport_client.py",
+      "bytes": 5141,
+      "sha256": "0ecb9953fb13c89d694cef17539877035987ca330204a50c1688f296214e0914"
+    },
+    {
+      "path": "unitree_sdk2_python/example/go2/high_level/go2_utlidar_switch.py",
+      "bytes": 1120,
+      "sha256": "ccacac7d8809d6cf942aab88a3b3dbccaf811739e8ab8570ef62ccf500731d1e"
+    },
+    {
+      "path": "unitree_sdk2_python/example/go2/low_level/go2_stand_example.py",
+      "bytes": 6601,
+      "sha256": "0d6cb04cecdcbaad946073216fda79af8837ab1ac10e3b9a009d315ef9405896"
+    },
+    {
+      "path": "unitree_sdk2_python/example/go2/low_level/unitree_legged_const.py",
+      "bytes": 345,
+      "sha256": "7685d8c384f268ebfebd569dea5b6f1e40ba6ec3ae29e8535334193f257d1034"
+    },
+    {
+      "path": "unitree_sdk2_python/example/go2w/high_level/go2w_sport_client.py",
+      "bytes": 3163,
+      "sha256": "4afe93629b7cec97d3c4830ff33f8e2e251c49fd7b361bcd746420aadf1c8d5a"
+    },
+    {
+      "path": "unitree_sdk2_python/example/go2w/low_level/go2w_stand_example.py",
+      "bytes": 7372,
+      "sha256": "03f81f64db00b40a740d5e010387d4bf50f843adf6e029f565bc50d72545496a"
+    },
+    {
+      "path": "unitree_sdk2_python/example/go2w/low_level/unitree_legged_const.py",
+      "bytes": 485,
+      "sha256": "82af6f49261e087a7fb0d705466befe5bd9c2765ae39d1845ec89e7e5861fc77"
+    },
+    {
+      "path": "unitree_sdk2_python/example/h1/high_level/h1_loco_client_example.py",
+      "bytes": 2971,
+      "sha256": "124e3d7b73a4715bb9fb42f3ad4728c4be1ff66df665de34f562b3bbc28785f4"
+    },
+    {
+      "path": "unitree_sdk2_python/example/h1/low_level/h1_low_level_example.py",
+      "bytes": 5322,
+      "sha256": "e70fb2e56c15b4629ee33b02603f6438eb0abd1e1951a5c6f13cd9d660e01cc4"
+    },
+    {
+      "path": "unitree_sdk2_python/example/h1/low_level/unitree_legged_const.py",
+      "bytes": 90,
+      "sha256": "d997f6599c85bd217859144e6b825770555e24a1e46ce7dbdb0fb14707382624"
+    },
+    {
+      "path": "unitree_sdk2_python/example/h1_2/low_level/h1_2_low_level_example.py",
+      "bytes": 7653,
+      "sha256": "d17bc442d7f4f17b9085ea4f11ce22e7ef9b182ebc9114d359716e0116672ea8"
+    },
+    {
+      "path": "unitree_sdk2_python/example/helloworld/publisher.py",
+      "bytes": 689,
+      "sha256": "6bb9d2e916c4db9fd78672abdb3c00962b48bbc6f73e15a094cdba43e7b5e3b6"
+    },
+    {
+      "path": "unitree_sdk2_python/example/helloworld/subscriber.py",
+      "bytes": 526,
+      "sha256": "747fb34b2e1ae7b4f750cd6b2ad50b376332a0e90be93448c4fa593f663dae92"
+    },
+    {
+      "path": "unitree_sdk2_python/example/helloworld/user_data.py",
+      "bytes": 251,
+      "sha256": "3ecca06e03313315a7cc60d6decf1ededdaf269201ba75b52f234e05a5ec245e"
+    },
+    {
+      "path": "unitree_sdk2_python/example/motionSwitcher/motion_switcher_example.py",
+      "bytes": 922,
+      "sha256": "7fcc9c42f265f437d9b4b63541acc555827749754f2fe1159a58b6d598426f9c"
+    },
+    {
+      "path": "unitree_sdk2_python/example/obstacles_avoid/obstacles_avoid_move.py",
+      "bytes": 943,
+      "sha256": "7f3df4a359b359f1ba865bef9840f0419186579e5b2c829ce80614f8c9d20876"
+    },
+    {
+      "path": "unitree_sdk2_python/example/obstacles_avoid/obstacles_avoid_switch.py",
+      "bytes": 2842,
+      "sha256": "bb9175bc718db9760d93a3b2b8d3d275544111caa453e0b43726283d3ab888c8"
+    },
+    {
+      "path": "unitree_sdk2_python/example/vui_client/vui_client_example.py",
+      "bytes": 1957,
+      "sha256": "4fb120dd5c0d46aeb4efcc6c2c1c24ebea3b557d9884f04940448fee84fd4129"
+    },
+    {
+      "path": "unitree_sdk2_python/example/wireless_controller/wireless_controller.py",
+      "bytes": 3917,
+      "sha256": "8d649f50a3e60015f6b494b0201b99a0e9ad6f3862ee24e8aad2a9272202c70a"
+    },
+    {
+      "path": "unitree_sdk2_python/pyproject.toml",
+      "bytes": 89,
+      "sha256": "c83da5db515857a120ce4f6afd13c08644ebee0ea5128ad7dc2109236a973075"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/__init__.py",
+      "bytes": 126,
+      "sha256": "41dfb726774708c891bf8ab54450b4ef331d9a38ecfdfb31d2883921a3bc05ec"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/b2/back_video/back_video_api.py",
+      "bytes": 209,
+      "sha256": "edfc3d350bd8ed9968c1f3a49b194920f8e53041024c51e427b1c692978fa52c"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/b2/back_video/back_video_client.py",
+      "bytes": 540,
+      "sha256": "a6afe9b130b8acb3b49c44e066b51045d68387b65112a3b9f874d73cdf30eba6"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/b2/front_video/front_video_api.py",
+      "bytes": 213,
+      "sha256": "3c6998fc1f6bcdc832146b06571c676399d77a7cb987090250fb5f4d82df3d9c"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/b2/front_video/front_video_client.py",
+      "bytes": 546,
+      "sha256": "cdc093c1d2fa2dcf111db003bb2998822fea4766a79d97e8d4ccc1c2ee26736c"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/b2/robot_state/robot_state_api.py",
+      "bytes": 371,
+      "sha256": "9491fa44b00ceea1ddc3ee1cb9509577aef9f75124eb629204ac77d14577a639"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/b2/robot_state/robot_state_client.py",
+      "bytes": 2113,
+      "sha256": "ab1c557509148a28bbd5704965d4d22b20c4227127eccd4de61d92e4eedfe933"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/b2/sport/sport_api.py",
+      "bytes": 1208,
+      "sha256": "f408395413f7fdeae19fcefa2f89ba50149211d59083f29ebc3b7f9591ea9b9c"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/b2/sport/sport_client.py",
+      "bytes": 6666,
+      "sha256": "02ff547faaa49c0265997a76e843103b76ef9f3e5f95db81ced5bacbf59dec05"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/b2/vui/vui_api.py",
+      "bytes": 303,
+      "sha256": "8d3c45fe84c5ab5a9130e8536dd4df3290e80fef5849e540679e2a288c297c6d"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/b2/vui/vui_client.py",
+      "bytes": 2137,
+      "sha256": "0a5b7b6ced82c139dc47da49bb83477090b69be234b576aaa6bd04f1693af12c"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/comm/motion_switcher/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/comm/motion_switcher/motion_switcher_api.py",
+      "bytes": 538,
+      "sha256": "933210a39b46f9303de1991b5647b5780845886d94d491604de0444caaa9c60c"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/comm/motion_switcher/motion_switcher_client.py",
+      "bytes": 1409,
+      "sha256": "133d78f6619f6e32d971b40020868618f10db0fd191731085a4b08615448b195"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/core/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/core/channel.py",
+      "bytes": 9786,
+      "sha256": "8a58eea2bc6bb8792e5b5fa76949407bd8c2ef8af07172d1a3a465bcc544e247"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/core/channel_config.py",
+      "bytes": 861,
+      "sha256": "158d8ec4090b57e9a4030c759209d972b1401673072e7beb9cf95f412e7e9c02"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/core/channel_name.py",
+      "bytes": 646,
+      "sha256": "a978ad0fe4e548a2b790cd83d4881191ef249018359b30e3cc710d9a1d0f9f0c"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/g1/arm/g1_arm_action_api.py",
+      "bytes": 254,
+      "sha256": "e929f22cb2bc6e65bbbf2aa1f6f57983a14c1937b53bde7b49c85c30af8e73d0"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/g1/arm/g1_arm_action_client.py",
+      "bytes": 1344,
+      "sha256": "0617124577a1d41b2fd559d8fbba8bb1b6ace43e0471a7dbbb972b51ac155872"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/g1/audio/g1_audio_api.py",
+      "bytes": 398,
+      "sha256": "7ccd417ef05637617a012606dc752709674a3c9984a3828b72c9f5c453db66a8"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/g1/audio/g1_audio_client.py",
+      "bytes": 2270,
+      "sha256": "64a9942c1278b3b5badf2ae7d1b871ac785f5fd3deda9404e97088b1e9aff74b"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/g1/loco/g1_loco_api.py",
+      "bytes": 639,
+      "sha256": "8443f5450ade69de7d454b40c8f6c1b0f4c66573bb35eac9251840885cb4c2c4"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/g1/loco/g1_loco_client.py",
+      "bytes": 3780,
+      "sha256": "42ec688779719b4d7a7e88df5b400f12950f6ea8d81188e701c06c99df8d5873"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/go2/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/go2/obstacles_avoid/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/go2/obstacles_avoid/obstacles_avoid_api.py",
+      "bytes": 337,
+      "sha256": "71b8f9dc4247558553187e36577ff631b0f615452464656b6b4edde40b4401d3"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/go2/obstacles_avoid/obstacles_avoid_client.py",
+      "bytes": 1742,
+      "sha256": "4e5212447cd3eab684dbb5bc7576e9a98063706c09ab524708f500e23a76449b"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/go2/robot_state/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/go2/robot_state/robot_state_api.py",
+      "bytes": 371,
+      "sha256": "9491fa44b00ceea1ddc3ee1cb9509577aef9f75124eb629204ac77d14577a639"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/go2/robot_state/robot_state_client.py",
+      "bytes": 2106,
+      "sha256": "3d659ce8ce866bf966d01157064aca42a675b26d29a1a03f5e6d913b1f96bc83"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/go2/sport/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/go2/sport/sport_api.py",
+      "bytes": 1440,
+      "sha256": "c21a47056e6a4dafeadbfb0af794a5c68dd99b60d3583678ac67c06b1cfef6be"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/go2/sport/sport_client.py",
+      "bytes": 10949,
+      "sha256": "95dea0e3a9c8feff64c9c8c6f81eafe40a177ae25ce4ffa9e5d9d8343eb3d2e7"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/go2/video/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/go2/video/video_api.py",
+      "bytes": 171,
+      "sha256": "8bb53f1840021558e955e292460d3f4d7f668787969e5730f1e91c2ebf805eba"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/go2/video/video_client.py",
+      "bytes": 482,
+      "sha256": "90e5295dc1f706f1a224b6ab38a4c830189fe3aa77c0f8ce743768e426896f84"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/go2/vui/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/go2/vui/vui_api.py",
+      "bytes": 303,
+      "sha256": "8d3c45fe84c5ab5a9130e8536dd4df3290e80fef5849e540679e2a288c297c6d"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/go2/vui/vui_client.py",
+      "bytes": 2137,
+      "sha256": "0a5b7b6ced82c139dc47da49bb83477090b69be234b576aaa6bd04f1693af12c"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/h1/loco/h1_loco_api.py",
+      "bytes": 600,
+      "sha256": "46a17a2144eb0c97b1a1a99ead7162c091de5967196fcd981a7aa02fd992a9f8"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/h1/loco/h1_loco_client.py",
+      "bytes": 2439,
+      "sha256": "50f58f65e13aa09c73f998426c3164001503088ea93f4ddd6b3f2865d1f60884"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/__init__.py",
+      "bytes": 271,
+      "sha256": "32e41f377806fbd3e2a6d62dc4386d55a5e82fd1261a4a9d182a2cfbf86797ac"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/builtin_interfaces/__init__.py",
+      "bytes": 167,
+      "sha256": "ce7836c6b08eece21752d06270bdafc63a0faf0dc637a43ade3e2e9b8bba474f"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/builtin_interfaces/msg/__init__.py",
+      "bytes": 173,
+      "sha256": "7c95109cdd2041cce0259b7108ee2845c9031262841d231cb8840cf41e2c18fe"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/builtin_interfaces/msg/dds_/_Time_.py",
+      "bytes": 625,
+      "sha256": "ea94f7622321d79df206441ead2eded0a0fed5863dd58d27005a26436d584e1f"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/builtin_interfaces/msg/dds_/__init__.py",
+      "bytes": 186,
+      "sha256": "662d71714d12ee9920e998fd22bee426df6811db020b1ee951a4004ca7e091f3"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/default.py",
+      "bytes": 10522,
+      "sha256": "b3101722e07534c667d4c673677a8a5d57643f307cfdeb11f4761ebc456b18ea"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/geometry_msgs/__init__.py",
+      "bytes": 162,
+      "sha256": "2aefbe7a2032d34cf076a1d8001011d8bfa3b81543b6a03183288b17df6978e7"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/geometry_msgs/msg/__init__.py",
+      "bytes": 168,
+      "sha256": "0f374cde971de23eb9dbfde357a07e8594a1a8e0ec8d214fd1dc7b07b12f9483"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/geometry_msgs/msg/dds_/_Point32_.py",
+      "bytes": 635,
+      "sha256": "fc8495ef8a777896fc65dab9300692d7bb0bd8607708ee35aa5c0452ee66335a"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/geometry_msgs/msg/dds_/_PointStamped_.py",
+      "bytes": 760,
+      "sha256": "c258986e8fbea38afd14fbefbf64ff5ea3ab4630e59dfd65bbf272109e593d9b"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/geometry_msgs/msg/dds_/_Point_.py",
+      "bytes": 629,
+      "sha256": "f14a8983124895d5781f99ad8ba50919c6622909598e75bb8aea5407f4352e9b"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/geometry_msgs/msg/dds_/_Pose2D_.py",
+      "bytes": 636,
+      "sha256": "11d331c77cac12846b626680919304a39c55bd63d667f673687399dd077c8054"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/geometry_msgs/msg/dds_/_PoseStamped_.py",
+      "bytes": 756,
+      "sha256": "7bcc9670d756755584bf9b123b98ef3a8c8c6ef906cef1c0898205d94bbb6422"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/geometry_msgs/msg/dds_/_PoseWithCovarianceStamped_.py",
+      "bytes": 812,
+      "sha256": "c8474d3663fdee4cfb120344ef03dce37faf124690d40edccf491dd151b42c79"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/geometry_msgs/msg/dds_/_PoseWithCovariance_.py",
+      "bytes": 712,
+      "sha256": "c3384acb00b2e42f9668cd00614c84b8d6e6b6c4fa9e3a731e79c219b8500067"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/geometry_msgs/msg/dds_/_Pose_.py",
+      "bytes": 701,
+      "sha256": "a3402ffa46de1e2a5fde2bad696e136b2d9a741667836e713c7b31a9f58475bb"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/geometry_msgs/msg/dds_/_QuaternionStamped_.py",
+      "bytes": 786,
+      "sha256": "6f709a0c09b987eba4b44efeb724980f1c574d73d8e0bd7149260a2c3a1ebd83"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/geometry_msgs/msg/dds_/_Quaternion_.py",
+      "bytes": 665,
+      "sha256": "b133ae3ffd24dc6190996d818a1385ab9f9319e2dda9aaa789177e70a19e4eb3"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/geometry_msgs/msg/dds_/_TwistStamped_.py",
+      "bytes": 761,
+      "sha256": "8be06afafe2c8f621f8c4cde5b2a4504c4e52ba0c4cc63da0804fa58a8401e97"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/geometry_msgs/msg/dds_/_TwistWithCovarianceStamped_.py",
+      "bytes": 817,
+      "sha256": "0c002a0157868ce50227d0370f48f5b942ada2a1d7e96eaf8b7622e50e28f1c9"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/geometry_msgs/msg/dds_/_TwistWithCovariance_.py",
+      "bytes": 717,
+      "sha256": "761ee8be8d35f84dcba8261143dcffc115337a533a95627772f5daeafeab08da"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/geometry_msgs/msg/dds_/_Twist_.py",
+      "bytes": 697,
+      "sha256": "620fd0d1d477b97f77cdba351ec8e0782406036d551be2569b74b131f9b13e60"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/geometry_msgs/msg/dds_/_Vector3_.py",
+      "bytes": 635,
+      "sha256": "82e4728bd2e99e311e8bae5216f1fb20ba53c075fabbdf2f155974c2174e95f0"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/geometry_msgs/msg/dds_/__init__.py",
+      "bytes": 1043,
+      "sha256": "fcc8ac771fd2cc62294b2a16c0f9f4cda9831f109779df70670e1db8b492a647"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/nav_msgs/__init__.py",
+      "bytes": 157,
+      "sha256": "9caa80ac26be9642ec46bb6dead20273848e381d41fb4eb3edf6ed3431553bee"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/nav_msgs/msg/__init__.py",
+      "bytes": 163,
+      "sha256": "15229534f52deb21d1138d18fb39c6054e0c638093effbba81c2406cc1a56ab8"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/nav_msgs/msg/dds_/_MapMetaData_.py",
+      "bytes": 882,
+      "sha256": "1805a7b05517b94d640e4d39f14f572480e7311bd5ae85f876fd06f8fb17d35f"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/nav_msgs/msg/dds_/_OccupancyGrid_.py",
+      "bytes": 788,
+      "sha256": "3edf9453724d9445ab1cf019a51fcef37ed50fa0e05fdbd0569f858144d69c27"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/nav_msgs/msg/dds_/_Odometry_.py",
+      "bytes": 882,
+      "sha256": "b00c39e39d9066ecd9b9fb4ad774f1cf2d9772e209b42a417634299eb7c44c77"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/nav_msgs/msg/dds_/__init__.py",
+      "bytes": 306,
+      "sha256": "cf8e9471ca0d304b7bc1ee329fef3b360dcc0076f448b3fa632bb87da8b9744b"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/sensor_msgs/__init__.py",
+      "bytes": 160,
+      "sha256": "e9d4c0450812b2e1f52a64232f9e6482e966a7a4be16d561f21abe1b8a3ffe93"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/sensor_msgs/msg/__init__.py",
+      "bytes": 166,
+      "sha256": "77f33f9fd7a371685a6c6a870047689a876bade2e6316f895a13041ae17b8dd0"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/sensor_msgs/msg/dds_/PointField_Constants/_PointField_.py",
+      "bytes": 550,
+      "sha256": "bf818a64ae10aa98e86ea5a382474574de599a7248ba3982a9dbf32c2bbff2fb"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/sensor_msgs/msg/dds_/PointField_Constants/__init__.py",
+      "bytes": 344,
+      "sha256": "469e7fa152a1c7a778530e6ac5c3451efbb69389f569045b91b0d87d190b690a"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/sensor_msgs/msg/dds_/_PointCloud2_.py",
+      "bytes": 957,
+      "sha256": "91a9917ee12e6bc30598b9dd6c8e5284c6b96fe24aabe1831b65899fa2853849"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/sensor_msgs/msg/dds_/_PointField_.py",
+      "bytes": 664,
+      "sha256": "90f532023f9c0da4f999cf6d476347ca0e1febc6db08b61d19f0e7ca18d77a27"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/sensor_msgs/msg/dds_/__init__.py",
+      "bytes": 312,
+      "sha256": "ed73e0cfb4d0d94ea07c3e35160a73543de2ad07e76ab54cd1c9cf7ede2e9dbe"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/std_msgs/__init__.py",
+      "bytes": 157,
+      "sha256": "681bf5d378bf582a89ef5b79a71d4b743088191e1a300ec01a0a415946b22f70"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/std_msgs/msg/__init__.py",
+      "bytes": 163,
+      "sha256": "06c63955a5036a764946a1540b0fc4aa2e60cd9b20ec371120362608063c7b1c"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/std_msgs/msg/dds_/_Header_.py",
+      "bytes": 701,
+      "sha256": "9dd04e5f3076dd7bada7a007a0a57a58af9f8d9eb0efcd64212ec6562c51414c"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/std_msgs/msg/dds_/_String_.py",
+      "bytes": 568,
+      "sha256": "b11e1293c473c79e301607907489063e0d7b118395524709b810a03e4aa0a626"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/std_msgs/msg/dds_/__init__.py",
+      "bytes": 223,
+      "sha256": "d9d3b8c598d5387c28cb65e103b3e8af1071798c18560c27529d0f78de37f141"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_api/__init__.py",
+      "bytes": 160,
+      "sha256": "17d2a41f162443103f271261b375eadb7abdfe323906b3b3a98c09b4055a705c"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_api/msg/__init__.py",
+      "bytes": 166,
+      "sha256": "0b6a9c8eea1a48b9160c4af3bd1db920005093cfaecde00ae9312341fb1815e7"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_api/msg/dds_/_RequestHeader_.py",
+      "bytes": 793,
+      "sha256": "cedcd0fe5e2ea280e4d0fcf95ba3eb2a8a6087d7c99de1d4361aefc1c8bf36fa"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_api/msg/dds_/_RequestIdentity_.py",
+      "bytes": 634,
+      "sha256": "5956cf7260a4871a66d02867cd8bf7b4cff545de4e2bb67754edfced227d14f0"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_api/msg/dds_/_RequestLease_.py",
+      "bytes": 601,
+      "sha256": "810f7237d44111f8a72323d97ddcefee9ebd1d1002db1c206c0b5fc133f30680"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_api/msg/dds_/_RequestPolicy_.py",
+      "bytes": 628,
+      "sha256": "e83b1b5ea4c0c366c37c66937be9aa04d362b3c8314db33bec035d8755f99dd1"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_api/msg/dds_/_Request_.py",
+      "bytes": 693,
+      "sha256": "5702725b61f3e5cb0fa373ab569c24934655b17391b3696bdf64f91c013660d7"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_api/msg/dds_/_ResponseHeader_.py",
+      "bytes": 730,
+      "sha256": "9a502cc7d83f552ae12ae29ebb8017b5dc99d050f36ec229d607b3bc99df68d0"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_api/msg/dds_/_ResponseStatus_.py",
+      "bytes": 609,
+      "sha256": "6847677af6d5a0dbbc9f653b4dfffa5d22c45b7cde229b409cec4218a2d3e59e"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_api/msg/dds_/_Response_.py",
+      "bytes": 692,
+      "sha256": "37c3cf084917a403abec30f59b246b7e8e20bf699e5f6c01a55de310160cacd6"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_api/msg/dds_/__init__.py",
+      "bytes": 616,
+      "sha256": "dceb760e1ac7e493ba852819f76cafebd3a10d5bf4864961154d051d7c6f6c91"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/__init__.py",
+      "bytes": 159,
+      "sha256": "2966ffd4d7d8971c555c45020b5fbd9bcd526a65527da44546e5e876df526f32"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/__init__.py",
+      "bytes": 165,
+      "sha256": "f023f6ba33cffd5a41e2e94c32ec352f21d36991a8f49abecfca32bd5faf6690"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_AudioData_.py",
+      "bytes": 636,
+      "sha256": "bb8b1af877d007d2eb30b5c5ee92d5dfd8c0993fe2fe2e16b3d74948d88d6166"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_BmsCmd_.py",
+      "bytes": 622,
+      "sha256": "75ade3d3cc52dca553db5edd41dc65a4ffe774b267939c2ef299846b2c536b16"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_BmsState_.py",
+      "bytes": 844,
+      "sha256": "abcc0497c43007b2648b19ac6538d264555fde90d23427ff9cda150320725e46"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_Error_.py",
+      "bytes": 606,
+      "sha256": "dedc8e7a45715b0bc82d7569c938afd14db66df7763c5ca869260af0650e9b11"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_Go2FrontVideoData_.py",
+      "bytes": 751,
+      "sha256": "f641c34591249cb1f4fd4977697e6440843ff8c8040ca13ac98374f03a6df34e"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_HeightMap_.py",
+      "bytes": 773,
+      "sha256": "147a5c0543d82b75e35cb820596b68317e4a1086dbf58ad19785b55c8c782b31"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_IMUState_.py",
+      "bytes": 774,
+      "sha256": "9465b3f1d8f2ddaafe449cf8d27969ec398d4b56d690c8ca5f9a8ea09f67d475"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_InterfaceConfig_.py",
+      "bytes": 673,
+      "sha256": "bf0fcfc627a7e0fdbc3f208102caf815b0b824ed59903d916d1899bbfe5abc4d"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_LidarState_.py",
+      "bytes": 1141,
+      "sha256": "7a04fde6c354b85b87f661d2e56c373d715bfdefe7c4550dbd710e4ecd8f73eb"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_LowCmd_.py",
+      "bytes": 1104,
+      "sha256": "5d0098eef648cf017267d105bde5407b40496cc0df791f15ed7a3e5e77981fe8"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_LowState_.py",
+      "bytes": 1426,
+      "sha256": "0d370ae286a529f9f727519e1b6abfa9189595d78f2b29db3316886a5b1d51e4"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_MotorCmd_.py",
+      "bytes": 740,
+      "sha256": "0784882cf61368413ab4e4e9b428ca770eb4537cf3000d2388ebfb49971bb64c"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_MotorCmds_.py",
+      "bytes": 626,
+      "sha256": "c3978e73801e3682ea65db99d74510121296e8b2059a5a99fe777b10414f2e40"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_MotorState_.py",
+      "bytes": 859,
+      "sha256": "193465a3b93aae23b1a685941fdaeaaff42ac9b2d24caa0e34aef3f32363bcab"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_MotorStates_.py",
+      "bytes": 636,
+      "sha256": "18651ed4e6f1ac8d0f0c7ed79c52386826fc7896d05267c9201800a8001259d2"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_PathPoint_.py",
+      "bytes": 734,
+      "sha256": "7d139390fb646af819e2fc2c594413bcf6dee3f1788ee3410dc0da4c77fcd7d3"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_Req_.py",
+      "bytes": 579,
+      "sha256": "d1fc29f3394f53f2157d1bc5da2c211013b281ae1871bfb01c4b35c2f57e6fea"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_Res_.py",
+      "bytes": 617,
+      "sha256": "d8ea5e0252d765121e56cdf4a947e3d8f9588504d5aa5fa80b28af346cc6ee05"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_SportModeState_.py",
+      "bytes": 1289,
+      "sha256": "8f05eea51a6822727a14572e656bb59a84a899ac264c96c8c7104d2acccf5909"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_TimeSpec_.py",
+      "bytes": 613,
+      "sha256": "b7d083cd135887e7810733c02fe1ebb9748dff1a6ee47d6c7dcb5775490ffbfb"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_UwbState_.py",
+      "bytes": 1084,
+      "sha256": "f05ab82976ec61eaeb2412eadeff4e50e39839b98840559fb347723ae01d468f"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_UwbSwitch_.py",
+      "bytes": 594,
+      "sha256": "cc7f973666e4eb76d263b4124dd1a515bdf7190ddc64809de58eeb9ee22be5e3"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/_WirelessController_.py",
+      "bytes": 707,
+      "sha256": "f6e2bddf415ed8fabe56924a21579b014fcd599f092d91a0c37adcb02357b777"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_go/msg/dds_/__init__.py",
+      "bytes": 1307,
+      "sha256": "0759e89df1394e0076c13fbb872dcb89ba0b34fec1da781591295787af78ea01"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_hg/__init__.py",
+      "bytes": 159,
+      "sha256": "2be522ac4c24ddb2906f4725a2245e0cba8632b46a46a7ea1c186a71cc6a7fc4"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_hg/msg/__init__.py",
+      "bytes": 165,
+      "sha256": "3702f3dac2b540a82dd0668ec0076d0dbb04019804c3e2ef4e3ef35428743f55"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_hg/msg/dds_/_BmsCmd_.py",
+      "bytes": 623,
+      "sha256": "042984eba84a6082e7f08eabd078599aaf7645e51c4f1a95a1b78429d343c87b"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_hg/msg/dds_/_BmsState_.py",
+      "bytes": 992,
+      "sha256": "115f2d1b43e993ccda8ad7572ec4e6213474fb4536a6a17a5413eb144ca52423"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_hg/msg/dds_/_HandCmd_.py",
+      "bytes": 687,
+      "sha256": "c7b4fb827507d9d8028c3d6a1ae1706240c16cc8e05ec4e4f1193b58e6561f3f"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_hg/msg/dds_/_HandState_.py",
+      "bytes": 1012,
+      "sha256": "f9cd6aeb3e10f8c2c59f65c4c1cd39ba2d515b7d4e6d8138c0ba80f52812455c"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_hg/msg/dds_/_IMUState_.py",
+      "bytes": 774,
+      "sha256": "f41533674e588ed3c4613f95a553bb5ee99b6356084208d7d25ee90897871497"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_hg/msg/dds_/_LowCmd_.py",
+      "bytes": 762,
+      "sha256": "a23cec88e4bf782263ac2bea29d3908c9d21a44a14361ffc0bf3424cd36597ae"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_hg/msg/dds_/_LowState_.py",
+      "bytes": 953,
+      "sha256": "97f746a693aff14a8a1c2ea2bbd7790722bb784554e0402173ed491ad9d957f2"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_hg/msg/dds_/_MainBoardState_.py",
+      "bytes": 754,
+      "sha256": "6c181057c869c9bef8daa53ab2e396c2f48226e9a8be4e7e6da2b88747d122fd"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_hg/msg/dds_/_MotorCmd_.py",
+      "bytes": 724,
+      "sha256": "710a8321be4d6731093b6f8328c70ab11606372561ed01a7af9a187143f54c4d"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_hg/msg/dds_/_MotorState_.py",
+      "bytes": 867,
+      "sha256": "cffb489830dbfb7091454279d031224f0968c066fad0b1204e309426a0d82910"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_hg/msg/dds_/_PressSensorState_.py",
+      "bytes": 732,
+      "sha256": "1920e21f70df982a4b0cd1e3ae7ed7a80a8389541e52c43e815df2bf7147bddc"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/idl/unitree_hg/msg/dds_/__init__.py",
+      "bytes": 696,
+      "sha256": "877b1aa3a79dee70d9615eba56e9a856a50d741b491e74f4793a5200ce326f98"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/rpc/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/rpc/client.py",
+      "bytes": 4032,
+      "sha256": "20840192dee42525b64ecc3a3e8d5ec5d1d7e122b7bfc4236c482cb2b0f6e186"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/rpc/client_base.py",
+      "bytes": 5078,
+      "sha256": "2a815a5c798be95df1c8a4af525873c2ee47d5e0bbfbcc8a4ccf2d991a341321"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/rpc/client_stub.py",
+      "bytes": 2363,
+      "sha256": "37c860bb4783c2f13b24bc369ebf99b2131a21dfb49f0f7a8b74e79960d879b0"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/rpc/internal.py",
+      "bytes": 743,
+      "sha256": "38896942088a7b0d03e3d9e5fa06ef3aee81e8ec6d52e0a9a640e35aaf955343"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/rpc/lease_client.py",
+      "bytes": 2883,
+      "sha256": "dcfbcb7a91296fe3aa3743df8f1c3fed6527f48c957de0f749772da8069fd4c8"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/rpc/lease_server.py",
+      "bytes": 4163,
+      "sha256": "a16058e0d3f03188677e32b6662023b886f123c1b500e447a98bb0c1bd6edafc"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/rpc/request_future.py",
+      "bytes": 1149,
+      "sha256": "a82ed0f0f09cd531be9962af1b624d83447be1682afcb3319022600a9de4d072"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/rpc/server.py",
+      "bytes": 4070,
+      "sha256": "80e114fc190cd2394d48ce0f4e8187fcafc28339fe41ba0a38b4c5fb14ba2ff9"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/rpc/server_base.py",
+      "bytes": 991,
+      "sha256": "f2e5bd96960e12d6519aee602141770c2658b289eee554621d2eb9c9cdbe947a"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/rpc/server_stub.py",
+      "bytes": 2688,
+      "sha256": "8e62b3940f0122bdf7f390f505c41892cf0d56f6735c2ee5521825f7ea67fabd"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/test/client/obstacles_avoid_client_example.py",
+      "bytes": 2764,
+      "sha256": "22b6e2dccfeafaa283915c3762fa3781dc036e7024846275da4fe1f5055f6b83"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/test/client/robot_service_client_example.py",
+      "bytes": 1594,
+      "sha256": "8c9c6ef46d91c8d80128c0d0657a2f35f1077213fae325565ed10fe622d10792"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/test/client/sport_client_example.py",
+      "bytes": 3180,
+      "sha256": "7f47422e99deb78b02d49655ac7b5ea2ea7976fc525a0a86fa66ace5bc9b2324"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/test/client/video_client_example.py",
+      "bytes": 722,
+      "sha256": "342d5f1c663d4747070d8ea023070d9b610b630095c37f125c366032dc36697a"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/test/client/vui_client_example.py",
+      "bytes": 1877,
+      "sha256": "8653156f9386b16cb7e03ecfd019cc3ab4d19d401a80423be91055690e55fe86"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/test/crc/test_crc.py",
+      "bytes": 715,
+      "sha256": "17817cbac7789554e8d7b2a7e162a9b6c8fb7e0602ea528956ec026d9315ae3f"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/test/helloworld/helloworld.py",
+      "bytes": 148,
+      "sha256": "64a1cc0ab1689ab9553e856cb1fcf0c8037ae58c47f449d13f5e6a96e00ebef2"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/test/helloworld/publisher.py",
+      "bytes": 500,
+      "sha256": "8c1d50616041bb088aaa669fb0dd08ec0278cb6faab08923b0b8825c6181447d"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/test/helloworld/subscriber.py",
+      "bytes": 373,
+      "sha256": "796b74f380624d513bab9bfff3ccbeb6f6e47697d02338303c8dfb3ed6b95795"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/test/lowlevel/lowlevel_control.py",
+      "bytes": 1964,
+      "sha256": "637297a08f4b4ad04e00d8722f4f670edf2acc142c236499120dc92dd4a6ee35"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/test/lowlevel/read_lowstate.py",
+      "bytes": 780,
+      "sha256": "d86e2a971b33c73c483c7c73a626d16020d406fa6e5f5290158295db9c97f9bd"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/test/lowlevel/sub_lowstate.py",
+      "bytes": 446,
+      "sha256": "01796254d66311aa5a3aec9a622e403b05b4411fa511ab7b3b40f03904c5c009"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/test/lowlevel/unitree_go2_const.py",
+      "bytes": 345,
+      "sha256": "7685d8c384f268ebfebd569dea5b6f1e40ba6ec3ae29e8535334193f257d1034"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/test/rpc/test_api.py",
+      "bytes": 143,
+      "sha256": "753290c91eb9961de53b0bc2f95da8f39dcdd85e362e01ba19b9b1513daef85e"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/test/rpc/test_client_example.py",
+      "bytes": 1496,
+      "sha256": "641a729fdbc07e68694a0e72cadbd0b7f17c131b18b6d57a6c9f06c1148bdcd0"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/test/rpc/test_server_example.py",
+      "bytes": 1017,
+      "sha256": "cef1c190b682ad548e3ecefe192a0252716790f0189c89ccc468c4ff71e90499"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/utils/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/utils/bqueue.py",
+      "bytes": 1603,
+      "sha256": "0ea1299b91f2d3c6f4ed8605064ebc3e079c1439cdf111bd30881d560166fc3f"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/utils/clib_lookup.py",
+      "bytes": 386,
+      "sha256": "0c3a68c755ec3249b0f70b7fc42efbc072d2b71db123796af232a5e7ea4b45b3"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/utils/crc.py",
+      "bytes": 8585,
+      "sha256": "b95a530423f72c5acc96811f75677699cb3a185b6327353e7c44b355a425a20e"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/utils/future.py",
+      "bytes": 2960,
+      "sha256": "959880bb2cf32e5db47d2aac90034c623cb413dc5573fef13c01b3902273d8f6"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/utils/hz_sample.py",
+      "bytes": 643,
+      "sha256": "ee63af36fda2b11475d16d06776c3aec69748bd8e1efb4cf394d802e0b0506db"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/utils/joystick.py",
+      "bytes": 8216,
+      "sha256": "d021e6c5fcd0e6a740134ce9dc5f5f56f7542ec0e220117a3d175df86e7ab578"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/utils/singleton.py",
+      "bytes": 247,
+      "sha256": "0559be3069ea2d4450f25c3153567cb641b8bf7ac55226edddb5f119223f9477"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/utils/thread.py",
+      "bytes": 2688,
+      "sha256": "453166ef60d8eaa8008e1d18d8f9513e51582404522ef03ec23584aad351e726"
+    },
+    {
+      "path": "unitree_sdk2_python/unitree_sdk2py/utils/timerfd.py",
+      "bytes": 1319,
+      "sha256": "5ca58f4d0661d62c773b883a1fb923bd6230935b1683d1449f05dc32ad6b7f0a"
+    }
+  ]
+}

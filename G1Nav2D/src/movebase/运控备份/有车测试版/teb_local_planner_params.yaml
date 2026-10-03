@@ -1,0 +1,119 @@
+TebLocalPlannerROS:
+
+ odom_topic: slam_odom
+
+ # Trajectory
+
+ teb_autosize: True
+ dt_ref: 0.2
+ dt_hysteresis: 0.1
+ max_samples: 500
+ global_plan_overwrite_orientation: False # 改为False，减少因方向调整导致的重规划和振荡
+ allow_init_with_backwards_motion: True # 允许倒车初始化，增加灵活性，帮助角度调整
+ max_global_plan_lookahead_dist: 5.0 # 增大前瞻距离，考虑更远的路径，减少频繁重规划
+ global_plan_viapoint_sep: 1.0 # 增大途经点间隔，给局部规划更多自由度
+ global_plan_prune_distance: 0.5
+ exact_arc_length: False
+ feasibility_check_no_poses: 3 # 检查点少一点，目标附近不容易被判"不可行"
+ publish_feedback: False
+
+ # Robot
+
+ max_vel_x: 1.5 # 降低最大速度，减少振荡（走跑模式更稳定）
+ max_vel_x_backwards: 0.05
+ max_vel_y: 0.0
+ max_vel_theta: 4.0 # 大幅提高角速度，支持一次性大角度转向（20度、30度、90度）
+ acc_lim_x: 1.5 # 降低加速度，使运动更平滑
+ acc_lim_theta: 3.0 # 大幅提高角加速度，支持快速大角度转向
+ min_turning_radius: 0.0 # diff-drive robot (can turn on place!)
+
+ footprint_model: # types: "point", "circular", "two_circles", "line", "polygon"
+   type: "line"
+   radius: 0.36 # for type "circular"
+   line_start: [0.0, 0.0] # for type "line"
+   line_end: [0.2, 0.0] # for type "line"
+   front_offset: 0.2 # for type "two_circles"
+   front_radius: 0.2 # for type "two_circles"
+   rear_offset: 0.0 # for type "two_circles"
+   rear_radius: 0.2 # for type "two_circles"
+   vertices: [[0.3, 0.2], [-0.1, 0.2], [-0.1, -0.2], [0.3, -0.2]] # for type "polygon"
+
+ # GoalTolerance
+
+ xy_goal_tolerance: 0.5 # 位置精度：增大到0.5米，减少振荡（走跑模式需要更大容差）
+ yaw_goal_tolerance: 0.15 # 角度精度：增大到约17.2度，减少角度调整导致的振荡
+ free_goal_vel: False
+ complete_global_plan: True
+
+ # Obstacles
+
+ min_obstacle_dist: 0.15  # 减小最小障碍物距离，允许通过更狭窄通道（但仍需考虑机器人尺寸）
+ inflation_dist: 0.5 # 减小膨胀距离，减少过度避障导致的路径问题
+ include_costmap_obstacles: True
+ costmap_obstacles_behind_robot_dist: 1.5
+ obstacle_poses_affected: 15
+
+ dynamic_obstacle_inflation_dist: 0.6
+ include_dynamic_obstacles: True
+
+ costmap_converter_plugin: ""
+ costmap_converter_spin_thread: True
+ costmap_converter_rate: 10
+
+ # Optimization
+
+ no_inner_iterations: 4
+ no_outer_iterations: 3
+ optimization_activate: True
+ optimization_verbose: False
+ penalty_epsilon: 0.03
+ obstacle_cost_exponent: 4
+ weight_max_vel_x: 2
+ weight_max_vel_theta: 0.5 # 降低角速度约束权重，让优化器更愿意使用最大角速度进行大角度转向
+ weight_acc_lim_x: 1
+ weight_acc_lim_theta: 0.5 # 降低角加速度约束权重，允许更激进的转向
+ weight_kinematics_nh: 1000
+ weight_kinematics_forward_drive: 0.0 # 完全取消前向行驶偏好，让机器人更愿意原地大角度转向
+ weight_kinematics_turning_radius: 1
+ weight_optimaltime: 5 # 提高时间最优权重，让优化器更重视快速到达目标（包括快速转向）
+ weight_shortest_path: 0
+ weight_obstacle: 50 # 略微降低障碍物权重，避免过度避障
+ weight_inflation: 0.8 # 降低膨胀权重，减少对膨胀区域的过度敏感
+ weight_dynamic_obstacle: 2
+ weight_dynamic_obstacle_inflation: 0.1
+ weight_viapoint: 3
+ weight_adapt_factor: 2
+
+ # Homotopy Class Planner
+
+ enable_homotopy_class_planning: False
+ enable_multithreading: True
+ max_number_classes: 4
+ selection_cost_hysteresis: 1.0
+ selection_prefer_initial_plan: 0.9
+ selection_obst_cost_scale: 100.0
+ selection_alternative_time_cost: False
+
+ roadmap_graph_no_samples: 15
+ roadmap_graph_area_width: 5
+ roadmap_graph_area_length_scale: 1.0
+ h_signature_prescaler: 0.5
+ h_signature_threshold: 0.1
+ obstacle_heading_threshold: 0.45
+ switching_blocking_period: 0.0
+ viapoints_all_candidates: True
+ delete_detours_backwards: True
+ max_ratio_detours_duration_best_duration: 3.0
+ visualize_hc_graph: False
+ visualize_with_time_as_z_axis_scale: False
+
+ # Recovery
+
+ shrink_horizon_backup: True
+ shrink_horizon_min_duration: 8 # 稍微缩短一点备份时间
+ oscillation_recovery: False # 关闭振荡恢复：宁可多试几次也别轻易失败（目标点周围无障碍物）
+ oscillation_v_eps: 0.3 # 振荡线速度阈值再放宽，减少误判
+ oscillation_omega_eps: 0.3 # 振荡角速度阈值再放宽，减少误判
+ oscillation_recovery_min_duration: 8 # 时间要求缩短，避免长时间卡在"恢复模式"
+ oscillation_filter_duration: 8 # 过滤窗口缩短，不要长时间记着之前的小抖动
+

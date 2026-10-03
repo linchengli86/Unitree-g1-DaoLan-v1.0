@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=停止语音
+Exec=sh -c 'cd "/home/ztx/robot/DaoLan/scripts" && chmod +x voice_stop.sh && ./voice_stop.sh'
+Path=/home/ztx/robot/DaoLan/scripts
+Terminal=true
+Icon=audio-input-microphone

@@ -1,0 +1,30 @@
+map_frame: map
+local_frame: local
+body_frame: body
+imu_topic: /livox/imu
+livox_topic: /livox/lidar
+
+local_rate: 30.0
+loop_rate: 1.0
+publish_map_cloud: false
+
+lio_builder:
+  det_range: 50.0    # 从100.0改为50.0，适合室内环境
+  cube_len: 200.0    # 从500.0改为200.0，减少内存占用
+  resolution: 0.1    # 从0.2改为0.1，提高建图精度
+  move_thresh: 1.2   # 从1.5改为1.2，更频繁地更新局部地图
+  align_gravity: true
+  imu_ext_rot: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+  imu_ext_pos: [-0.011, -0.02329, 0.04412]
+
+localizer:
+  # 与 Go2 强化定位一致：略降采样换速度，靠子图+yaw 搜索保证成功率
+  refine_resolution: 0.2
+  rough_resolution: 0.5
+  refine_iter: 6
+  rough_iter: 10
+  thresh: 0.12
+  xy_offset: 0.5           # 断电后小范围搜索，防止相似走廊误匹配
+  yaw_offset: 1            # 仅在初值附近搜索，避免相似场景误匹配
+  yaw_resolution: 0.45
+  submap_radius: 40.0      # 按初值裁局部子图再 ICP

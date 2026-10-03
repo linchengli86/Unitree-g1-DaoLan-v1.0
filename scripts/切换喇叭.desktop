@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=切换喇叭
+Exec=sh -c 'cd "/home/ztx/robot/DaoLan/scripts" && chmod +x select_audio_output.sh && ./select_audio_output.sh'
+Path=/home/ztx/robot/DaoLan/scripts
+Terminal=true
+Icon=audio-speakers

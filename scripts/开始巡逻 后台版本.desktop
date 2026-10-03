@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=开始巡逻
+Comment=开始巡逻
+Exec=bash -lc 'cd "/home/ztx/robot/DaoLan/scripts" && chmod +x patrol.sh && setsid nohup ./patrol.sh >/tmp/patrol.out 2>&1 < /dev/null &'
+Path=/home/ztx/robot/DaoLan/scripts
+Terminal=true
+Icon=utilities-terminal
