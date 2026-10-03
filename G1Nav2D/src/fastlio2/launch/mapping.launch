@@ -1,12 +1,29 @@
 <launch>
 
     <arg name="rviz" default="true" />
+    <arg name="web_mapping" default="false" />
+    <arg name="map_output_path" default="$(find fastlio)/PCD/map.pcd" />
+    <arg name="ground_map_output_path" default="$(find fastlio)/PCD/ground_map.pcd" />
+    <arg name="keyposes_output_path" default="$(find fastlio)/path/key_poses.txt" />
 
     <include file="$(find livox_ros_driver2)/launch_ROS1/msg_MID360.launch">
     </include>
     <rosparam command="load" file="$(find fastlio)/config/mapping.yaml" />
-    <node pkg="fastlio" type="map_builder_node" name="map_builder_node" output="screen"/>
+    <node pkg="fastlio" type="map_builder_node" name="map_builder_node" output="screen">
+        <param name="map_output_path" value="$(arg map_output_path)" />
+        <param name="ground_map_output_path" value="$(arg ground_map_output_path)" />
+        <param name="keyposes_output_path" value="$(arg keyposes_output_path)" />
+    </node>
     <!--<include file="$(find tool)/launch/livox2velodyne.launch"/>-->
-    <include file="$(find fastlio)/launch/octomap_server.launch"/>
+    <include unless="$(arg web_mapping)" file="$(find fastlio)/launch/octomap_server.launch"/>
+    <!-- Ground cloud is accumulated in the global map frame, matching saved PCD. -->
+    <node if="$(arg web_mapping)" pkg="octomap_server" type="octomap_server_node" name="octomap_server">
+        <param name="frame_id" value="map" />
+        <param name="resolution" value="0.05" />
+        <param name="pointcloud_min_z" value="-0.10" />
+        <param name="pointcloud_max_z" value="0.15" />
+        <param name="sensor_model/max_range" value="100.0" />
+        <remap from="cloud_in" to="/ground_cloud" />
+    </node>
     <node if="$(arg rviz)" launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find fastlio)/rviz/mapping.rviz" />
 </launch>

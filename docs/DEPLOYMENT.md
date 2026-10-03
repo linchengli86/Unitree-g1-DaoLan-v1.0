@@ -2,6 +2,14 @@
 
 基线为已使用的 Ubuntu 20.04 / ROS Noetic / aarch64 PC2，不承诺任意系统一键兼容。仓库不携带地图、点位、Key、虚拟环境；先读 [交付说明](REPOSITORY.md)。
 
+## 新入口（候选版）
+
+兼容环境首次执行 `bash scripts/quickstart.sh --prepare`，之后执行 `bash scripts/quickstart.sh`；网页进入 `/setup`，无地图先遥控建图审核激活，有地图跳过。依赖可信 Noetic apt 源、网络和 sudo；不改源、不绕过签名、不在运行导航/控制/建图时编译。保留已有地图和配置，未准备成功不启动任务。
+
+新模板默认 `GUIDE_AUDIO_ENABLED=0`，纯运动不初始化音频；按需另装 Omni（`--prepare --with-omni`）、隐藏配置 Key，再启用音频。PIN/导航权限可在 `/setup` 配置，但实际导航模块验收后才能确认开放，手臂仍关闭。[实现和产物](WEB_ONBOARDING.md)
+
+下文为原现场分步维护方式；新增安装器/C++/网页新图尚未干净 PC2 和新场地实机验收，历史编译成功不代表本候选版验收。
+
 ## 连接和目录
 
 ```bash

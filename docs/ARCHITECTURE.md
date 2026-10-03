@@ -16,6 +16,8 @@ MID360 点云 / IMU → FastLIO → 定位 / TF / navigation_odom
 
 ## 模块契约
 
+新增网页建图/环境准备模块的完整输入输出、会话资产和切换机制见 [WEB_ONBOARDING.md](WEB_ONBOARDING.md)。它们不由 Omni 调度、不发送运动指令，与导航/初始化/重定位互斥。
+
 | 模块 / 实现 | 输入 | 输出 / 成功判据 | 产物与边界 |
 | --- | --- | --- | --- |
 | 建图 `mapping.sh`、FastLIO | 点云/IMU、人工安全带行 | PCD、地面地图、关键位姿；二维地图另保存 | `fastlio2/PCD/`、`path/`、`map/`；不与导航同时运行 |

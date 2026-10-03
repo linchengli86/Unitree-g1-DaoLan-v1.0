@@ -7,6 +7,7 @@
 | 用户快速上手：启动与网页流程 | [QUICKSTART.md](QUICKSTART.md) |
 | 开发者连接/调用示例 | [QUICKSTART_API.md](QUICKSTART_API.md) |
 | 一键复现目标、缺口与验收标准 | [REPRODUCIBILITY.md](REPRODUCIBILITY.md) |
+| 网页建图向导、环境入口、产物与接口 | [WEB_ONBOARDING.md](WEB_ONBOARDING.md) |
 | 项目成果与入口 | [根 README](../README.md) |
 | 模块职责、输入输出、产物 | [ARCHITECTURE.md](ARCHITECTURE.md) |
 | 新 PC2 环境与部署 | [DEPLOYMENT.md](DEPLOYMENT.md) |

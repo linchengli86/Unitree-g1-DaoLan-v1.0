@@ -301,6 +301,9 @@ def initialize(project=PROJECT, report=None):
         raise RuntimeError("缺少已部署的 g1_control_safe.py，拒绝使用旧控制器")
     initial = probe("master", 4)
     assert_idle(initial)
+    from guide_mapping import session_running
+    if session_running(project) or '/map_builder_node' in initial.get('nodes', []):
+        raise RuntimeError('建图会话仍在运行，请先保存/取消并等待退出，不启动导航')
     if services["safe_controller"]:
         if "/unitree_safe_controller" not in initial.get("nodes", []):
             raise RuntimeError("已有安全控制器进程未接入当前 ROS Master，不重复启动")

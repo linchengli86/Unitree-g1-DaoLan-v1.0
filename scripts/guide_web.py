@@ -3,6 +3,8 @@
 from html import escape
 
 WEB_ROUTES = {
+    "/setup": {"key": "setup", "title": "首次使用向导",
+        "description": "新场地先遥控建图，再初始化定位、登记导览点并选点前往。"},
     "/": {
         "key": "home",
         "title": "工作台",
@@ -76,10 +78,12 @@ PAGE = r"""<!doctype html>
 </header>
 <div class="app-layout">
 <aside class="sidebar"><nav aria-label="主导航"><div class="nav-label">WORKSPACE</div>
+<a href="/setup" data-nav>首次使用向导</a>
 <a href="/" data-nav>工作台</a><a href="/initialize" data-nav>一键初始化</a><a href="/navigation" data-nav>点位导航</a><a href="/map" data-nav>实时地图</a><a href="/agent" data-nav>Agent 导览</a><a href="/assistant" data-nav>导览助手</a><a href="/tasks" data-nav>任务控制</a><a href="/points" data-nav>导览点管理</a><a href="/knowledge" data-nav>先验与文献</a><a href="/localization" data-nav>定位与重定位</a><a href="/system" data-nav>系统状态</a>
 </nav></aside>
 <main id="main"><div class="breadcrumb">DaoLan / 导览工作空间</div><h1 id="page-title" tabindex="-1">__PAGE_TITLE__</h1><p id="page-description">__PAGE_DESCRIPTION__</p><div id="status" role="status" aria-live="polite">正在连接 PC2……</div>
 <section class="view" data-view="home" hidden aria-label="工作台">
+  <div class="card"><h2>第一次使用或新场地？</h2><p>遥控建图 → 保存并审核地图 → 初始化定位 → 创建导览点 → 选点前往。已有地图不必重复建图。</p><a class="button-link primary" href="/setup" data-nav>打开首次使用向导 →</a></div>
   <div class="card hero"><div class="eyebrow">GUIDE WORKSPACE</div><h2>把讲解、点位和机器人操作<br>放在各自清晰的入口里。</h2><p>换电开机后先初始化软件，再核对定位与任务。进入页面不会触发动作，机器人运动仍需独立授权。</p><div class="buttons"><a id="home-initialize" class="button-link primary" href="/initialize" data-nav>一键初始化</a><a id="home-navigation" class="button-link primary" href="/navigation" data-nav>选择导览点前往</a><a id="home-live-map" class="button-link" href="/map" data-nav>查看实时地图</a><a class="button-link" href="/agent" data-nav>开始 Agent 导览</a><a class="button-link" href="/points/new" data-nav>添加导览点</a></div></div>
   <div class="stats"><div class="stat"><div class="stat-label">PC2 连接</div><div class="stat-value" id="home-connection">正在连接</div></div><div class="stat"><div class="stat-label">已保存导览点</div><div class="stat-value" id="home-point-count">—</div></div><div class="stat"><div class="stat-label">Omni 服务</div><div class="stat-value" id="home-omni">正在检查</div></div></div>
   <div class="entry-grid">
@@ -97,6 +101,17 @@ PAGE = r"""<!doctype html>
   <div class="card"><h2>启动导览软件模块</h2><div class="note">此操作不会切换机器人的物理运动模式、不会使能自动行走，也不会发送导航目标。初始化过程中会发送安全禁用 / StopMove，让自动运动保持关闭；请保持现场监护。</div><label><input id="initialize-ready" type="checkbox" onchange="syncInitializationButtons()">我确认机器人双脚已落地，已由官方控制进入可运动模式，并且当前停稳</label><label for="initialize-pin">操作员 PIN（初始化与地图定位确认使用）</label><input id="initialize-pin" type="password" inputmode="numeric" autocomplete="off" placeholder="按服务端权限设置填写 PIN"><div class="buttons"><button id="initialize-start" class="primary" disabled onclick="startInitialization()">一键初始化软件（不行走）</button><button class="chip" onclick="loadInitialization()">刷新初始化状态</button></div><div id="initialize-status" role="status" aria-live="polite">尚未读取初始化状态。</div><ol id="initialize-stages"></ol><p id="initialize-position" class="hint">未成功定位时不使用 TF 零点作为当前位置。</p></div>
   <div class="card" id="initial-map-panel" hidden><h2>在地图上给出当前位置的大致范围</h2><div class="note">这是粗定位先验，不是精确坐标，也不是导航目标。请对照实际场地，在大致站位按下，再朝机器人实际面向的方向拖动箭头。后台只在圆心附近 1 米、朝向约 ±45° 的范围内匹配雷达与地图，得到最终精配位姿；无需用鼠标点到 20 cm 内。无法确认机器人在圈内就不要猜测。点击地图不会自动配准；只有确认后才提交。标准 base_link 粗定位服务须重新加载定位模块才可用，首次配准仍需实机核验。</div><p class="hint" id="initial-map-status">等待地图加载……</p><div class="buttons"><button class="chip" onclick="zoomInitialMap(2)">放大地图 ×2</button><button class="chip" onclick="zoomInitialMap(0.5)">缩小地图 ÷2</button><button class="chip" onclick="zoomInitialMap(0)">适应宽度</button><button class="chip" id="initial-map-pan" onclick="toggleInitialMapPan()">切换为拖动平移</button><button class="chip" onclick="loadInitialMap()">重新读取地图</button></div><div id="initial-map-wrap"><canvas id="initial-map" width="1" height="1" tabindex="0" aria-label="当前场地地图：选择大致站位并拖动箭头指定大致朝向；圆内半径 1 米"></canvas></div><p class="hint">可放大到 8×，切换“拖动平移”查看局部后再切回选择位姿。蓝点是已保存导览点；黄色箭头与淡橙色圈是 1 米粗定位先验，不代表已经定位；绿色箭头才是最近核验的最终位姿。方向以地图为准，不能直接用屏幕左右替代机器人朝向。配准失败不会自动扩大搜索或使能运动。</p><div id="initial-map-pose" class="note" aria-live="polite">尚未选择位置与朝向。</div><label><input id="manual-reloc-confirmed" type="checkbox" onchange="syncInitializationButtons()">我确认机器人当前真实位置在 1 米圈内，实际朝向与箭头相差约 ±45° 内，并且已停稳</label><div class="buttons"><button id="manual-reloc-start" class="primary" disabled onclick="submitManualRelocation()">在1米范围匹配定位（不行走）</button></div><div id="manual-reloc-status" role="status" aria-live="polite"></div></div>
   <p class="hint warning">地图点选重定位尚待首次实机验收，旧定位接口的朝向约定需要核验。若配准失败或位置、朝向不符，请停止并检查，不要反复猜测初值；不会自动启用导航。</p>
+</section>
+<section class="view" data-view="setup" hidden aria-label="首次使用向导">
+  <div class="card"><h2>只走这一条流程</h2><p>① 启动网站 → ② 新场地遥控建图（已有图跳过） → ③ 初始化 / 核对定位 → ④ 添加导览点 → ⑤ 选点前往。</p><p class="hint">系统只管理归属明确的软件服务；不给硬件通电、不切换官方模式、不自动行走。网页停止不代替物理急停。</p><div class="buttons"><a class="button-link" href="/initialize" data-nav>已有地图：初始化 →</a><a class="button-link" href="/points/new" data-nav>定位后：添加导览点 →</a><a class="button-link" href="/navigation" data-nav>选点前往 →</a></div></div>
+  <div class="card"><h2>新场地：遥控建图</h2><div id="mapping-status" role="status">正在读取建图状态……</div><p id="mapping-existing" class="hint"></p>
+    <label><input id="mapping-ready" type="checkbox" onchange="syncMappingButtons()">机器人已落地、官方运动模式、拆绳、停稳且有遥控器监护；建图只人工遥控</label>
+    <div class="buttons"><button id="mapping-start" disabled onclick="mappingAction('start')">开始新建图</button><button class="chip" onclick="loadMapping()">刷新状态</button><button id="mapping-cancel" class="danger" disabled onclick="mappingAction('cancel')">取消本次建图</button></div>
+    <label><input id="mapping-finish-ready" type="checkbox" onchange="syncMappingButtons()">已经走完整个场地并停稳，准备结束保存</label><button id="mapping-finish" disabled onclick="mappingAction('finish')">结束并保存（不覆盖旧图）</button>
+    <div id="mapping-review-box" hidden><h3>新地图预览与验收</h3><img id="mapping-preview" alt="本次新建二维地图，需对照现场审核" style="max-width:100%;height:auto"><p class="hint">结构检查不代表几何精度；核对墙体、通道、自由区域和整体方向。新图使用新坐标系，旧点位登记将归档，照片与文献保留，需要重新登记新图点位。</p><label><input id="mapping-reviewed" type="checkbox" onchange="syncMappingButtons()">我已对照现场审核新图，确认激活；旧图、编辑标注和点位登记将备份归档</label><button id="mapping-activate" disabled onclick="mappingAction('activate')">备份旧图并激活新地图</button></div>
+    <p class="hint">开始时安全禁用并退出本项目初始化器启动的导航/控制服务；其他归属的进程会明确拒绝。保存/取消期间不要断电，所有产物先写独立会话。</p>
+  </div>
+  <div class="card"><h2>一次性：设置操作员 PIN</h2><label for="setup-pin">新 PIN（6–32 位数字，输入隐藏）</label><input id="setup-pin" type="password" inputmode="numeric" minlength="6" maxlength="32" autocomplete="new-password"><label><input id="setup-reviewed" type="checkbox">已人工确认当前兼容环境与导航模块验收；这不代表所有路线验收</label><label><input id="setup-enable-navigation" type="checkbox">明确开放网站点位导航（仍需每次 PIN 和实时预检，不会立即使能运动）</label><button onclick="setupOperator()">保存 PIN 与网站权限</button><p class="hint">已有 PIN 时需输入原 PIN。手臂保持关闭，密钥/PIN 不进入页面或 Git。仅在可信局域网进行首次设置。</p></div>
 </section>
 <section class="view" data-view="map" hidden aria-label="实时地图">
   <div class="card live-map-card"><h2>现场 2D 地图</h2><p class="hint">深灰是固定底图中的已知墙体；蓝点是导览点，绿色箭头是新鲜且定位有效的机器人位姿。橙点为雷达返回，红点为局部代价地图中的占用单元，不表示已确认的物体类别。</p><div id="live-map-status" role="status" aria-live="polite">正在等待地图……</div><div id="live-map-position" class="note">当前位置未知；不会显示未定位的 TF 零点。</div><div class="buttons"><button class="chip" onclick="zoomLiveMap(2)">放大 ×2</button><button class="chip" onclick="zoomLiveMap(0.5)">缩小 ÷2</button><button class="chip" onclick="zoomLiveMap(0)">适应地图</button><button class="chip" onclick="centerLiveRobot()">机器人居中</button><button id="live-map-follow" class="chip" onclick="toggleLiveMapFollow()">开启跟随</button><button class="chip" onclick="refreshLiveMap()">重新读取地图</button></div><div id="live-map-wrap"><canvas id="live-map" width="1" height="1" tabindex="0" aria-label="只读现场地图：拖动平移，点击不会发送目标"></canvas></div><div class="live-map-legend"><span><i class="wall"></i>已知墙体</span><span><i class="unknown"></i>未知区域</span><span><i class="point"></i>导览点</span><span><i class="robot"></i>机器人</span><span><i class="scan"></i>雷达返回</span><span><i class="obstacle"></i>局部占用</span></div><p id="live-map-sensors" class="hint">传感器状态未读取。</p><p class="hint">仅在本页可见时约每 0.5 秒读取；可放大到 16×，拖动只平移，不会导航或重定位。位置过期、网络断开或地图不匹配时立即隐藏实时叠加。</p><div class="note">这是固定底图 + 实时探测的可视化，不会永久写入地图，不等于摄像头感知、重新建图或 SLAM 优化。运动授权与安全检查仍独立执行。</div></div>
@@ -466,6 +481,32 @@ function syncPointSelects(){
     for(const point of savedPoints){const option=document.createElement('option');option.value=point.id;option.textContent=point.name;select.append(option);}
     select.value=savedPoints.some(point=>point.id===previous)?previous:savedPoints[0].id;
   }
+}
+let mappingState={state:'idle'},mappingPinRequired=false,mappingTimer=null,mappingPosting=false;
+function syncMappingButtons(){
+  const busy=['starting','mapping','saving','activating','stopping'].includes(mappingState.state);
+  document.getElementById('mapping-start').disabled=mappingPosting||busy||mappingState.state==='review'||!document.getElementById('mapping-ready').checked;
+  document.getElementById('mapping-finish').disabled=mappingPosting||mappingState.state!=='mapping'||!document.getElementById('mapping-finish-ready').checked;
+  document.getElementById('mapping-activate').disabled=mappingPosting||mappingState.state!=='review'||!document.getElementById('mapping-reviewed').checked;
+  document.getElementById('mapping-cancel').disabled=mappingPosting||!['starting','mapping','saving','review','stopping'].includes(mappingState.state);
+}
+async function loadMapping(){
+  if(mappingTimer){clearTimeout(mappingTimer);mappingTimer=null;}
+  try{const response=await fetch('/api/mapping'),body=await response.json();if(!response.ok||body.status!=='success')throw new Error(body.message||'读取失败');mappingState=body.mapping;mappingPinRequired=body.requires_pin;document.getElementById('mapping-status').textContent=mappingState.message;document.getElementById('mapping-existing').textContent=body.has_map?'检测到现有地图：无需重复建图；新图只在审核并激活后替换。':'尚无部署地图：先建图并激活，再进入初始化。';const review=mappingState.state==='review';document.getElementById('mapping-review-box').hidden=!review;if(review){document.getElementById('mapping-preview').src='/api/mapping/preview?session='+encodeURIComponent(mappingState.session_id);document.getElementById('mapping-reviewed').checked=false;}if(['starting','mapping','saving','activating','stopping'].includes(mappingState.state)&&document.body.dataset.page==='setup')mappingTimer=setTimeout(loadMapping,1000);}
+  catch(e){document.getElementById('mapping-status').textContent='建图状态未知：'+e.message;mappingState={state:'stopping'};}
+  syncMappingButtons();
+}
+async function mappingAction(action){
+  if(mappingPosting)return;const payload={};
+  if(action==='start'){if(!document.getElementById('mapping-ready').checked)return;Object.assign(payload,{robot_ready:true,manual_only:true});}
+  if(action==='finish'){if(!document.getElementById('mapping-finish-ready').checked)return;Object.assign(payload,{session_id:mappingState.session_id,stationary:true});}
+  if(action==='activate'){if(!document.getElementById('mapping-reviewed').checked)return;Object.assign(payload,{session_id:mappingState.session_id,map_reviewed:true});}
+  if(action!=='cancel'&&mappingPinRequired){const pin=prompt('请输入操作员 PIN');if(pin===null)return;payload.pin=pin;}
+  mappingPosting=true;syncMappingButtons();try{const body=await post('/api/mapping/'+action,payload);mappingState=body.mapping;await loadMapping();setStatus(mappingState.message);}catch(e){setStatus(e.message,'bad');}finally{mappingPosting=false;syncMappingButtons();}
+}
+async function setupOperator(){
+  const input=document.getElementById('setup-pin');let pin='';if(mappingPinRequired){pin=prompt('请输入原操作员 PIN');if(pin===null)return;}
+  try{const body=await post('/api/setup/operator',{pin,new_pin:input.value,enable_navigation:document.getElementById('setup-enable-navigation').checked,module_reviewed:document.getElementById('setup-reviewed').checked});input.value='';setStatus(body.message,'ok');await loadMapping();await refreshHealth();}catch(e){setStatus(e.message,'bad');}
 }
 let navigationPreparing=false,navigationTaskRunning=false,navigationConfirmation=null;
 function syncNavigationButtons(){document.getElementById('navigation-prepare').disabled=navigationPreparing||navigationTaskRunning||!document.getElementById('navigation-ready').checked||!document.getElementById('navigation-point').value;}
@@ -1002,6 +1043,7 @@ document.addEventListener('visibilitychange',()=>{if(document.body.dataset.page=
 window.addEventListener('resize',()=>{drawLiveMap();if(liveMapFollow)centerLiveRobot();});
 
 const routeInfo={
+  '/setup':{key:'setup',title:'首次使用向导',description:'新场地先遥控建图，再初始化定位、登记导览点并选点前往。'},
   '/':{key:'home',title:'工作台',description:'从一个入口开始管理导览、讲解和机器人状态。'},
   '/initialize':{key:'initialize',title:'一键初始化',description:'明确确认机器人已准备就绪，再启动软件模块；必要时在地图上确认真实站位与朝向。'},
   '/map':{key:'map',title:'实时地图',description:'只读查看固定墙体底图、机器人的当前大致位置与实时探测障碍；不会控制运动。'},
@@ -1037,13 +1079,14 @@ function navigateTo(path){
   if(path==='/knowledge'&&savedPoints.length)loadKnowledge();
   if(path==='/initialize')loadInitialization();
   if(path==='/navigation')loadNavigationPolicy();
+  if(path==='/setup')loadMapping();
 }
 document.addEventListener('click',event=>{
   const link=event.target.closest('a[data-nav]');
   if(!link||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
   event.preventDefault();navigateTo(link.getAttribute('href'));
 });
-window.addEventListener('popstate',()=>{activatePage(location.pathname);if(location.pathname==='/initialize')loadInitialization();if(location.pathname==='/navigation')loadNavigationPolicy();});
+window.addEventListener('popstate',()=>{activatePage(location.pathname);if(location.pathname==='/initialize')loadInitialization();if(location.pathname==='/navigation')loadNavigationPolicy();if(location.pathname==='/setup')loadMapping();});
 document.getElementById('point-search').addEventListener('input',renderSavedPoints);
 async function refreshHealth(){
   try{
@@ -1088,6 +1131,7 @@ loadPoints();
 syncInitializationButtons();
 if(location.pathname==='/initialize')loadInitialization();
 if(location.pathname==='/navigation')loadNavigationPolicy();
+if(location.pathname==='/setup')loadMapping();
 """
 
 

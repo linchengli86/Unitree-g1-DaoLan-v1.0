@@ -2,6 +2,16 @@
 
 ## 仓库边界
 
+当前交付位置为 `/media/robot2/49EB5B0A321ABC03/git_HM`：`dist/DaoLan` 是真实 Git 仓库，外层 README/docs 是阅读副本。`main` 保留已验证导航基线；`feat/web-onboarding` 为新增网页建图候选分支，尚待 PC2 编译和新图验收。`DaoLan-web-onboarding-candidate.bundle` 保存两条分支及历史，不覆盖旧 bundle。
+
+```bash
+git clone -b feat/web-onboarding /路径/DaoLan-web-onboarding-candidate.bundle DaoLan
+cd DaoLan
+bash scripts/quickstart.sh --check
+```
+
+以上 check 只在支持的 PC2 检查；实际准备和操作见 Quickstart。原 `EXPORT_MANIFEST.json` 是初始快照清单，后续提交以 Git 对象/提交和 bundle 校验为准，不应将初始 SHA256 当作当前树清单。
+
 当前工作目录的 `.git` 是环境只读占位目录，不是已有版本库。为避免覆盖它，导出脚本在临时目录创建真实 Git 仓库，将审核后的源码快照提交到 `main`，生成 `dist/DaoLan.bundle`。该 bundle 是本地 Git 仓库交付物，不是已推送的 GitHub 仓库。
 
 ```bash

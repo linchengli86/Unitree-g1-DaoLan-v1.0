@@ -18,6 +18,10 @@ NAME=mobile_guide
 PORT=${MOBILE_GUIDE_PORT:-8765}
 VOLUME=${MOBILE_GUIDE_VOLUME:-100}
 LOG_FILE="$LOG_DIR/mobile_guide.log"
+AUDIO_ARGS=()
+if [[ "${GUIDE_AUDIO_ENABLED:-1}" != "1" ]]; then
+  AUDIO_ARGS+=(--no-audio)
+fi
 
 old_pid=$(read_pid "$NAME")
 if is_running "$old_pid"; then
@@ -30,6 +34,7 @@ nohup "$CONTROL_PYTHON" "$SCRIPT_DIR/mobile_guide_server.py" \
   --host 0.0.0.0 \
   --port "$PORT" \
   --volume "$VOLUME" \
+  "${AUDIO_ARGS[@]}" \
   >"$LOG_FILE" 2>&1 &
 pid=$!
 write_pid "$NAME" "$pid"

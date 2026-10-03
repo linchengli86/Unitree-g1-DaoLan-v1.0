@@ -12,6 +12,7 @@ from guide_web import CSS, SCRIPT, WEB_ROUTES, render_page
 
 
 EXPECTED_ROUTES = {
+    "/setup": "setup",
     "/": "home",
     "/initialize": "initialize",
     "/map": "map",
@@ -181,6 +182,51 @@ class GuideWebTests(unittest.TestCase):
         self.assertIn("getBoundingClientRect", SCRIPT)
         self.assertIn("overflow:auto", CSS)
 
+    def test_setup_has_explicit_manual_mapping_and_review_controls(self):
+        page = PageParser(render_page('/setup'))
+        ids = {attrs.get('id'): attrs for _, attrs in page.elements}
+        for name in ('mapping-ready', 'mapping-finish-ready', 'mapping-reviewed', 'setup-reviewed'):
+            self.assertEqual(ids[name]['type'], 'checkbox')
+        for name in ('mapping-start', 'mapping-finish', 'mapping-activate'):
+            self.assertIn('disabled', ids[name])
+        self.assertEqual(ids['setup-pin']['type'], 'password')
+        self.assertIn('旧点位登记将归档', render_page('/setup'))
+
+    @unittest.skipUnless(shutil.which('node'), 'Node is optional for browser contracts')
+    def test_setup_browser_never_autostarts_and_submits_exact_confirmations(self):
+        harness = r"""
+const vm=require('vm'),els=new Map(),requests=[];let mapping={state:'idle',message:'idle'},promptValue=null;
+class Element{constructor(){this.dataset={};this.checked=false;this.value='';this.files=[];this.style={};this.children=[];}append(...x){this.children.push(...x);}appendChild(x){this.append(x);}replaceChildren(...x){this.children=x;}setAttribute(){}removeAttribute(){}addEventListener(){}querySelectorAll(){return [];}focus(){}}
+const keys=['setup','home','initialize','map','navigation','assistant','agent','knowledge','tasks','points','point_new','localization','system'];
+const views=keys.map(k=>{const e=new Element();e.dataset.view=k;return e;});
+const document={body:new Element(),hidden:false,getElementById(k){if(!els.has(k))els.set(k,new Element());return els.get(k);},createElement(){return new Element();},querySelectorAll(s){return s.includes('data-view')?views:[];},addEventListener(){}};document.body.dataset.page='setup';
+const generic={status:'success',message:'okay',points:[],seeds:[],arm_gestures:{},task:null,requires_pin:true,relocation:{state:'idle'},initialization:{state:'idle'}};
+const sandbox={document,location:{pathname:'/setup',href:'http://localhost/setup'},window:{addEventListener(){},scrollTo(){}},history:{pushState(){}},URL,AbortController,console,performance:{now:()=>100},setTimeout(){return 1;},clearTimeout(){},setInterval(){return 1;},clearInterval(){},prompt(){return promptValue;},alert(){},confirm(){return false;},fetch:async(path,options={})=>{const method=options.method||'GET';let body=options.body?JSON.parse(options.body):null;requests.push({path,method,body});if(method==='POST'){if(path.endsWith('/start'))mapping={state:'starting',message:'start',session_id:'a'.repeat(32)};if(path.endsWith('/finish'))mapping={state:'saving',message:'save',session_id:'a'.repeat(32)};if(path.endsWith('/activate'))mapping={state:'succeeded',message:'activated',session_id:'a'.repeat(32)};if(path.endsWith('/cancel'))mapping={state:'cancelled',message:'cancelled'};}return {ok:true,json:async()=>({...generic,mapping,has_map:false})};}};
+vm.runInNewContext(SCRIPT_VALUE,sandbox,{timeout:1000});
+const tick=()=>new Promise(resolve=>setImmediate(resolve)),assert=(v,m)=>{if(!v)throw new Error(m);},posts=()=>requests.filter(r=>r.method==='POST');
+setImmediate(async()=>{try{
+ await tick();assert(posts().length===0,'page load started hardware');
+ await sandbox.mappingAction('start');assert(posts().length===0,'unchecked start');
+ document.getElementById('mapping-ready').checked=true;await sandbox.mappingAction('start');assert(posts().length===0,'cancelled PIN prompt started');
+ promptValue='246810';await sandbox.mappingAction('start');assert(posts().length===1,'explicit start not submitted');
+ assert(Object.keys(posts()[0].body).sort().join(',')==='manual_only,pin,robot_ready','start payload injection');
+ mapping={state:'mapping',session_id:'a'.repeat(32),message:'collecting'};await sandbox.loadMapping();
+ await sandbox.mappingAction('finish');assert(posts().length===1,'unchecked save');
+ document.getElementById('mapping-finish-ready').checked=true;await sandbox.mappingAction('finish');assert(posts()[1].body.stationary===true,'save confirmation missing');
+ mapping={state:'review',session_id:'a'.repeat(32),message:'review'};await sandbox.loadMapping();
+ assert(!document.getElementById('mapping-review-box').hidden,'preview hidden');
+ await sandbox.mappingAction('activate');assert(posts().length===2,'unchecked activation');
+ document.getElementById('mapping-reviewed').checked=true;await sandbox.mappingAction('activate');assert(posts()[2].body.map_reviewed===true,'map review missing');
+ promptValue=null;await sandbox.mappingAction('cancel');assert(posts().length===4,'cancel unnecessarily required PIN');
+ assert(Object.keys(posts()[3].body).length===0,'cancel parameters');
+ console.log('setup browser contract passed');
+ }catch(e){console.error(e.stack);process.exitCode=1;}});
+"""
+        command = harness.replace('SCRIPT_VALUE', json.dumps(SCRIPT))
+        result = subprocess.run(['node', '-e', command], capture_output=True, text=True, timeout=10)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn('setup browser contract passed', result.stdout)
+
     def test_unknown_routes_are_not_silently_home(self):
         for path in ("/missing", "/points/../../system", "/<script>alert(1)</script>", "https://example.com", ""):
             with self.subTest(path=path), self.assertRaises(ValueError):
@@ -302,7 +348,7 @@ class Element {
   focus() {}
   closest() { return null; }
 }
-const keys=['home','initialize','map','navigation','assistant','agent','knowledge','tasks','points','point_new','localization','system'];
+const keys=['home','setup','initialize','map','navigation','assistant','agent','knowledge','tasks','points','point_new','localization','system'];
 const views=keys.map(key=>{const el=new Element(); el.dataset.view=key; return el;});
 const body=new Element('body'); body.dataset.page='home';
 const location={pathname:'/',search:'',hash:'',href:'http://localhost/'};
@@ -322,7 +368,7 @@ vm.runInNewContext(SCRIPT_VALUE,sandbox,{timeout:1000});
 if(listeners.DOMContentLoaded)listeners.DOMContentLoaded();
 const form=document.getElementById('point-name'),photo=document.getElementById('point-photo'),confirmation=document.getElementById('confirm');
 form.value='unsaved point'; const upload={name:'pending-photo.jpg'}; photo.files=[upload]; confirmation.textContent='pending confirmation';
-for(const [path,key] of [['/','home'],['/initialize','initialize'],['/navigation','navigation'],['/assistant','assistant'],['/agent','agent'],['/knowledge','knowledge'],['/tasks','tasks'],['/points','points'],['/points/new','point_new'],['/localization','localization'],['/system','system']]){
+for(const [path,key] of [['/','home'],['/setup','setup'],['/initialize','initialize'],['/navigation','navigation'],['/assistant','assistant'],['/agent','agent'],['/knowledge','knowledge'],['/tasks','tasks'],['/points','points'],['/points/new','point_new'],['/localization','localization'],['/system','system']]){
   sandbox.navigateTo(path);
   if(body.dataset.page!==key||views.filter(view=>!view.hidden).length!==1||!views.some(view=>!view.hidden&&view.dataset.view===key))throw new Error('Navigation did not select '+key);
   if(form.value!=='unsaved point'||photo.files[0]!==upload||confirmation.textContent!=='pending confirmation')throw new Error('Navigation lost unsaved input or plan');

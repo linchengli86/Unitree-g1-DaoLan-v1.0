@@ -36,7 +36,7 @@
 #include <sstream>
 #include <pcl/filters/statistical_outlier_removal.h>
 
-bool terminate_flag = false;
+volatile std::sig_atomic_t terminate_flag = 0;
 
 // 读取参数并构造变换矩阵
 Eigen::Matrix4f getLidar2BaseFromParam(const ros::NodeHandle& nh) {
@@ -864,8 +864,7 @@ public:
         shared_data->mutex.unlock();
         if (ground_map->empty()) return false;
         pcl::PCDWriter writer;
-        writer.writeBinaryCompressed(file_path, *ground_map);
-        return true;
+        return writer.writeBinaryCompressed(file_path, *ground_map) == 0;
     }
 
 
@@ -1137,7 +1136,7 @@ public:
     void setLidar2Base(const Eigen::Matrix4f& tf) { lidar2base_ = tf; }
     void operator()() {
         size_t last_processed = 0;
-        while (ros::ok()) {
+        while (ros::ok() && !terminate_flag) {
             // 检查是否有新关键帧
             shared_data_->mutex.lock();
             size_t cur_size = shared_data_->cloud_history.size();
@@ -1234,8 +1233,7 @@ public:
         shared_data_->mutex.unlock();
         if (map->empty()) return false;
         pcl::PCDWriter writer;
-        writer.writeBinaryCompressed(file_path, *map);
-        return true;
+        return writer.writeBinaryCompressed(file_path, *map) == 0;
     }
 
     // 保存关键帧位姿到文本文件
@@ -1253,11 +1251,11 @@ public:
         }
         ofs.close();
         shared_data_->mutex.unlock();
-        return true;
+        return !ofs.fail();
     }
     void operator()() {
         ros::Rate r(rate_);
-        while (ros::ok()) {
+        while (ros::ok() && !terminate_flag) {
             fastlio::PointCloudXYZI::Ptr ground_map(new fastlio::PointCloudXYZI);
             shared_data_->mutex.lock();
             for (const auto& p : shared_data_->key_poses) {
@@ -1294,17 +1292,8 @@ std::string g_keyposes_path = "/tmp/key_poses.txt";
 
 void signalHandler(int signum)
 {
-    std::cout << "SHUTTING DOWN MAPPING NODE!" << std::endl;
-    terminate_flag = true;
-    if (g_ground_pub_thread) {
-        std::cout << "Auto-saving ground map and key poses..." << std::endl;
-        g_ground_pub_thread->saveMap(g_map_path);
-        g_ground_pub_thread->saveGroundMap(g_ground_map_path);
-        g_ground_pub_thread->saveKeyPoses(g_keyposes_path);
-        std::cout << "Map saved to: " << g_map_path << std::endl;
-        std::cout << "Ground map saved to: " << g_ground_map_path << std::endl;
-        std::cout << "Key poses saved to: " << g_keyposes_path << std::endl;
-    }
+    // Signal context must not lock mutexes, allocate memory or write PCD.
+    terminate_flag = 1;
 }
 
 int main(int argc, char **argv)
@@ -1314,6 +1303,7 @@ int main(int argc, char **argv)
     ros::NodeHandle private_nh("~");
     tf2_ros::TransformBroadcaster br;
     signal(SIGINT, signalHandler);
+    signal(SIGTERM, signalHandler);
 
     const std::string package_path = ros::package::getPath("fastlio");
     if (package_path.empty()) {
@@ -1351,5 +1341,16 @@ int main(int argc, char **argv)
     g_ground_pub_thread = &ground_pub_thread;
     map_builder.run();
     ground_pub_worker.join();
+    ground_extract_worker.join();
+    // All writers have stopped: save one consistent bundle on the main thread.
+    const bool map_ok = ground_pub_thread.saveMap(g_map_path);
+    const bool ground_ok = ground_pub_thread.saveGroundMap(g_ground_map_path);
+    const bool poses_ok = ground_pub_thread.saveKeyPoses(g_keyposes_path);
+    ros::shutdown();
+    if (!map_ok || !ground_ok || !poses_ok) {
+        std::cerr << "MAPPING BUNDLE SAVE FAILED" << std::endl;
+        return 1;
+    }
+    std::cout << "MAPPING BUNDLE SAVED" << std::endl;
     return 0;
 }

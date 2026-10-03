@@ -14,3 +14,7 @@
 | `PythonProject/` | 历史小智/语音实验、缓存/模型/环境与可能私有配置，保留本地，不进入默认源码导出 |
 
 原工作目录无有效 Git 历史，不能可靠复原所有上游版本号和修改作者。此次生成的是带快照清单的新仓库基线，不伪造旧历史。正式公开前补充上游版本锁定、许可审查和必要的署名。
+
+## 候选版安装适配
+
+`unitree_sdk2_python/setup.py` 为新增本地包装，`1.0.1+daolan.snapshot` 标记仓库快照，不是上游发行承诺。安装器参考 [Unitree 官方 SDK 环境要求](https://github.com/unitreerobotics/unitree_sdk2_python)，缺失 DDS 时选择 [CycloneDDS 官方版本](https://github.com/eclipse-cyclonedds/cyclonedds/releases) tag `0.10.2`；实际下载仅安装时发生，不把外部源码归为本项目许可。上游适配仍须干净环境验收。

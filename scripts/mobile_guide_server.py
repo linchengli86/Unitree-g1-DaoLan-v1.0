@@ -25,7 +25,7 @@ from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from typing import Any
 
-from guide_skills import CATALOG, PROJECT, guide_assets, robot_status, stop_navigation
+from guide_skills import CATALOG, PROJECT, MAP, PCD, guide_assets, robot_status, stop_navigation
 from guide_actions import action_catalog, needs_motion, validate_plan
 from guide_task_executor import TaskExecutor
 from guide_points import GuidePointStore, decode_board_image, validate_board_draft
@@ -37,6 +37,8 @@ from guide_conception_jobs import ConceptionJobs
 from guide_initialization import InitializationManager
 from guide_map import GuideMap
 from guide_live_map import LiveMapManager
+from guide_mapping import MappingManager
+from guide_operator_setup import configure_operator
 
 from unitree_sdk2py.core.channel import ChannelFactoryInitialize
 from unitree_sdk2py.g1.audio.g1_audio_api import ROBOT_API_ID_AUDIO_TTS
@@ -164,6 +166,30 @@ class UnitreeSpeechWorker(threading.Thread):
                 request["done"].set()
 
 
+class DisabledSpeechWorker:
+    disabled = True
+    error = None
+
+    def __init__(self):
+        self.ready = threading.Event()
+        self.ready.set()
+
+    def start(self):
+        pass
+
+    def stop(self):
+        pass
+
+    def discard_pending(self):
+        pass
+
+    def enqueue(self, text):
+        raise RuntimeError('当前是纯运动模式；讲解请另行配置并启用音频模块')
+
+    def speak_and_wait(self, *args, **kwargs):
+        raise RuntimeError('当前是纯运动模式，音频模块未启用')
+
+
 class MobileGuideServer(ThreadingHTTPServer):
     daemon_threads = True
 
@@ -198,16 +224,61 @@ class MobileGuideServer(ThreadingHTTPServer):
         self.live_map = LiveMapManager(project=PROJECT)
         self.initialization = InitializationManager(project=PROJECT,
             idle=lambda: not self.tasks.active() and not self.relocation.active())
+        self.mapping = MappingManager(project=PROJECT, idle=lambda: not self.tasks.active()
+            and not self.initialization.active() and not self.relocation.active())
+
+    def check_mapping_idle(self):
+        if self.mapping.active():
+            raise RuntimeError('建图或地图保存/切换进行中，请先完成或取消')
+
+    def mapping_request(self, operation, payload):
+        payload = dict(payload)
+        self.check_operator_pin(payload.pop('pin', ''))
+        with self.pending_lock:
+            if self.initialization.active() or self.tasks.active() or self.relocation.active():
+                raise RuntimeError('请结束当前任务/初始化/重定位后再操作地图')
+            if operation == 'start':
+                result = self.mapping.start(payload)
+            elif operation == 'finish':
+                result = self.mapping.finish(payload)
+            elif operation == 'activate':
+                result = self.mapping.activate(payload)
+                with self.initialization.lock:
+                    self.initialization.state = {'state': 'idle', 'stages': [], 'needs_initial_pose': True,
+                        'automatic_motion_enabled': False, 'message': '地图已切换，请重新初始化和人工定位'}
+            else:
+                raise ValueError('未知建图操作')
+            self.pending.clear()
+            self.pending_presentations.clear()
+            return {'status': 'success', 'mapping': result}
+
+    def setup_operator(self, payload):
+        payload = dict(payload)
+        self.check_operator_pin(payload.pop('pin', ''))
+        with self.pending_lock:
+            self.check_mapping_idle()
+            if self.tasks.active() or self.initialization.active() or self.relocation.active():
+                raise RuntimeError('活动任务期间不能调整权限')
+            values = configure_operator(PROJECT, payload)
+            self.operator_pin = values['GUIDE_OPERATOR_PIN']
+            self.motion_enabled = values['GUIDE_MOTION_ENABLED'] == '1'
+            os.environ.update(values)
+            self.pending.clear()
+            self.pending_presentations.clear()
+            return {'status': 'success', 'message': '设置已保存；不会使能控制器或运动，手臂保持禁用',
+                    'motion_permission': self.motion_enabled}
 
     def check_operator_pin(self, pin):
         if self.operator_pin and (not isinstance(pin, str) or not hmac.compare_digest(pin, self.operator_pin)):
             raise ValueError("操作员 PIN 错误")
 
     def start_initialization(self, payload):
+        self.check_mapping_idle()
         if set(payload) - {"robot_ready", "pin"} or payload.get("robot_ready") is not True:
             raise ValueError("请先确认双脚落地、官方运动模式且已停稳；悬空或零力矩时不能初始化运控")
         self.check_operator_pin(payload.get("pin", ""))
         with self.pending_lock:
+            self.check_mapping_idle()
             if self.tasks.active() or self.relocation.active():
                 raise RuntimeError("任务或重定位进行中，请结束后再初始化")
             state = self.initialization.start(confirmations={"grounded": True, "motion_mode": True, "stationary": True})
@@ -220,11 +291,13 @@ class MobileGuideServer(ThreadingHTTPServer):
                 "message": "后台初始化已开始；会安全禁用运动，不自动重定位或行走"}
 
     def start_manual_relocation(self, payload):
+        self.check_mapping_idle()
         allowed = {"x", "y", "yaw", "map_fingerprint", "confirmed_position", "pin"}
         if set(payload) - allowed or payload.get("confirmed_position") is not True:
             raise ValueError("请确认地图箭头标记的是当前真实站位和朝向，不是导航目的地")
         self.check_operator_pin(payload.get("pin", ""))
         with self.pending_lock:
+            self.check_mapping_idle()
             if self.initialization.active() or self.tasks.active() or self.relocation.active():
                 raise RuntimeError("初始化、任务或重定位进行中，请完成后再点选位置")
             if self.initialization.snapshot().get("state") != "succeeded":
@@ -420,6 +493,7 @@ class MobileGuideServer(ThreadingHTTPServer):
             "steps": [{"action": "navigate_route", "parameters": {"destination": destination}}]}
 
     def prepare_plan(self, raw_plan, presentation_ticket=None):
+        self.check_mapping_idle()
         if self.initialization.active():
             raise RuntimeError("初始化进行中，请完成后再规划任务")
         if self.relocation.active():
@@ -438,6 +512,7 @@ class MobileGuideServer(ThreadingHTTPServer):
                 if not catalog["arm_enabled"] or not catalog["arm_gestures"][gesture]["verified"]:
                     warnings.append("手臂动作待实机验证：" + catalog["arm_gestures"][gesture]["label"])
         with self.pending_lock:
+            self.check_mapping_idle()
             if self.initialization.active():
                 raise RuntimeError("初始化进行中，请完成后再规划任务")
             if self.relocation.active():
@@ -456,6 +531,7 @@ class MobileGuideServer(ThreadingHTTPServer):
 
     def confirm_plan(self, token, pin="", dry_run=False):
         with self.pending_lock:
+            self.check_mapping_idle()
             if self.initialization.active():
                 raise RuntimeError("初始化进行中，不能提交任务")
             if self.relocation.active():
@@ -494,6 +570,7 @@ class MobileGuideServer(ThreadingHTTPServer):
             self.conception_jobs.cancel_all()
             self.conception_cancel.set()
             cancelled = self.tasks.cancel()
+            cancelled = self.mapping.cancel() or cancelled
             cancelled = self.initialization.cancel() or cancelled
             if cancel_relocation:
                 cancelled = self.relocation.cancel() or cancelled
@@ -504,6 +581,7 @@ class MobileGuideServer(ThreadingHTTPServer):
                 ("任务取消已收到；" if cancelled else "") + stopped["message"]}
 
     def add_point(self, payload):
+        self.check_mapping_idle()
         payload = dict(payload)
         pin = payload.pop("pin", "")
         if self.operator_pin and (not isinstance(pin, str) or not hmac.compare_digest(pin, self.operator_pin)):
@@ -526,6 +604,7 @@ class MobileGuideServer(ThreadingHTTPServer):
                 "message": "已保存“{}”的位置、朝向和讲解；机器人不会自动运动。".format(point["name"])}
 
     def read_point_pose(self):
+        self.check_mapping_idle()
         if self.initialization.active():
             raise RuntimeError("初始化进行中，请完成后再读取位置")
         if self.relocation.active():
@@ -536,6 +615,7 @@ class MobileGuideServer(ThreadingHTTPServer):
                 "message": "定位有效；已读取当前位置与朝向，不移动机器人"}
 
     def start_relocation(self, payload):
+        self.check_mapping_idle()
         if set(payload) - {"point_id", "confirmed_position", "pin"}:
             raise ValueError("重定位不接收任意坐标或命令，只能选择已确认位置")
         if payload.get("confirmed_position") is not True:
@@ -547,6 +627,7 @@ class MobileGuideServer(ThreadingHTTPServer):
         if not isinstance(point_id, str):
             raise ValueError("导览点编号无效")
         with self.pending_lock:
+            self.check_mapping_idle()
             if self.initialization.active():
                 raise RuntimeError("初始化进行中，请完成后再重定位")
             state = self.relocation.start(point_id)
@@ -610,6 +691,23 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(body)
 
     def do_GET(self) -> None:
+        if self.path == '/api/mapping':
+            self.send_payload(HTTPStatus.OK, {'status': 'success', 'mapping': self.server.mapping.snapshot(),
+                'has_map': MAP.is_file() and PCD.is_file(),
+                'requires_pin': bool(self.server.operator_pin)})
+            return
+        if self.path.split('?', 1)[0] == '/api/mapping/preview':
+            try:
+                image = self.server.mapping.preview()
+                self.send_response(HTTPStatus.OK)
+                self.send_header('Content-Type', 'image/png')
+                self.send_header('Cache-Control', 'no-store')
+                self.send_header('Content-Length', str(len(image)))
+                self.end_headers()
+                self.wfile.write(image)
+            except Exception as exc:
+                self.send_payload(HTTPStatus.BAD_REQUEST, {'status': 'error', 'message': str(exc)})
+            return
         assets = {"/assets/guide.css": (CSS, "text/css; charset=utf-8"),
                   "/assets/guide.js": (SCRIPT, "application/javascript; charset=utf-8")}
         if self.path in assets:
@@ -744,10 +842,11 @@ class Handler(BaseHTTPRequestHandler):
         if self.path == "/api/health":
             assistant = os.path.exists(self.server.dialogue_socket)
             omni = self.server.omni_ready()
-            message = "网页与机器人扬声器已连接"
+            message = "网页已连接" if getattr(self.server.speech, 'disabled', False) else "网页与机器人扬声器已连接"
             message += "；Omni 已配置" if omni else "；Omni 未配置"
             self.send_payload(HTTPStatus.OK, {"status": "success", "assistant": assistant,
                 "omni": omni, "motion_enabled": self.server.motion_enabled,
+                "audio_enabled": not getattr(self.server.speech, 'disabled', False),
                 "message": message})
             return
         if self.path == "/api/skills":
@@ -783,6 +882,15 @@ class Handler(BaseHTTPRequestHandler):
 
             if self.path == "/api/init/start":
                 result = self.server.start_initialization(payload)
+            elif self.path == '/api/setup/operator':
+                result = self.server.setup_operator(payload)
+            elif self.path in ('/api/mapping/start', '/api/mapping/finish', '/api/mapping/activate'):
+                result = self.server.mapping_request(self.path.rsplit('/', 1)[1], payload)
+            elif self.path == '/api/mapping/cancel':
+                if payload:
+                    raise ValueError('取消建图不接收参数')
+                result = {'status': 'success', 'cancelled': self.server.mapping.cancel(),
+                          'mapping': self.server.mapping.snapshot()}
             elif self.path == "/api/relocation/manual":
                 result = self.server.start_manual_relocation(payload)
             elif self.path == "/api/agent/prepare":
@@ -862,12 +970,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--port", type=int, default=8765)
     parser.add_argument("--volume", type=int, default=100)
     parser.add_argument("--dialogue-socket", default="/tmp/dialogue_trigger.sock")
+    parser.add_argument('--no-audio', action='store_true', help='纯运动网站，不初始化音频服务')
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
-    speech = UnitreeSpeechWorker(args.interface, max(0, min(100, args.volume)))
+    speech = DisabledSpeechWorker() if args.no_audio else UnitreeSpeechWorker(args.interface, max(0, min(100, args.volume)))
     speech.start()
     if not speech.ready.wait(timeout=15):
         print("Unitree audio initialization timed out", file=sys.stderr)
@@ -887,6 +996,7 @@ def main() -> int:
     try:
         server.serve_forever(poll_interval=0.25)
     finally:
+        server.mapping.cancel()
         server.live_map.close()
         server.initialization.cancel()
         server.conception_cancel.set()
