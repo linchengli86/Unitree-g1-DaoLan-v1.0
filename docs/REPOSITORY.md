@@ -1,5 +1,11 @@
 # Git 仓库与私有数据交付
 
+## 公开发布许可门槛
+
+2026-10-04 源码许可审查尚未通过：三个本地包缺少明确授权证据，FastLIO / ikd-Tree 需追溯许可范围，自有代码也尚未确定项目许可。详见 [审查证据与检查表](THIRD_PARTY.md)。不要在创建 GitHub 仓库时自动选择 MIT 来覆盖整个源码树；先完成来源、授权、适用许可及资料审查。
+
+此次文档更新不构成授权补齐，也未自动提交、推送或重建 bundle。已有 bundle 是旧快照，不能据其宣称包含当前工作树的审查记录；发布时需包含审核后的提交，并明确交付版本。
+
 ## 仓库边界
 
 当前交付位置为 `/media/robot2/49EB5B0A321ABC03/git_HM`：`dist/DaoLan` 是真实 Git 仓库，外层 README/docs 是阅读副本。`main` 保留已验证导航基线；`feat/web-onboarding` 为新增网页建图候选分支，尚待 PC2 编译和新图验收。`DaoLan-web-onboarding-candidate.bundle` 保存两条分支及历史，不覆盖旧 bundle。
